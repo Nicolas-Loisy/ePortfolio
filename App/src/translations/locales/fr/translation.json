@@ -1,0 +1,88 @@
+{
+  "language_name": "Français",
+  "global": {
+    "siteName": "MarkIA",
+    "loading": "Chargement...",
+    "noContent": "Aucun contenu trouvé",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "welcome": "Bienvenue dans notre application",
+  "homepage": {
+    "title": "Page d'accueil test",
+    "description": "Ceci est la page d'accueil."
+  },
+  "contentpage": {
+    "title": "Documentation"
+  },
+  "components": {
+    "organisms": {
+      "footer": {
+        "text": "© {{year}} MarkIA - Nicolas Loisy. Tous droits réservés."
+      },
+      "navbar": {
+        "home": "Accueil",
+        "documentation": "Documentation",
+        "tools": "Outils",
+        "extensions": "Extensions"
+      }
+    },
+    "molecules": {
+      "addExtensionForm": {
+        "errorExtension": "Une erreur s'est produite lors de l'ajout de l'extension VS Code.",
+        "fieldName": "Nom",
+        "fieldDescription": "Description en {{lang}}",
+        "fieldUrl": "URL de l'image",
+        "fieldLink": "Lien",
+        "isSubmittingYes": "Ajout en cours...",
+        "isSubmittingNo": "Ajouter l'extension VS Code"
+      },
+      "addToolForm": {
+        "errorTool": "Une erreur s'est produite lors de l'ajout de l'outil.",
+        "fieldName": "Nom",
+        "fieldDescription": "Description en {{lang}}",
+        "fieldUrl": "URL de l'image",
+        "fieldLink": "Lien",
+        "isSubmittingYes": "Ajout en cours...",
+        "isSubmittingNo": "Ajouter l'outil"
+      },
+      "authModal": {
+        "incorrectPassword": "Email ou mot de passe incorrect.",
+        "errorLogout": "Erreur lors de la déconnexion.",
+        "login": "Connexion",
+        "welcome": "Bienvenue, {{name}} !",
+        "logout": "Déconnexion",
+        "email": "Adresse e-mail",
+        "password": "Mot de passe"
+      },
+      "modalDelete": {
+        "confirmDelete": "Confirmer la suppression ?"
+      },
+      "newFileForm": {
+        "errorFile": "Une erreur s'est produite lors de la création du fichier.",
+        "fieldName": "Chemin du fichier (avec extension) : ex. 'PHP/Symfony.md'",
+        "isSubmittingYes": "Création en cours...",
+        "isSubmittingNo": "Créer le fichier"
+      },
+      "searchBar": {
+        "searchInput": "Recherche"
+      }
+    }
+  },
+  "error": {
+    "errorThrow": "Erreur : {{error}}",
+    "errorContent": "Une erreur est survenue lors du chargement du contenu.",
+    "403": {
+      "title": "403 - Interdit",
+      "description": "Vous n'avez pas la permission d'accéder à cette page."
+    },
+    "404": {
+      "title": "404 - Introuvable",
+      "description": "La page que vous recherchez n'existe pas."
+    },
+    "generic": {
+      "title": "Une erreur s'est produite",
+      "description": "Quelque chose a mal tourné. Veuillez réessayer plus tard."
+    }
+  }
+}

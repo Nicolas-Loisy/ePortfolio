@@ -6,13 +6,11 @@ Project Description
 
 ### Todo
 
-- [ ] Redaction documentation  
-- [ ] Espace documentation  
-- [ ] Double espace/site même Domaine  
+- [ ] Redaction documentation
+- [ ] Espace documentation
+- [ ] Double espace/site même Domaine
+- [ ] Chatbot sur moi
 
 ### In Progress
 
-
 ### Done ✓
-
-

@@ -1,0 +1,87 @@
+{
+  "language_name": "English",
+  "global": {
+    "siteName": "MarkIA",
+    "loading": "Loading...",
+    "noContent": "No content found",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "welcome": "Welcome to our application",
+  "homepage": {
+    "title": "Home Page",
+    "description": "This is the home page."
+  },
+  "contentpage": {
+    "title": "Documentation"
+  },
+  "components": {
+    "organisms": {
+      "footer": {
+        "text": "© {{year}} MarkIA - Nicolas Loisy. All rights reserved."
+      },
+      "navbar": {
+        "home": "Home",
+        "documentation": "Documentation",
+        "tools": "Tools"
+      }
+    },
+    "molecules": {
+      "addExtensionForm": {
+        "errorExtension": "An error occurred while adding the extension.",
+        "fieldName": "Name",
+        "fieldDescription": "Description in {{lang}}",
+        "fieldUrl": "Image URL",
+        "fieldLink": "Link",
+        "isSubmittingYes": "Adding...",
+        "isSubmittingNo": "Add Extension"
+      },
+      "addToolForm": {
+        "errorTool": "An error occurred while adding the tool.",
+        "fieldName": "Name",
+        "fieldDescription": "Description in {{lang}}",
+        "fieldUrl": "Image URL",
+        "fieldLink": "Link",
+        "isSubmittingYes": "Adding...",
+        "isSubmittingNo": "Add Tool"
+      },
+      "authModal": {
+        "incorrectPassword": "Incorrect email or password.",
+        "errorLogout": "Error during logout.",
+        "login": "Login",
+        "welcome": "Welcome, {{name}}!",
+        "logout": "Logout",
+        "email": "Email address",
+        "password": "Password"
+      },
+      "modalDelete": {
+        "confirmDelete": "Confirm deletion?"
+      },
+      "newFileForm": {
+        "errorFile": "An error occurred while creating the file.",
+        "fieldName": "File path (with extension): e.g., 'PHP/Symfony.md'",
+        "isSubmittingYes": "Creating...",
+        "isSubmittingNo": "Create File"
+      },
+      "searchBar": {
+        "searchInput": "Search"
+      }
+    }
+  },
+  "error": {
+    "errorThrow": "Error: {{error}}",
+    "errorContent": "An error occurred while loading content.",
+    "403": {
+      "title": "403 - Forbidden",
+      "description": "You don't have permission to access this page."
+    },
+    "404": {
+      "title": "404 - Not Found",
+      "description": "The page you are looking for does not exist."
+    },
+    "generic": {
+      "title": "An Error Occurred",
+      "description": "Something went wrong. Please try again later."
+    }
+  }
+}
