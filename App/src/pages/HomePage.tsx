@@ -8,6 +8,9 @@ import bannerImageDark from "../assets/img/LOGO_NL_dark.svg";
 import bannerImageLight from "../assets/img/LOGO_NL_white.svg";
 import NavLink from "../components/atoms/NavLink";
 import { FaGithub } from "react-icons/fa";
+import ProfileCard from "../components/molecules/ProfileCard";
+import pp from "../assets/img/pp_nl.jpg";
+import SocialBar from "../components/molecules/SocialBar";
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();
@@ -22,6 +25,18 @@ const HomePage: React.FC = () => {
         margin="10px 0"
         width="10%" // Largeur ajustée pour l'image
       />
+      <ProfileCard
+        imageSrc={pp}
+        name="Nicolas Loisy"
+        // title="Fullstack Developer"
+        title="Développeur Web & Intégrateur d'Intelligence Artificielle"
+      />
+      <SocialBar
+        github="https://github.com/Nicolas-Loisy"
+        huggingface="https://huggingface.co/Nicolas-Loisy"
+        linkedin="https://www.linkedin.com/in/nicolas-loisy/"
+      />
+
       <InfoSection
         leftTitle="Documentation"
         leftText="Accédez facilement à toute la documentation dont vous avez besoin. Des guides pratiques et des explications claires pour tout maîtriser."
