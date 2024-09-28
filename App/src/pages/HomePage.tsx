@@ -11,6 +11,7 @@ import { FaGithub } from "react-icons/fa";
 import ProfileCard from "../components/molecules/ProfileCard";
 import pp from "../assets/img/pp_nl.jpg";
 import SocialBar from "../components/molecules/SocialBar";
+import About from "../components/molecules/About";
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();
@@ -35,6 +36,12 @@ const HomePage: React.FC = () => {
         github="https://github.com/Nicolas-Loisy"
         huggingface="https://huggingface.co/Nicolas-Loisy"
         linkedin="https://www.linkedin.com/in/nicolas-loisy/"
+        email="nicolas.loisy@yahoo.fr"
+      />
+
+      <About
+        title="À propos de moi"
+        description="Je suis développeur web passionné par l'informatique dans son ensemble. Ma curiosité me pousse à explorer divers domaines tels que la technologie, l'intelligence artificielle et l'électronique. J'aime trouver des solutions à des problèmes techniques et relever des défis.<br /><br /> Chaque jour, j'ai la chance de travailler dans un environnement stimulant où je peux appliquer mes compétences tout en apprenant constamment. Mes passions pour l'informatique et la technologie me permettent de prendre du plaisir à créer et à innover, tout en m'enrichissant en connaissances et en expériences. Mon objectif est de continuer à évoluer dans ce domaine fascinant."
       />
 
       <InfoSection

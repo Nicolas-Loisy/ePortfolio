@@ -6,8 +6,9 @@ import {
   FaLinkedin,
   FaInstagram,
   FaGithub,
-} from "react-icons/fa"; // Icônes pour Facebook, Twitter, LinkedIn, Instagram et GitHub
-import { SiHuggingface } from "react-icons/si"; // Icône Hugging Face
+  FaEnvelope, // Icône d'e-mail
+} from "react-icons/fa";
+import { SiHuggingface } from "react-icons/si";
 
 // Conteneur principal qui centre la barre et les icônes
 const SocialBarContainer = styled.div`
@@ -31,17 +32,45 @@ const YellowBar = styled.div`
 const IconsContainer = styled.div`
   display: flex;
   gap: 1.5rem; // Espacement entre les icônes
+  position: relative; // Position relative pour le tooltip
 `;
 
 // Style pour les icônes individuelles avec effet de grossissement au survol
-const SocialIcon = styled.a`
+const SocialIcon = styled.div`
   color: ${(props) => props.theme.text}; // Couleur des icônes selon le thème
   font-size: 2rem; // Taille des icônes
   transition: transform 0.3s ease-in-out; // Animation pour le grossissement
+  position: relative; // Position relative pour le tooltip
 
   &:hover {
     transform: scale(1.2); // Grossissement au survol
-    // color: ${(props) => props.theme.primary}; // Change de couleur au survol
+  }
+
+  // S'assurer que le lien n'affecte pas la couleur des icônes
+  a {
+    color: inherit; // L'héritage de la couleur pour le lien
+    text-decoration: none; // Supprimer le soulignement du lien
+  }
+`;
+
+// Style pour le tooltip
+const Tooltip = styled.div`
+  position: absolute;
+  top: 100%; // Positionne le tooltip en dessous de l'icône
+  left: 50%; // Centre le tooltip
+  transform: translateX(-50%); // Centre le tooltip
+  background-color: #333; // Couleur de fond du tooltip
+  color: white; // Couleur du texte
+  padding: 3px 10px 5px; // Espacement interne
+  border-radius: 4px; // Coins arrondis
+  font-size: 0.75rem; // Réduit la taille de la police
+  visibility: hidden; // Masquer par défaut
+  opacity: 0; // Masquer par défaut
+  transition: visibility 0s, opacity 0.2s linear; // Transition pour le tooltip
+
+  ${SocialIcon}:hover & {
+    visibility: visible; // Afficher au survol
+    opacity: 1; // Rendre visible
   }
 `;
 
@@ -53,6 +82,7 @@ interface SocialBarProps {
   instagram?: string;
   github?: string;
   huggingface?: string;
+  email?: string; // Ajout de la propriété email
 }
 
 const SocialBar: React.FC<SocialBarProps> = ({
@@ -62,6 +92,7 @@ const SocialBar: React.FC<SocialBarProps> = ({
   instagram,
   github,
   huggingface,
+  email, // Ajout de l'email dans les props
 }) => {
   return (
     <SocialBarContainer>
@@ -71,41 +102,57 @@ const SocialBar: React.FC<SocialBarProps> = ({
       {/* Conteneur des icônes de réseaux sociaux */}
       <IconsContainer>
         {facebook && (
-          <SocialIcon href={facebook} target="_blank" rel="noopener noreferrer">
-            <FaFacebook />
+          <SocialIcon>
+            <a href={facebook} target="_blank" rel="noopener noreferrer">
+              <FaFacebook />
+            </a>
           </SocialIcon>
         )}
         {twitter && (
-          <SocialIcon href={twitter} target="_blank" rel="noopener noreferrer">
-            <FaTwitter />
+          <SocialIcon>
+            <a href={twitter} target="_blank" rel="noopener noreferrer">
+              <FaTwitter />
+            </a>
           </SocialIcon>
         )}
         {linkedin && (
-          <SocialIcon href={linkedin} target="_blank" rel="noopener noreferrer">
-            <FaLinkedin />
+          <SocialIcon>
+            <a href={linkedin} target="_blank" rel="noopener noreferrer">
+              <FaLinkedin />
+            </a>
           </SocialIcon>
         )}
         {instagram && (
-          <SocialIcon
-            href={instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram />
+          <SocialIcon>
+            <a href={instagram} target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>
           </SocialIcon>
         )}
         {github && (
-          <SocialIcon href={github} target="_blank" rel="noopener noreferrer">
-            <FaGithub />
+          <SocialIcon>
+            <a href={github} target="_blank" rel="noopener noreferrer">
+              <FaGithub />
+            </a>
           </SocialIcon>
         )}
         {huggingface && (
-          <SocialIcon
-            href={huggingface}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SiHuggingface />
+          <SocialIcon>
+            <a href={huggingface} target="_blank" rel="noopener noreferrer">
+              <SiHuggingface />
+            </a>
+          </SocialIcon>
+        )}
+        {email && (
+          <SocialIcon>
+            <a
+              href={`mailto:${email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaEnvelope />
+            </a>
+            <Tooltip>{email}</Tooltip> {/* Afficher l'email dans le tooltip */}
           </SocialIcon>
         )}
       </IconsContainer>
