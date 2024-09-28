@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import styled from "styled-components";
+import { FaBars, FaTimes } from "react-icons/fa"; // Icônes burger et croix de FontAwesome
+import ThemeSwitcher from "../molecules/ThemeSwitcher";
+import LanguageSelector from "../molecules/LanguageSelector";
 
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,37 +12,26 @@ const Sidebar: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
-  // Styles en ligne pour grand écran (PC)
+  // Styles pour le menu latéral
   const sidebarStyle = {
     position: "fixed" as "fixed",
     top: 0,
     left: isOpen ? 0 : "-250px", // Menu caché à gauche
-    width: "250px", // Largeur fixe pour PC
+    width: "250px",
     height: "100%",
     backgroundColor: "#333",
     color: "white",
     transition: "left 0.3s ease-in-out",
-    zIndex: 999,
-    paddingTop: "60px",
-    overflowX: "hidden",
+    zIndex: 9999, // Augmentation du z-index pour s'assurer qu'il est au-dessus de tout
+    overflowX: "hidden" as "hidden",
+    paddingTop: "20px", // Un peu d'espacement en haut pour le bouton de fermeture
+    display: "flex", // Utilisation de Flexbox pour organiser le contenu
+    flexDirection: "column" as "column", // Organise les éléments de manière verticale
+    alignItems: "center" as "center", // Centre horizontalement les éléments
+    justifyContent: "flex-start" as "flex-start", // Aligne les éléments au début verticalement
   };
 
-  // Styles en ligne pour mobile (petits écrans)
-  const sidebarMobileStyle = {
-    position: "fixed" as "fixed",
-    top: 0,
-    left: isOpen ? 0 : "-100vw", // Cache le menu en dehors de l'écran sur mobile
-    width: "100vw", // Le menu prend toute la largeur de l'écran sur mobile
-    height: "100vh", // Le menu prend toute la hauteur sur mobile
-    backgroundColor: "#333",
-    color: "white",
-    transition: "left 0.3s ease-in-out",
-    zIndex: 999,
-    paddingTop: "60px",
-    display: "flex",
-    flexDirection: "column" as "column",
-  };
-
+  // Overlay pour fermer le menu en cliquant à l'extérieur
   const overlayStyle = {
     position: "fixed" as "fixed",
     top: 0,
@@ -46,45 +39,32 @@ const Sidebar: React.FC = () => {
     width: "100vw",
     height: "100vh",
     backgroundColor: "rgba(0, 0, 0, 0.5)",
-    zIndex: 998,
+    zIndex: 9998, // Juste en dessous de la sidebar
   };
 
-  const burgerBtnStyle = {
-    position: "fixed" as "fixed",
-    top: "20px",
-    left: "20px",
-    width: "40px",
-    height: "30px",
-    display: "flex",
-    flexDirection: "column" as "column",
-    justifyContent: "space-between",
-    cursor: "pointer",
-    zIndex: 1000,
+  // Icône burger : simple icône positionnée en haut à gauche (modifiable)
+  const BurgerButton = styled.button`
+    align-items: center;
+    font-size: 30px; // Taille de l'icône
+    color: ${(props) => props.theme.text};
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-top: 8px;
+    z-index: 10000; // Pour que le bouton soit au-dessus de la sidebar
+  `;
+
+  // Bouton pour fermer le sidebar
+  const closeBtnStyle = {
+    position: "absolute" as "absolute",
+    top: "20px", // Position du bouton de fermeture
+    right: "20px", // À droite
+    fontSize: "24px", // Taille de l'icône de fermeture
+    color: "white",
     background: "none",
     border: "none",
+    cursor: "pointer",
   };
-
-  const burgerLineStyle = {
-    width: "100%",
-    height: "4px",
-    backgroundColor: "black",
-    transition: "all 0.3s ease-in-out",
-  };
-
-  const firstLineStyle = (open: boolean) => ({
-    ...burgerLineStyle,
-    transform: open ? "rotate(45deg) translate(5px, 5px)" : "none",
-  });
-
-  const secondLineStyle = (open: boolean) => ({
-    ...burgerLineStyle,
-    opacity: open ? 0 : 1,
-  });
-
-  const thirdLineStyle = (open: boolean) => ({
-    ...burgerLineStyle,
-    transform: open ? "rotate(-45deg) translate(5px, -5px)" : "none",
-  });
 
   const ulStyle = {
     listStyle: "none",
@@ -102,53 +82,38 @@ const Sidebar: React.FC = () => {
     textDecoration: "none",
     padding: "10px 20px",
     display: "block",
-    fontSize: "18px", // Taille du texte par défaut
+    fontSize: "18px",
   };
 
-  // Media query pour le style conditionnel sur petits écrans
-  const mobileMediaQuery = `
-    @media (max-width: 768px) {
-      .sidebar {
-        left: ${isOpen ? 0 : "-100vw"};
-        width: 100vw;
-        height: 100vh;
-      }
-
-      .sidebar a {
-        font-size: 24px;
-      }
-    }
-  `;
+  // Style pour centrer les composants LanguageSelector et ThemeSwitcher
+  const utilityContainerStyle = {
+    margin: "20px 0", // Espacement vertical entre le LanguageSelector et ThemeSwitcher
+    display: "flex",
+    flexDirection: "column" as "column", // Aligne verticalement
+    alignItems: "center" as "center", // Centre les éléments
+    width: "100%", // Assure que les éléments prennent la largeur du parent
+  };
 
   return (
     <div>
-      {/* Applique les styles dynamiques sur mobile */}
-      <style>{`
-        @media (max-width: 768px) {
-          .sidebar {
-            left: ${isOpen ? "0" : "-100vw"};
-            width: 100vw;
-            height: 100vh;
-          }
-        }
-      `}</style>
-
       {/* Bouton Burger */}
-      <button style={burgerBtnStyle} onClick={toggleSidebar}>
-        <div style={firstLineStyle(isOpen)}></div>
-        <div style={secondLineStyle(isOpen)}></div>
-        <div style={thirdLineStyle(isOpen)}></div>
-      </button>
+      <BurgerButton onClick={toggleSidebar}>
+        <FaBars />
+      </BurgerButton>
 
       {/* Menu latéral */}
-      <div
-        className="sidebar"
-        style={
-          window.innerWidth <= 768
-            ? (sidebarMobileStyle as React.CSSProperties)
-            : (sidebarStyle as React.CSSProperties)
-        }
-      >
+      <div className="sidebar" style={sidebarStyle}>
+        {/* Bouton pour fermer la sidebar */}
+        <button style={closeBtnStyle} onClick={toggleSidebar}>
+          <FaTimes /> {/* Icône de fermeture en croix */}
+        </button>
+
+        {/* Conteneur pour les utilitaires comme LanguageSelector et ThemeSwitcher */}
+        <div style={utilityContainerStyle}>
+          <LanguageSelector />
+        </div>
+
+        {/* Liens dans la sidebar */}
         <ul style={ulStyle}>
           <li style={liStyle}>
             <a style={aStyle} href="#">

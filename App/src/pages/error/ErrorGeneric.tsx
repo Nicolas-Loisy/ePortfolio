@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import Layout from "../../components/templates/Layout";
-import imgError from "../../assets/img/LOGO_NL.jpg";
+import imgError from "../../assets/img/LOGO_NL_dark.svg";
 
 const ErrorContainer = styled.div`
   display: flex;

@@ -1,7 +1,7 @@
 {
   "language_name": "English",
   "global": {
-    "siteName": "MarkIA",
+    "siteName": "Nicolas Loisy",
     "loading": "Loading...",
     "noContent": "No content found",
     "yes": "Yes",
@@ -18,7 +18,7 @@
   "components": {
     "organisms": {
       "footer": {
-        "text": "© {{year}} MarkIA - Nicolas Loisy. All rights reserved."
+        "text": "© {{year}} ePortfolio - Nicolas Loisy. All rights reserved."
       },
       "navbar": {
         "home": "Home",

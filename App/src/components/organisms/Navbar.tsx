@@ -1,16 +1,15 @@
 // components/organisms/Navbar.tsx
 import React, { useCallback, useState, useEffect } from "react";
 import styled from "styled-components";
-import NavLink from "../atoms/NavLink";
 import Logo from "../molecules/Logo";
-import LanguageSelector from "../molecules/LanguageSelector";
-import { FaGithub } from "react-icons/fa";
+import Sidebar from "./Sidebar";
 import ThemeSwitcher from "../molecules/ThemeSwitcher";
 
+// Conteneur de la barre de navigation
 const NavbarContainer = styled.nav<{ isHidden: boolean; isFixed: boolean }>`
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between; /* Espace entre le Sidebar à gauche et le logo centré */
   padding: 0.5rem 2rem;
   background-color: ${(props) => props.theme.navBarBackground};
   color: ${(props) => props.theme.text};
@@ -28,18 +27,21 @@ const NavbarContainer = styled.nav<{ isHidden: boolean; isFixed: boolean }>`
   `}
 `;
 
-const NavLinks = styled.div`
-  margin-left: 2rem;
+// Conteneur pour le logo, centré
+const LogoContainer = styled.div`
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centre le logo horizontalement */
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  flex-grow: 1;
 `;
 
-const Actions = styled.div`
+// Conteneur pour le Sidebar (menu)
+const SidebarContainer = styled.div`
   display: flex;
+  justify-content: flex-start; /* Aligne le Sidebar à gauche */
   align-items: center;
-  gap: 1rem;
 `;
 
 interface NavbarProps {
@@ -87,30 +89,26 @@ const Navbar: React.FC<NavbarProps> = ({
   }, [handleScroll, hideOnScroll]);
 
   return (
-    <NavbarContainer isHidden={isHidden} isFixed={fixed}>
-      <Logo
-        to="/"
-        lightSrc={logoLight}
-        darkSrc={logoDark}
-        alt="logo"
-        siteName={siteName}
-      />
-      <NavLinks>
-        {links &&
-          links.map((link) => (
-            <NavLink key={link.to} to={link.to}>
-              {link.label}
-            </NavLink>
-          ))}
-      </NavLinks>
-      <Actions>
-        <LanguageSelector />
-        <NavLink to="https://github.com/Nicolas-Loisy">
-          <FaGithub size={24} />
-        </NavLink>
+    <>
+      <NavbarContainer isHidden={isHidden} isFixed={fixed}>
+        {/* Sidebar à gauche */}
+        <SidebarContainer>
+          <Sidebar />
+        </SidebarContainer>
+
+        {/* Logo centré */}
+        <LogoContainer>
+          <Logo
+            to="/"
+            lightSrc={logoLight}
+            darkSrc={logoDark}
+            alt="logo"
+            siteName={siteName}
+          />
+        </LogoContainer>
         <ThemeSwitcher />
-      </Actions>
-    </NavbarContainer>
+      </NavbarContainer>
+    </>
   );
 };
 

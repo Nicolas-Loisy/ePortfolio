@@ -1,12 +1,11 @@
 // components\templates\Layout.tsx
 
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Navbar from "../organisms/Navbar";
 import Footer from "../organisms/Footer";
-import logoDark from "../../assets/img/LOGO_NL.jpg";
-import logoLight from "../../assets/img/LOGO_NL.jpg";
-import Sidebar from "../organisms/Sidebar";
+import logoDark from "../../assets/img/LOGO_NL_dark.svg";
+import logoLight from "../../assets/img/LOGO_NL_white.svg";
 import { useTranslation } from "react-i18next";
 
 const LayoutContainer = styled.div`
@@ -31,11 +30,7 @@ interface LayoutProps {
   displaySidebar?: boolean;
 }
 
-const Layout: React.FC<LayoutProps> = ({
-  children,
-  title,
-  displaySidebar = false,
-}) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { t } = useTranslation();
 
   return (
@@ -48,8 +43,6 @@ const Layout: React.FC<LayoutProps> = ({
         hideOnScroll={false}
       />
       <LayoutContainer>
-        {displaySidebar && <Sidebar />}
-
         <MainContainer>{children}</MainContainer>
       </LayoutContainer>
       <Footer />
