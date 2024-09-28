@@ -27,7 +27,7 @@ const TextContainer = styled.div`
   margin-right: 2rem; // Espacement entre le texte et l'image
   display: flex;
   flex-direction: column;
-  align-items: flex-start; // Aligne le texte à droite dans la colonne
+  align-items: flex-start; // Aligne le texte à gauche dans la colonne
   width: 40%;
 
   @media (max-width: 768px) {
@@ -41,6 +41,10 @@ const Name = styled.h2`
   font-size: 2rem;
   color: ${(props) => props.theme.text};
   margin-bottom: 0.5rem;
+  //   padding-bottom: 0.5rem;
+  //   position: relative; // Position relative pour la ligne en dessous
+  //   display: inline-block; // Permet à la ligne de s'ajuster au texte
+  //   border-bottom: 5px solid #f9d342; // Ligne jaune sous le nom
 `;
 
 // Style pour le titre

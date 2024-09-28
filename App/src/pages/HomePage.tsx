@@ -17,14 +17,14 @@ const HomePage: React.FC = () => {
 
   return (
     <Layout title={t("homepage.title")} displaySidebar>
-      <Banner text="ePortfolio" height="100px" />
+      {/* <Banner text="ePortfolio" height="100px" />
       <MainImage
         imgLight={bannerImageDark}
         imgDark={bannerImageLight}
         alt="Description of image"
         margin="10px 0"
         width="10%" // Largeur ajustée pour l'image
-      />
+      /> */}
       <ProfileCard
         imageSrc={pp}
         name="Nicolas Loisy"
