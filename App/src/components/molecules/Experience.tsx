@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
+import { FaBriefcase } from "react-icons/fa";
+
 // Conteneur principal pour la timeline
 const TimelineContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center; // Centre tous les éléments de la timeline
-  //   padding: 2rem;
   box-sizing: border-box;
   max-width: 1200px; // Largeur maximale des cartes
   width: 100%; // Prend toute la largeur disponible
@@ -79,14 +80,28 @@ const Bar = styled.div`
   position: absolute;
 `;
 
-// Conteneur pour le contenu de l'expérience (titre et description) à droite
+// Conteneur pour le contenu de l'expérience (titre, description, et image)
 const ContentContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row; // Place l'image et le texte côte à côte
+  justify-content: flex-start;
   padding-left: 1rem;
   width: 300px;
   text-align: left; // Assure que le texte reste aligné à gauche
+`;
+
+// Conteneur pour l'image à gauche du texte
+const ImageContainer = styled.div`
+  margin-right: 1rem; // Espacement entre l'image et le texte
+  margin-top: 1rem; // Espacement entre l'image et le texte
+`;
+
+// Image pour chaque expérience
+const ExperienceImage = styled.img`
+  width: 50px; // Taille de l'image
+  height: 50px;
+  object-fit: cover; // Assure que l'image garde ses proportions
+  border-radius: 50%;
 `;
 
 // Titre de l'expérience
@@ -113,12 +128,26 @@ const SectionTitle = styled.h2`
   width: fit-content; // La largeur du titre s'adapte à son contenu
 `;
 
+const Icon = styled.div`
+  height: 50px; // Taille de l'icône
+  width: 50px; // Taille de l'icône
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem; // Taille de l'icône
+  margin-bottom: 0.5rem; // Espace entre l'icône et le titre
+  color: ${(props) => props.theme.text}; // Couleur de l'icône
+  border: 1px solid ${(props) => props.theme.borderColor}; // Bordure de l'icône
+  border-radius: 50%; // Bordure ronde
+`;
+
 // Composant Expérience
 interface ExperienceProps {
   experiences: {
     date: string;
     title: string;
     description: string;
+    imageUrl?: string; // Ajout de l'image optionnelle
   }[];
   title: string;
 }
@@ -143,10 +172,24 @@ const Experience: React.FC<ExperienceProps> = ({ experiences, title }) => {
             </PointAndBarContainer>
           </LeftContainer>
 
-          {/* Contenu de l'expérience à droite */}
+          {/* Contenu de l'expérience à droite avec image */}
           <ContentContainer>
-            <ExperienceTitle>{exp.title}</ExperienceTitle>
-            <ExperienceDescription>{exp.description}</ExperienceDescription>
+            <div>
+              <ExperienceTitle>{exp.title}</ExperienceTitle>
+              <ExperienceDescription>{exp.description}</ExperienceDescription>
+            </div>
+            {/* Affichage de l'image si une image est fournie */}
+            {exp.imageUrl ? (
+              <ImageContainer>
+                <ExperienceImage src={exp.imageUrl} alt={exp.title} />
+              </ImageContainer>
+            ) : (
+              <ImageContainer>
+                <Icon>
+                  <FaBriefcase />
+                </Icon>
+              </ImageContainer>
+            )}
           </ContentContainer>
         </TimelineItem>
       ))}

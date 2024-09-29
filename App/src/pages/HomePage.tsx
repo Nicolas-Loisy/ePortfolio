@@ -9,6 +9,8 @@ import About from "../components/molecules/About";
 import Skills from "../components/molecules/Skills";
 import Experience from "../components/molecules/Experience";
 
+import eurelisLogo from "../assets/img/eurelis_logo.jpg";
+
 const HomePage: React.FC = () => {
   const { t } = useTranslation();
 
@@ -18,6 +20,7 @@ const HomePage: React.FC = () => {
       date: "Jan 2022 - Présent",
       title: "Développeur Full Stack",
       description: "Travail sur des projets web avec React et Symfony.",
+      imageUrl: eurelisLogo,
     },
     {
       date: "Mar 2020 - Déc 2021",
