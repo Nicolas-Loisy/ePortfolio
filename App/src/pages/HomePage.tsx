@@ -8,13 +8,16 @@ import SocialBar from "../components/molecules/SocialBar";
 import About from "../components/molecules/About";
 import Skills from "../components/molecules/Skills";
 import Experience from "../components/molecules/Experience";
+import Diplome from "../components/molecules/Diplome";
 
 import eurelisLogo from "../assets/img/eurelis_logo.jpg";
+import LogoUniversiteParisCite from "../assets/img/LogoUniversiteParisCite.png";
+import LogoIutMontreuil from "../assets/img/logo_iut_montreuil.png";
+import LogoDiderot from "../assets/img/logo_diderot.png";
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();
 
-  // Exemples de données à passer au composant Experience
   const experiencesData = [
     {
       date: "Jan 2022 - Présent",
@@ -32,6 +35,34 @@ const HomePage: React.FC = () => {
       date: "Sep 2018 - Fév 2020",
       title: "Stagiaire Développeur",
       description: "Participation au développement d'applications internes.",
+    },
+  ];
+
+  const diplomesData = [
+    {
+      date: "Jan 2022 - Présent",
+      title: "Master 2 MIAGE - Université Paris Cité (Descartes)",
+      description: "Travail sur des projets web avec React et Symfony.",
+      imageUrl: LogoUniversiteParisCite,
+    },
+    {
+      date: "Mar 2020 - Déc 2021",
+      title: "L3 MIAGE - IUT Paris Cité (Descartes)",
+      description:
+        "Conception de solutions backend robustes avec PHP et MySQL.",
+      imageUrl: LogoUniversiteParisCite,
+    },
+    {
+      date: "Sep 2018 - Fév 2020",
+      title: "DUT Informatique - IUT de Montreuil",
+      description: "Participation au développement d'applications internes.",
+      imageUrl: LogoIutMontreuil,
+    },
+    {
+      date: "Sep 2018 - Fév 2020",
+      title: "Bac Scientifique",
+      description: "Participation au développement d'applications internes.",
+      imageUrl: LogoDiderot,
     },
   ];
 
@@ -66,6 +97,7 @@ const HomePage: React.FC = () => {
       <Skills title="Compétences"></Skills>
 
       <Experience title="Experiences" experiences={experiencesData} />
+      <Diplome title="Diplômes" diplomes={diplomesData} />
     </Layout>
   );
 };
