@@ -7,9 +7,30 @@ import pp from "../assets/img/pp_nl.jpg";
 import SocialBar from "../components/molecules/SocialBar";
 import About from "../components/molecules/About";
 import Skills from "../components/molecules/Skills";
+import Experience from "../components/molecules/Experience";
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();
+
+  // Exemples de données à passer au composant Experience
+  const experiencesData = [
+    {
+      date: "Jan 2022 - Présent",
+      title: "Développeur Full Stack",
+      description: "Travail sur des projets web avec React et Symfony.",
+    },
+    {
+      date: "Mar 2020 - Déc 2021",
+      title: "Ingénieur Logiciel",
+      description:
+        "Conception de solutions backend robustes avec PHP et MySQL.",
+    },
+    {
+      date: "Sep 2018 - Fév 2020",
+      title: "Stagiaire Développeur",
+      description: "Participation au développement d'applications internes.",
+    },
+  ];
 
   return (
     <Layout title={t("homepage.title")} displaySidebar>
@@ -40,6 +61,8 @@ const HomePage: React.FC = () => {
       />
 
       <Skills title="Compétences"></Skills>
+
+      <Experience title="Experiences" experiences={experiencesData} />
     </Layout>
   );
 };
