@@ -14,6 +14,7 @@ import eurelisLogo from "../assets/img/eurelis_logo.jpg";
 import LogoUniversiteParisCite from "../assets/img/LogoUniversiteParisCite.png";
 import LogoIutMontreuil from "../assets/img/logo_iut_montreuil.png";
 import LogoDiderot from "../assets/img/logo_diderot.png";
+import Certification from "../components/molecules/Certification";
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();
@@ -66,6 +67,30 @@ const HomePage: React.FC = () => {
     },
   ];
 
+  const certifications = [
+    {
+      title: "Certified JavaScript Developer",
+      description:
+        "A comprehensive certification covering advanced JavaScript topics.",
+      year: "2022",
+      link: "https://www.example.com/certification1",
+    },
+    {
+      title: "React Expert Certification",
+      description:
+        "Certification demonstrating mastery of React.js development.",
+      year: "2021",
+      link: "https://www.example.com/certification2",
+    },
+    {
+      title: "Full Stack Web Developer",
+      description:
+        "An extensive certification for full stack web development skills.",
+      year: "2020",
+      link: "https://www.example.com/certification3",
+    },
+  ];
+
   return (
     <Layout title={t("homepage.title")} displaySidebar>
       {/* <Banner text="ePortfolio" height="100px" />
@@ -88,16 +113,14 @@ const HomePage: React.FC = () => {
         linkedin="https://www.linkedin.com/in/nicolas-loisy/"
         email="nicolas.loisy@yahoo.fr"
       />
-
       <About
         title="À propos de moi"
         description="Je suis développeur web passionné par l'informatique dans son ensemble. Ma curiosité me pousse à explorer divers domaines tels que la technologie, l'intelligence artificielle et l'électronique. J'aime trouver des solutions à des problèmes techniques et relever des défis.<br /><br /> Chaque jour, j'ai la chance de travailler dans un environnement stimulant où je peux appliquer mes compétences tout en apprenant constamment. Mes passions pour l'informatique et la technologie me permettent de prendre du plaisir à créer et à innover, tout en m'enrichissant en connaissances et en expériences. Mon objectif est de continuer à évoluer dans ce domaine fascinant."
       />
-
       <Skills title="Compétences"></Skills>
-
       <Experience title="Experiences" experiences={experiencesData} />
       <Diplome title="Diplômes" diplomes={diplomesData} />
+      <Certification title="Certifications" certifications={certifications} />
     </Layout>
   );
 };
