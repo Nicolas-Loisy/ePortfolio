@@ -3,18 +3,22 @@ import Layout from "../components/templates/Layout";
 import InfoSection from "../components/organisms/InfoSection";
 import { useTranslation } from "react-i18next";
 import ProfileCard from "../components/molecules/ProfileCard";
-import pp from "../assets/img/pp_nl.jpg";
-import SocialBar from "../components/molecules/SocialBar";
 import About from "../components/molecules/About";
-import Skills from "../components/molecules/Skills";
-import Experience from "../components/molecules/Experience";
+import Certification from "../components/molecules/Certification";
 import Diplome from "../components/molecules/Diplome";
+import Experience from "../components/molecules/Experience";
+import Skills from "../components/molecules/Skills";
+import SocialBar from "../components/molecules/SocialBar";
 
+import pp from "../assets/img/pp_nl.jpg";
 import eurelisLogo from "../assets/img/eurelis_logo.jpg";
 import LogoUniversiteParisCite from "../assets/img/LogoUniversiteParisCite.png";
 import LogoIutMontreuil from "../assets/img/logo_iut_montreuil.png";
 import LogoDiderot from "../assets/img/logo_diderot.png";
-import Certification from "../components/molecules/Certification";
+
+import certif_ia from "../assets/files/nl_ia.jpg";
+import certif_js from "../assets/files/nl_js.jpg";
+import certif_py from "../assets/files/nl_py.jpg";
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();
@@ -73,21 +77,21 @@ const HomePage: React.FC = () => {
       description:
         "A comprehensive certification covering advanced JavaScript topics.",
       year: "2022",
-      link: "https://www.example.com/certification1",
+      link: certif_js,
     },
     {
       title: "React Expert Certification",
       description:
         "Certification demonstrating mastery of React.js development.",
       year: "2021",
-      link: "https://www.example.com/certification2",
+      link: certif_ia,
     },
     {
       title: "Full Stack Web Developer",
       description:
         "An extensive certification for full stack web development skills.",
       year: "2020",
-      link: "https://www.example.com/certification3",
+      link: certif_py,
     },
   ];
 

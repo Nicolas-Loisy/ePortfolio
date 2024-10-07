@@ -83,19 +83,21 @@ const CertificationLinkContainer = styled.div`
   margin-left: auto;
 `;
 
-// Lien pour plus d'informations sur la certification
 const CertificationLink = styled.a`
   font-size: 1rem;
-  color: ${(props) => props.theme.link || "#fff"};
-  background-color: ${(props) => props.theme.button || "#0066cc"};
+  color: ${(props) => props.theme.text || "#e3e3e3"};
+  background-color: transparent;
+  border: 2px solid ${(props) => props.theme.border || "#f9d342"};
   padding: 0.5rem 1rem;
-  text-decoration: none;
   font-weight: bold;
   border-radius: 4px;
+  // border-radius: 0px;
   text-align: center;
+  text-decoration: none; // Empêche le soulignement
 
   &:hover {
-    background-color: ${(props) => props.theme.buttonHover || "#005bb5"};
+    background-color: ${(props) => props.theme.border || "#f9d342"};
+    color: #fff; // Couleur du texte au hover (blanc)
   }
 `;
 
@@ -141,7 +143,6 @@ const Certification: React.FC<CertificationProps> = ({
         <div key={index}>
           <CertificationItem>
             <CertificationContent>
-              {/* Conteneur pour le titre, l'année et la description */}
               <CertificationDetails>
                 <CertificationTitle>{cert.title}</CertificationTitle>
                 <CertificationInfo>
@@ -152,12 +153,12 @@ const Certification: React.FC<CertificationProps> = ({
                 </CertificationInfo>
               </CertificationDetails>
 
-              {/* Conteneur pour le lien */}
+              {/* Lien vers la certification qui s'ouvre dans une nouvelle fenêtre */}
               <CertificationLinkContainer>
                 <CertificationLink
                   href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target="_blank" // Ouvre le lien dans une nouvelle fenêtre ou onglet
+                  rel="noopener noreferrer" // Sécurité pour les liens externes
                 >
                   Voir la certification
                 </CertificationLink>
