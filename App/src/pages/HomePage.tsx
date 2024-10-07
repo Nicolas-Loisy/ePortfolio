@@ -19,6 +19,7 @@ import LogoDiderot from "../assets/img/logo_diderot.png";
 import certif_ia from "../assets/files/nl_ia.jpg";
 import certif_js from "../assets/files/nl_js.jpg";
 import certif_py from "../assets/files/nl_py.jpg";
+import Terminal from "../components/molecules/Terminal";
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();
@@ -95,6 +96,21 @@ const HomePage: React.FC = () => {
     },
   ];
 
+  const texts = [
+    "Hello, world!",
+    // "This is a terminal simulation.",
+    // "React is awesome!",
+    // "Let's code more.",
+    "Intégrateur d'IA",
+    "Développeur PHP",
+    "Développeur Symfony",
+    "We love Eurelis! ♡",
+    "We ♡ Eurelis!",
+    "Formation : MIAGE",
+    "La Documentation ma passion!",
+    "MarkIA = MarkDown + IA",
+  ];
+
   return (
     <Layout title={t("homepage.title")} displaySidebar>
       {/* <Banner text="ePortfolio" height="100px" />
@@ -121,6 +137,7 @@ const HomePage: React.FC = () => {
         title="À propos de moi"
         description="Je suis développeur web passionné par l'informatique dans son ensemble. Ma curiosité me pousse à explorer divers domaines tels que la technologie, l'intelligence artificielle et l'électronique. J'aime trouver des solutions à des problèmes techniques et relever des défis.<br /><br /> Chaque jour, j'ai la chance de travailler dans un environnement stimulant où je peux appliquer mes compétences tout en apprenant constamment. Mes passions pour l'informatique et la technologie me permettent de prendre du plaisir à créer et à innover, tout en m'enrichissant en connaissances et en expériences. Mon objectif est de continuer à évoluer dans ce domaine fascinant."
       />
+      <Terminal texts={texts} />
       <Skills title="Compétences"></Skills>
       <Experience title="Experiences" experiences={experiencesData} />
       <Diplome title="Diplômes" diplomes={diplomesData} />
