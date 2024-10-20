@@ -13,7 +13,6 @@ import SocialBar from "../components/molecules/SocialBar";
 import Frise from "../components/molecules/Frise";
 import TerminalLite from "../components/molecules/TerminalLite";
 import Projects from "../components/molecules/Projects";
-import Terminal from "../components/molecules/Terminal";
 
 import pp from "../assets/img/pp_nl.jpg";
 import eurelisLogo from "../assets/img/eurelis_logo.jpg";
