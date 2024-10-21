@@ -87,7 +87,7 @@ const CertificationLink = styled.a`
   font-size: 1rem;
   color: ${(props) => props.theme.text || "#e3e3e3"};
   background-color: transparent;
-  border: 2px solid ${(props) => props.theme.border || "#f9d342"};
+  border: 2px solid ${(props) => props.theme.titleBorder || "#f9d342"};
   padding: 0.5rem 1rem;
   font-weight: bold;
   border-radius: 4px;
@@ -96,7 +96,7 @@ const CertificationLink = styled.a`
   text-decoration: none; // Empêche le soulignement
 
   &:hover {
-    background-color: ${(props) => props.theme.border || "#f9d342"};
+    background-color: ${(props) => props.theme.titleBorder || "#f9d342"};
     color: #fff; // Couleur du texte au hover (blanc)
   }
 `;

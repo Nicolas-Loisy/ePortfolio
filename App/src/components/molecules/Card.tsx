@@ -11,7 +11,7 @@ const CardContainer = styled.div`
   padding: 1.5rem;
   //   background-color: ${(props) => props.theme.cardBackground || "#ffffff"};
   background-color: "#9A1010FF";
-  border: 2px solid ${(props) => props.theme.border || "#f9d342"};
+  border: 2px solid ${(props) => props.theme.titleBorder || "#f9d342"};
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 `;
@@ -37,7 +37,7 @@ const CardImage = styled.img`
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
-  border: 1px solid ${(props) => props.theme.border || "#f9d342"};
+  border: 1px solid ${(props) => props.theme.titleBorder || "#f9d342"};
 `;
 
 // Titre de la carte
@@ -87,7 +87,7 @@ const TechLogo = styled.img`
   height: 40px;
   object-fit: contain;
   margin-right: 0.5rem;
-  border: 1px solid ${(props) => props.theme.border || "#f9d342"};
+  border: 1px solid ${(props) => props.theme.titleBorder || "#f9d342"};
   border-radius: 4px;
   background-color: #fff;
   padding: 0.2rem;
@@ -102,13 +102,13 @@ const DemoButton = styled.a`
   text-align: center;
   font-weight: bold;
   border-radius: 4px;
-  border: 2px solid ${(props) => props.theme.border || "#f9d342"};
+  border: 2px solid ${(props) => props.theme.titleBorder || "#f9d342"};
   text-decoration: none;
   margin: 0 auto; // Centré horizontalement
   transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover {
-    background-color: ${(props) => props.theme.border || "#f9d342"};
+    background-color: ${(props) => props.theme.titleBorder || "#f9d342"};
     color: #fff;
   }
 `;
