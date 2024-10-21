@@ -9,11 +9,14 @@ const CardContainer = styled.div`
   max-width: 800px;
   margin: 1rem auto;
   padding: 1.5rem;
-  //   background-color: ${(props) => props.theme.cardBackground || "#ffffff"};
-  background-color: "#9A1010FF";
   border: 2px solid ${(props) => props.theme.titleBorder || "#f9d342"};
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; // Assurer que le padding ne dépasse pas la largeur totale
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 // Conteneur pour les informations (à gauche) et l'image (à droite)
@@ -22,22 +25,39 @@ const CardContent = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 1rem;
+  flex-wrap: wrap; // Permet au contenu de se réorganiser si nécessaire
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 // Section de gauche avec le titre, sous-titre, date, description
 const CardText = styled.div`
   flex: 1;
   padding-right: 1rem;
+
+  @media (max-width: 768px) {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
 `;
 
 // Section de droite pour l'image
 const CardImage = styled.img`
   flex-shrink: 0;
-  width: 200px;
-  height: 150px;
+  width: 60%; // Ajustement : l'image prend toute la largeur sur petit écran
+  max-width: 200px; // Largeur max pour les écrans larges
+  height: auto; // Ajustement dynamique de la hauteur
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid ${(props) => props.theme.titleBorder || "#f9d342"};
+  align-self: center; // Aligner horizontalement au centre
+
+  @media (max-width: 768px) {
+    max-width: 100%; // S'assurer que l'image ne dépasse pas la largeur de l'écran
+    height: auto;
+  }
 `;
 
 // Titre de la carte
@@ -47,6 +67,10 @@ const CardTitle = styled.h3`
   margin: 0;
   margin-bottom: 0.5rem;
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+  }
 `;
 
 // Sous-titre de la carte
@@ -56,6 +80,10 @@ const CardSubtitle = styled.h4`
   margin: 0;
   margin-bottom: 0.5rem;
   font-weight: normal;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
 `;
 
 // Date de la carte
@@ -64,6 +92,10 @@ const CardDate = styled.p`
   color: ${(props) => props.theme.year || "#999999"};
   margin: 0;
   margin-bottom: 0.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+  }
 `;
 
 // Description de la carte
@@ -71,6 +103,10 @@ const CardDescription = styled.p`
   font-size: 1rem;
   color: ${(props) => props.theme.text || "#666666"};
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+  }
 `;
 
 // Conteneur pour les logos des technologies
@@ -79,6 +115,11 @@ const TechLogoContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 // Logo individuel de technologie
@@ -91,6 +132,10 @@ const TechLogo = styled.img`
   border-radius: 4px;
   background-color: #fff;
   padding: 0.2rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 0.5rem;
+  }
 `;
 
 // Bouton de démo
@@ -104,12 +149,17 @@ const DemoButton = styled.a`
   border-radius: 4px;
   border: 2px solid ${(props) => props.theme.titleBorder || "#f9d342"};
   text-decoration: none;
-  margin: 0 auto; // Centré horizontalement
+  margin: 0 auto;
   transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover {
     background-color: ${(props) => props.theme.titleBorder || "#f9d342"};
     color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 `;
 

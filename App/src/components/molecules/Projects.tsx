@@ -4,24 +4,33 @@ import Card from "./Card"; // Import du composant Card
 
 // Conteneur principal pour la liste des projets
 const ProjectsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem; // Ajoute un espacement entre les cartes
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 // Titre de la section
 const SectionTitle = styled.h2`
   font-size: 2.5rem;
-  color: ${(props) => props.theme.text || "#333"};
-  margin-bottom: 1rem;
+  color: ${(props) => props.theme.text};
+  margin-bottom: 1.5rem;
   border-bottom: 5px solid ${(props) => props.theme.titleBorder || "#f9d342"};
   padding-bottom: 0.5rem;
   align-self: flex-start;
   width: fit-content;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 // Interface pour les données des projets
