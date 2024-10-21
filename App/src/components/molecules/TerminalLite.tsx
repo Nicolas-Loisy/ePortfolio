@@ -18,7 +18,6 @@ const TerminalContainer = styled.div`
   // color: #0f0;
   //   color: #f9d342;
   font-weight: bold;
-  font-size: 1.5rem;
   font-family: "Courier New", Courier, monospace;
   padding: 1rem;
   border-radius: 5px;

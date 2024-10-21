@@ -35,6 +35,80 @@ const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar-track {
     background-color: ${(props) => props.theme.scrollbarTrack};
   }
+
+  @media (min-width: 768px) {
+    body {
+      padding: 0 10px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+    
+    span {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding: 0 10px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    span {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.75rem;
+    }
+  }
 `;
 
 export default GlobalStyle;

@@ -11,11 +11,19 @@ const LogoLink = styled(NavLink)`
   font-weight: bold;
   color: inherit;
   text-decoration: none;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const LogoImage = styled.img`
   height: 40px;
   margin-right: 0.5rem;
+
+  @media (max-width: 768px) {
+    height: 30px;
+  }
 `;
 
 interface LogoProps {

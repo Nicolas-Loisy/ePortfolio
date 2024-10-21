@@ -33,12 +33,12 @@ const TextContainer = styled.div`
   @media (max-width: 768px) {
     margin-right: 0; // Annuler la marge sur mobile
     align-items: center; // Centre le texte sur mobile
+    width: 100%;
   }
 `;
 
 // Style pour le nom
 const Name = styled.h2`
-  font-size: 2rem;
   color: ${(props) => props.theme.text};
   margin-bottom: 0.5rem;
   //   padding-bottom: 0.5rem;
@@ -49,7 +49,6 @@ const Name = styled.h2`
 
 // Style pour le titre
 const Title = styled.h3`
-  font-size: 1.5rem;
   color: ${(props) => props.theme.secondaryText};
   font-weight: 400;
   margin-bottom: 1.5rem;
@@ -77,6 +76,8 @@ const ProfileImage = styled.img`
 
   @media (max-width: 768px) {
     margin-bottom: 1.5rem; // Ajouter un espacement en dessous de l'image sur mobile
+    width: 150px;
+    height: 150px;
   }
 `;
 

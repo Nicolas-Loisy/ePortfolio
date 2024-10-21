@@ -36,6 +36,7 @@ export const lightTheme = {
   bannerBackground: "#f5f5f5",
 
   titleBorder: '#f9d342',
+  border: '#f9d342',
 };
 
 export const darkTheme = {
@@ -76,4 +77,5 @@ export const darkTheme = {
   bannerBackground: "#2c2c2c",
 
   titleBorder: '#f9d342',
+  border: '#f9d342',
 };

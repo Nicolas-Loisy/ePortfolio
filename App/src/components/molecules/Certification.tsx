@@ -111,7 +111,6 @@ const Separator = styled.hr`
 
 // Style pour le titre de la section
 const SectionTitle = styled.h2`
-  font-size: 2.5rem;
   color: ${(props) => props.theme.text};
   margin-bottom: 1rem;
   border-bottom: 5px solid #f9d342;

@@ -7,26 +7,37 @@ import { FaGraduationCap } from "react-icons/fa";
 const TimelineContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center; // Centre tous les éléments de la timeline
+  align-items: center;
   box-sizing: border-box;
   max-width: 1200px; // Largeur maximale des cartes
-  width: 100%; // Prend toute la largeur disponible
+  width: 100%;
   margin: 0 auto; // Centre horizontalement
+  padding: 0 1rem; // Ajouter du padding pour éviter que le contenu touche les bords
+
+  @media (max-width: 768px) {
+    padding: 0 0.5rem;
+  }
 `;
 
 // Conserve un conteneur pour aligner le titre à gauche
 const TitleContainer = styled.div`
-  align-self: flex-start; // Aligne le titre à gauche
+  align-self: flex-start;
+  width: 100%;
 `;
 
 // Conteneur pour chaque élément de la timeline
 const TimelineItem = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: stretch; // Assure que les deux colonnes ont la même hauteur
+  align-items: stretch;
   margin-bottom: 2rem;
-  justify-content: center; // Centre les items horizontalement
   width: 100%;
+  justify-content: space-between; // Assure que les éléments sont bien répartis sur toute la largeur
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 // Conteneur gauche pour la date et le point/barre
@@ -35,6 +46,16 @@ const LeftContainer = styled.div`
   flex-direction: row;
   align-items: flex-start;
   margin-right: 20px;
+  flex-basis: 180px; // Largeur fixe pour la date et le point/barre
+  flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    flex-basis: auto;
+    width: 100%; // Prend la largeur complète sur petit écran
+    justify-content: center;
+  }
 `;
 
 // Conteneur pour la date (à gauche du point)
@@ -45,10 +66,16 @@ const DateContainer = styled.div`
   text-align: right;
   width: 180px;
   height: 100%;
-  padding-right: 10px; // Espacement entre la date et le point
+  padding-right: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: top; // Centre verticalement la date
+  justify-content: top;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    padding-right: 0;
+    width: auto;
+  }
 `;
 
 // Conteneur pour le point et la barre (à droite de la date)
@@ -59,16 +86,20 @@ const PointAndBarContainer = styled.div`
   position: relative;
   margin-top: 5px;
   height: 100%;
+
+  @media (max-width: 768px) {
+    display: none; // Cacher sur les petits écrans
+  }
 `;
 
 // Point jaune sur la frise pour chaque expérience
 const TimelinePoint = styled.div`
   width: 15px;
   height: 15px;
-  background-color: #f9d342; // Couleur jaune pour le point
+  background-color: #f9d342;
   border-radius: 50%;
   z-index: 1;
-  margin-bottom: 10px; // Espacement entre le point et la barre
+  margin-bottom: 10px;
 `;
 
 // Barre qui relie chaque point (sous le point jaune)
@@ -83,29 +114,45 @@ const Bar = styled.div`
 // Conteneur pour le contenu de l'expérience (titre, description, et image)
 const ContentContainer = styled.div`
   display: flex;
-  flex-direction: row; // Place l'image et le texte côte à côte
+  flex-direction: row;
   justify-content: flex-start;
   padding-left: 1rem;
-  width: 500px;
-  text-align: left; // Assure que le texte reste aligné à gauche
+  flex-grow: 1; // Le contenu grandit pour occuper l'espace disponible
+  text-align: left;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 0;
+    align-items: center;
+  }
 `;
 
 // Conteneur pour l'image à gauche du texte
 const ImageContainer = styled.div`
-  margin-right: 1rem; // Espacement entre l'image et le texte
-  margin-top: 1rem; // Espacement entre l'image et le texte
+  margin-right: 1rem;
+  margin-top: 1rem;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
 `;
 
 // Image pour chaque expérience
 const DiplomeImage = styled.img`
-  width: 70px; // Taille de l'image
+  width: 70px;
   height: 70px;
-  object-fit: cover; // Assure que l'image garde ses proportions
+  object-fit: cover;
   border-radius: 50%;
+
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 const DiplomeContainer = styled.div`
-  width: 500px;
+  width: 100%;
 `;
 
 // Titre de l'expérience
@@ -124,25 +171,46 @@ const DiplomeDescription = styled.p`
 
 // Style pour le titre de la section
 const SectionTitle = styled.h2`
-  font-size: 2.5rem; // Taille du titre
-  color: ${(props) => props.theme.text}; // Couleur du texte
-  margin-bottom: 1rem; // Espacement en bas du titre
-  border-bottom: 5px solid #f9d342; // Ligne sous le titre
-  padding-bottom: 0.5rem; // Espacement intérieur
-  width: fit-content; // La largeur du titre s'adapte à son contenu
+  color: ${(props) => props.theme.text};
+  margin-bottom: 1rem;
+  border-bottom: 5px solid #f9d342;
+  padding-bottom: 0.5rem;
+  width: fit-content;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const Icon = styled.div`
-  height: 50px; // Taille de l'icône
-  width: 50px; // Taille de l'icône
+  height: 50px;
+  width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem; // Taille de l'icône
-  margin-bottom: 0.5rem; // Espace entre l'icône et le titre
-  color: ${(props) => props.theme.text}; // Couleur de l'icône
-  border: 1px solid ${(props) => props.theme.borderColor}; // Bordure de l'icône
-  border-radius: 50%; // Bordure ronde
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: ${(props) => props.theme.text};
+  border: 1px solid ${(props) => props.theme.borderColor};
+  border-radius: 50%;
+
+  @media (max-width: 768px) {
+    height: 40px;
+    width: 40px;
+    font-size: 1.8rem;
+  }
+`;
+
+// Séparateur horizontal pour mobile
+const HorizontalSeparator = styled.hr`
+  width: 100%;
+  border: none;
+  border-top: 2px solid ${(props) => props.theme.borderColor || "#f9d342"};
+  margin: 1rem 0;
+
+  @media (min-width: 769px) {
+    display: none; // Cacher sur les grands écrans
+  }
 `;
 
 // Composant Expérience
@@ -151,7 +219,7 @@ interface DiplomeProps {
     date: string;
     title: string;
     description: string;
-    imageUrl?: string; // Ajout de l'image optionnelle
+    imageUrl?: string;
   }[];
   title: string;
 }
@@ -165,37 +233,41 @@ const Diplome: React.FC<DiplomeProps> = ({ diplomes, title }) => {
       </TitleContainer>
 
       {diplomes.map((exp, index) => (
-        <TimelineItem key={index}>
-          {/* Colonne gauche avec la date et le point/barre */}
-          <LeftContainer>
-            <DateContainer>{exp.date}</DateContainer>
-            <PointAndBarContainer>
-              <TimelinePoint />
-              {/* Affiche la barre uniquement si ce n'est pas le dernier élément */}
-              {index < diplomes.length - 1 && <Bar />}
-            </PointAndBarContainer>
-          </LeftContainer>
+        <React.Fragment key={index}>
+          <TimelineItem>
+            {/* Colonne gauche avec la date et le point/barre */}
+            <LeftContainer>
+              <DateContainer>{exp.date}</DateContainer>
+              <PointAndBarContainer>
+                <TimelinePoint />
+                {/* Affiche la barre uniquement si ce n'est pas le dernier élément */}
+                {index < diplomes.length - 1 && <Bar />}
+              </PointAndBarContainer>
+            </LeftContainer>
 
-          {/* Contenu de l'expérience à droite avec image */}
-          <ContentContainer>
-            <DiplomeContainer>
-              <DiplomeTitle>{exp.title}</DiplomeTitle>
-              <DiplomeDescription>{exp.description}</DiplomeDescription>
-            </DiplomeContainer>
-            {/* Affichage de l'image si une image est fournie */}
-            {exp.imageUrl ? (
-              <ImageContainer>
-                <DiplomeImage src={exp.imageUrl} alt={exp.title} />
-              </ImageContainer>
-            ) : (
-              <ImageContainer>
-                <Icon>
-                  <FaGraduationCap />
-                </Icon>
-              </ImageContainer>
-            )}
-          </ContentContainer>
-        </TimelineItem>
+            {/* Contenu de l'expérience à droite avec image */}
+            <ContentContainer>
+              <DiplomeContainer>
+                <DiplomeTitle>{exp.title}</DiplomeTitle>
+                <DiplomeDescription>{exp.description}</DiplomeDescription>
+              </DiplomeContainer>
+              {/* Affichage de l'image si une image est fournie */}
+              {exp.imageUrl ? (
+                <ImageContainer>
+                  <DiplomeImage src={exp.imageUrl} alt={exp.title} />
+                </ImageContainer>
+              ) : (
+                <ImageContainer>
+                  <Icon>
+                    <FaGraduationCap />
+                  </Icon>
+                </ImageContainer>
+              )}
+            </ContentContainer>
+          </TimelineItem>
+          {/* Ajoute un séparateur horizontal pour les petits écrans */}
+          {index < diplomes.length - 1 && <HorizontalSeparator />}
+        </React.Fragment>
       ))}
     </TimelineContainer>
   );

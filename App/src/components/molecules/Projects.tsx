@@ -19,7 +19,6 @@ const ProjectsContainer = styled.div`
 
 // Titre de la section
 const SectionTitle = styled.h2`
-  font-size: 2.5rem;
   color: ${(props) => props.theme.text};
   margin-bottom: 1.5rem;
   border-bottom: 5px solid ${(props) => props.theme.titleBorder || "#f9d342"};
@@ -28,7 +27,6 @@ const SectionTitle = styled.h2`
   width: fit-content;
 
   @media (max-width: 768px) {
-    font-size: 2rem;
     margin-bottom: 1rem;
   }
 `;

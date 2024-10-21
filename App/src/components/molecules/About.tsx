@@ -20,7 +20,6 @@ const AboutContainer = styled.div`
 
 // Style pour le titre
 const SectionTitle = styled.h2`
-  font-size: 2.5rem; // Taille du titre
   color: ${(props) => props.theme.text}; // Couleur du texte
   margin-bottom: 1rem; // Espacement en bas du titre
   border-bottom: 5px solid #f9d342; // Ligne sous le titre
@@ -30,7 +29,6 @@ const SectionTitle = styled.h2`
 
 // Style pour la description
 const Description = styled.p`
-  font-size: 1.25rem; // Taille de la description
   color: ${(props) => props.theme.secondaryText}; // Couleur du texte
   max-width: 1200px; // Largeur maximale
   text-align: left; // Aligne le texte à gauche
