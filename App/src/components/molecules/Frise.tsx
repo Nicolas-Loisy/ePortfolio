@@ -6,15 +6,15 @@ const FriseContainer = styled.div`
   display: flex;
   overflow: hidden;
   width: 100%;
-  // background-color: transparent;
   padding: 1rem;
   box-sizing: border-box;
 `;
 
 // Conteneur pour le mouvement continu des images
-const FriseWrapper = styled.div<{ speed: number }>`
+const FriseWrapper = styled.div<{ speed: number; freeze: boolean }>`
   display: flex;
-  animation: scroll ${({ speed }) => speed}s linear infinite;
+  animation: ${({ freeze }) => (freeze ? "none" : "scroll")}
+    ${({ speed }) => speed}s linear infinite;
 
   @keyframes scroll {
     0% {
@@ -30,9 +30,14 @@ const FriseWrapper = styled.div<{ speed: number }>`
 interface FriseProps {
   images: string[];
   speed?: number; // Optionnel : contrôle la vitesse de défilement
+  freeze?: boolean; // Optionnel : contrôle si l'animation doit être figée
 }
 
-const Frise: React.FC<FriseProps> = ({ images, speed = 20 }) => {
+const Frise: React.FC<FriseProps> = ({
+  images,
+  speed = 20,
+  freeze = false,
+}) => {
   // Référence pour le conteneur de la frise
   const friseRef = useRef<HTMLDivElement | null>(null);
 
@@ -50,11 +55,9 @@ const Frise: React.FC<FriseProps> = ({ images, speed = 20 }) => {
         const img = document.createElement("img");
         img.src = imageSrc;
         img.alt = `image-${index}`;
-        // img.style.width = "100px";
-        img.style.height = "80px";
-        img.style.objectFit = "cover";
-        // img.style.marginRight = "1rem";
-        img.style.marginRight = "2.65rem";
+        img.style.height = "80px"; // Hauteur fixe
+        img.style.objectFit = "cover"; // Garde les proportions de l'image
+        img.style.marginRight = "2.65rem"; // Espacement entre les images
         friseWrapper.appendChild(img);
       });
     }
@@ -62,7 +65,7 @@ const Frise: React.FC<FriseProps> = ({ images, speed = 20 }) => {
 
   return (
     <FriseContainer>
-      <FriseWrapper ref={friseRef} speed={speed}></FriseWrapper>
+      <FriseWrapper ref={friseRef} speed={speed} freeze={freeze}></FriseWrapper>
     </FriseContainer>
   );
 };

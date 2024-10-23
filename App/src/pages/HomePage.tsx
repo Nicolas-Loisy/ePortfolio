@@ -231,7 +231,7 @@ const HomePage: React.FC = () => {
       <Diplome title="Diplômes" diplomes={diplomesData} />
       <Certification title="Certifications" certifications={certifications} />
       <Projects title="Mes Projets" projects={projectData} />
-      <Frise images={friseData} speed={10000000} />
+      <Frise images={friseData} speed={100} freeze />
     </Layout>
   );
 };
