@@ -5,11 +5,14 @@ import styled from "styled-components";
 const CertificationContainer = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 2rem;
   box-sizing: border-box;
-  max-width: 1200px;
-  width: 100%;
+  width: 74%;
   margin: 0 auto;
-  padding: 1rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 // Conteneur pour chaque certification
@@ -25,9 +28,14 @@ const CertificationItem = styled.div`
 const CertificationContent = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   flex-wrap: nowrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column; // Chaque élément en colonne sur les petits écrans
+    align-items: stretch; // Assure que chaque élément occupe la largeur complète
+  }
 `;
 
 // Conteneur pour les informations de gauche (titre, description et année)
@@ -38,11 +46,14 @@ const CertificationDetails = styled.div`
   align-items: flex-start;
   flex-grow: 2;
   padding-right: 1rem;
+
+  @media (max-width: 768px) {
+    padding-right: 0; // Supprime le padding sur petits écrans
+  }
 `;
 
 // Titre de la certification
 const CertificationTitle = styled.h3`
-  font-size: 1.5rem;
   color: ${(props) => props.theme.text || "#333"};
   margin: 0;
   margin-bottom: 0.5rem;
@@ -56,19 +67,28 @@ const CertificationInfo = styled.div`
   align-items: center;
   flex-wrap: wrap;
   text-align: left;
+
+  @media (max-width: 768px) {
+    flex-direction: column; // L'année et la description en colonne sur petits écrans
+    align-items: flex-start;
+  }
 `;
 
 // Année de la certification
 const CertificationYear = styled.span`
-  font-size: 0.9rem;
   color: ${(props) => props.theme.year || "#95a5a6"};
   margin-right: 1rem;
-  flex-shrink: 0; // Empêche l'année de se rétrécir
+  flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    align-self: center; // Centre l'année sur petits écrans
+    margin-right: 0; // Supprime la marge sur petits écrans
+    margin-bottom: 0.5rem;
+  }
 `;
 
 // Description de la certification
 const CertificationDescription = styled.p`
-  font-size: 1rem;
   color: ${(props) => props.theme.text || "#666"};
   margin: 0;
   text-align: left;
@@ -81,23 +101,28 @@ const CertificationLinkContainer = styled.div`
   align-items: center;
   flex-shrink: 0;
   margin-left: auto;
+  margin-top: 10px;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
 `;
 
 const CertificationLink = styled.a`
-  font-size: 1rem;
   color: ${(props) => props.theme.text || "#e3e3e3"};
   background-color: transparent;
   border: 2px solid ${(props) => props.theme.titleBorder || "#f9d342"};
   padding: 0.5rem 1rem;
   font-weight: bold;
   border-radius: 4px;
-  // border-radius: 0px;
   text-align: center;
-  text-decoration: none; // Empêche le soulignement
+  text-decoration: none;
 
   &:hover {
     background-color: ${(props) => props.theme.titleBorder || "#f9d342"};
-    color: #fff; // Couleur du texte au hover (blanc)
+    color: #fff;
   }
 `;
 
@@ -115,7 +140,6 @@ const SectionTitle = styled.h2`
   margin-bottom: 1rem;
   border-bottom: 5px solid #f9d342;
   padding-bottom: 0.5rem;
-  align-self: flex-start;
   width: fit-content;
 `;
 
@@ -145,19 +169,19 @@ const Certification: React.FC<CertificationProps> = ({
               <CertificationDetails>
                 <CertificationTitle>{cert.title}</CertificationTitle>
                 <CertificationInfo>
-                  <CertificationYear>{cert.year} - </CertificationYear>
+                  <CertificationYear>{cert.year} -</CertificationYear>
                   <CertificationDescription>
                     {cert.description}
                   </CertificationDescription>
                 </CertificationInfo>
               </CertificationDetails>
 
-              {/* Lien vers la certification qui s'ouvre dans une nouvelle fenêtre */}
+              {/* Lien vers la certification */}
               <CertificationLinkContainer>
                 <CertificationLink
                   href={cert.link}
-                  target="_blank" // Ouvre le lien dans une nouvelle fenêtre ou onglet
-                  rel="noopener noreferrer" // Sécurité pour les liens externes
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Voir la certification
                 </CertificationLink>
