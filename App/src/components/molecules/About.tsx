@@ -14,8 +14,12 @@ const AboutContainer = styled.div`
   padding: 2rem; // Espacement interne
   box-sizing: border-box; // Inclut le padding dans la largeur totale
   background-color: ${(props) => props.theme.background}; // Couleur de fond
-  width: fit-content; // La largeur s'adapte au contenu
+  width: 74%; // La largeur s'adapte au contenu
   margin: 0 auto; // Centre le composant horizontalement
+
+  @media (max-width: 768px) {
+    width: 100%; // La largeur s'adapte au contenu
+  }
 `;
 
 // Style pour le titre

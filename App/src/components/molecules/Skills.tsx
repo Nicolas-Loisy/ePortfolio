@@ -83,7 +83,6 @@ const SectionTitle = styled.h2`
   margin-bottom: 1rem; // Espacement en bas du titre
   border-bottom: 5px solid #f9d342; // Ligne sous le titre
   padding-bottom: 0.5rem; // Espacement intérieur
-  align-self: flex-start; // Aligne le titre à gauche
   width: fit-content; // La largeur du titre s'adapte à son contenu
 `;
 

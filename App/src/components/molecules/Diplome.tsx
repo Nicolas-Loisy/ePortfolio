@@ -1,21 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-
 import { FaGraduationCap } from "react-icons/fa";
 
 // Conteneur principal pour la timeline
 const TimelineContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  padding: 2rem;
   box-sizing: border-box;
-  max-width: 1200px; // Largeur maximale des cartes
-  width: 100%;
-  margin: 0 auto; // Centre horizontalement
-  padding: 0 1rem; // Ajouter du padding pour éviter que le contenu touche les bords
+  width: 74%;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
-    padding: 0 0.5rem;
+    width: 100%;
   }
 `;
 
@@ -30,9 +28,8 @@ const TimelineItem = styled.div`
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  margin-bottom: 2rem;
   width: 100%;
-  justify-content: space-between; // Assure que les éléments sont bien répartis sur toute la largeur
+  justify-content: space-between;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -46,21 +43,21 @@ const LeftContainer = styled.div`
   flex-direction: row;
   align-items: flex-start;
   margin-right: 20px;
-  flex-basis: 180px; // Largeur fixe pour la date et le point/barre
+  flex-basis: 180px;
   flex-shrink: 0;
 
   @media (max-width: 768px) {
     margin-right: 0;
     margin-bottom: 1rem;
     flex-basis: auto;
-    width: 100%; // Prend la largeur complète sur petit écran
+    width: 100%;
     justify-content: center;
   }
 `;
 
 // Conteneur pour la date (à gauche du point)
 const DateContainer = styled.div`
-  font-size: 1rem;
+  // font-size: 1rem;
   color: ${(props) => props.theme.text || "#333"};
   font-weight: bold;
   text-align: right;
@@ -88,7 +85,7 @@ const PointAndBarContainer = styled.div`
   height: 100%;
 
   @media (max-width: 768px) {
-    display: none; // Cacher sur les petits écrans
+    display: none;
   }
 `;
 
@@ -117,7 +114,7 @@ const ContentContainer = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   padding-left: 1rem;
-  flex-grow: 1; // Le contenu grandit pour occuper l'espace disponible
+  flex-grow: 1;
   text-align: left;
 
   @media (max-width: 768px) {
@@ -129,8 +126,9 @@ const ContentContainer = styled.div`
 
 // Conteneur pour l'image à gauche du texte
 const ImageContainer = styled.div`
-  margin-right: 1rem;
-  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 768px) {
     margin-right: 0;
@@ -157,14 +155,12 @@ const DiplomeContainer = styled.div`
 
 // Titre de l'expérience
 const DiplomeTitle = styled.h3`
-  font-size: 1.2rem;
   margin: 0;
   color: ${(props) => props.theme.text || "#333"};
 `;
 
 // Description de l'expérience
 const DiplomeDescription = styled.p`
-  font-size: 1rem;
   margin-top: 0.5rem;
   color: ${(props) => props.theme.text || "#666"};
 `;
@@ -188,7 +184,6 @@ const Icon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
   margin-bottom: 0.5rem;
   color: ${(props) => props.theme.text};
   border: 1px solid ${(props) => props.theme.borderColor};
@@ -209,11 +204,11 @@ const HorizontalSeparator = styled.hr`
   margin: 1rem 0;
 
   @media (min-width: 769px) {
-    display: none; // Cacher sur les grands écrans
+    display: none;
   }
 `;
 
-// Composant Expérience
+// Composant Diplome
 interface DiplomeProps {
   diplomes: {
     date: string;
@@ -229,7 +224,7 @@ const Diplome: React.FC<DiplomeProps> = ({ diplomes, title }) => {
     <TimelineContainer>
       {/* Conserve le titre aligné à gauche */}
       <TitleContainer>
-        <SectionTitle>{title}</SectionTitle> {/* Titre de la section */}
+        <SectionTitle>{title}</SectionTitle>
       </TitleContainer>
 
       {diplomes.map((exp, index) => (

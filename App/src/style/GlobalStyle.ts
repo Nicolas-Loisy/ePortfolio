@@ -37,10 +37,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @media (min-width: 768px) {
-    body {
-      padding: 0 10px;
-    }
-
     h1 {
       font-size: 2.5rem;
     }
@@ -63,10 +59,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @media (max-width: 768px) {
-    body {
-      padding: 0 10px;
-    }
-
     h1 {
       font-size: 2.5rem;
     }
