@@ -1,71 +1,53 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 
-// Conteneur principal de la frise
+// Conteneur principal de la frise avec une hauteur fixe de 80px
 const FriseContainer = styled.div`
   display: flex;
-  overflow: hidden;
+  justify-content: center; // Centre le wrapper dans le conteneur
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
+  height: 80px; // Hauteur fixe pour le conteneur
+
+  @media (max-width: 768px) {
+    height: 80px; // Hauteur fixe pour le conteneur
+  }
 `;
 
-// Conteneur pour le mouvement continu des images
-const FriseWrapper = styled.div<{ speed: number; freeze: boolean }>`
+// Conteneur pour la liste d'images, avec un espacement équitable
+const FriseWrapper = styled.div`
   display: flex;
-  animation: ${({ freeze }) => (freeze ? "none" : "scroll")}
-    ${({ speed }) => speed}s linear infinite;
-
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
+  justify-content: space-between; // Espacement équitable sur la largeur
+  flex-grow: 1; // Permet au conteneur de s'étendre pour occuper toute la largeur
+  max-width: 100%; // Empêche le conteneur de dépasser la largeur de l'écran
 `;
 
 // Interface des props du composant Frise
 interface FriseProps {
-  images: string[];
-  speed?: number; // Optionnel : contrôle la vitesse de défilement
-  freeze?: boolean; // Optionnel : contrôle si l'animation doit être figée
+  images: string[]; // Tableau d'URL d'images
 }
 
-const Frise: React.FC<FriseProps> = ({
-  images,
-  speed = 20,
-  freeze = false,
-}) => {
-  // Référence pour le conteneur de la frise
-  const friseRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const totalImagesNeeded = Math.ceil(window.innerWidth / 200) + 1; // Calcul du nombre d'images nécessaires pour remplir l'écran (basé sur la largeur d'une image)
-
-    // Remplir la frise avec les images répétées
-    const friseWrapper = friseRef.current;
-    if (friseWrapper) {
-      const repeatedImages = Array(totalImagesNeeded).fill(images).flat(); // Répète les images pour remplir la frise
-      friseWrapper.innerHTML = ""; // Efface le contenu précédent
-
-      // Ajoute les images répétées au conteneur de la frise
-      repeatedImages.forEach((imageSrc, index) => {
-        const img = document.createElement("img");
-        img.src = imageSrc;
-        img.alt = `image-${index}`;
-        img.style.height = "80px"; // Hauteur fixe
-        img.style.objectFit = "cover"; // Garde les proportions de l'image
-        img.style.marginRight = "2.65rem"; // Espacement entre les images
-        friseWrapper.appendChild(img);
-      });
-    }
-  }, [images]);
-
+const Frise: React.FC<FriseProps> = ({ images }) => {
   return (
     <FriseContainer>
-      <FriseWrapper ref={friseRef} speed={speed} freeze={freeze}></FriseWrapper>
+      <FriseWrapper>
+        {images.map((imageSrc, index) => (
+          <div
+            key={index}
+            style={{ height: "100%", display: "flex", alignItems: "center" }}
+          >
+            <img
+              src={imageSrc}
+              alt={`image-${index}`}
+              style={{
+                height: "80px", // Hauteur fixe pour chaque image
+                objectFit: "contain", // Assure que l'image reste dans son conteneur sans déformation
+              }}
+            />
+          </div>
+        ))}
+      </FriseWrapper>
     </FriseContainer>
   );
 };

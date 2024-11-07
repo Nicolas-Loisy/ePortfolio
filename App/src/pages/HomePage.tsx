@@ -11,6 +11,7 @@ import Skills from "../components/molecules/Skills";
 import SocialBar from "../components/molecules/SocialBar";
 
 import Frise from "../components/molecules/Frise";
+import FriseDyn from "../components/molecules/FriseDyn";
 import TerminalLite from "../components/molecules/TerminalLite";
 import Projects from "../components/molecules/Projects";
 
@@ -231,7 +232,8 @@ const HomePage: React.FC = () => {
       <Diplome title="Diplômes" diplomes={diplomesData} />
       <Certification title="Certifications" certifications={certifications} />
       <Projects title="Mes Projets" projects={projectData} />
-      <Frise images={friseData} speed={100} freeze />
+      {/* <FriseDyn images={friseData} speed={100} freeze /> */}
+      <Frise images={friseData} />
     </Layout>
   );
 };
