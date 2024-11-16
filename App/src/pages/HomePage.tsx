@@ -55,97 +55,91 @@ const HomePage: React.FC = () => {
 
   const experiencesData = [
     {
-      date: "Jan 2022 - Présent",
-      title: "Développeur Full Stack",
-      description: "Travail sur des projets web avec React et Symfony.",
+      date: t("experience.date1"),
+      title: t("experience.title1"),
+      description: t("experience.description1"),
       imageUrl: eurelisLogo,
     },
     {
-      date: "Mar 2020 - Déc 2021",
-      title: "Ingénieur Logiciel",
-      description:
-        "Conception de solutions backend robustes avec PHP et MySQL.",
+      date: t("experience.date2"),
+      title: t("experience.title2"),
+      description: t("experience.description2"),
+      imageUrl: eurelisLogo,
     },
     {
-      date: "Sep 2018 - Fév 2020",
-      title: "Stagiaire Développeur",
-      description: "Participation au développement d'applications internes.",
+      date: t("experience.date3"),
+      title: t("experience.title3"),
+      description: t("experience.description3"),
+      imageUrl: eurelisLogo,
     },
   ];
 
   const diplomesData = [
     {
-      date: "Jan 2022 - Présent",
-      title: "Master 2 MIAGE - Université Paris Cité (Descartes)",
-      description: "Travail sur des projets web avec React et Symfony.",
+      date: t("diplome.date1"),
+      title: t("diplome.title1"),
+      description: t("diplome.description1"),
       imageUrl: LogoUniversiteParisCite,
     },
     {
-      date: "Mar 2020 - Déc 2021",
-      title: "L3 MIAGE - IUT Paris Cité (Descartes)",
-      description:
-        "Conception de solutions backend robustes avec PHP et MySQL.",
+      date: t("diplome.date2"),
+      title: t("diplome.title2"),
+      description: t("diplome.description2"),
       imageUrl: LogoUniversiteParisCite,
     },
     {
-      date: "Sep 2018 - Fév 2020",
-      title: "DUT Informatique - IUT de Montreuil",
-      description: "Participation au développement d'applications internes.",
+      date: t("diplome.date3"),
+      title: t("diplome.title3"),
+      description: t("diplome.description3"),
       imageUrl: LogoIutMontreuil,
     },
     {
-      date: "Sep 2018 - Fév 2020",
-      title: "Bac Scientifique",
-      description: "Participation au développement d'applications internes.",
+      date: t("diplome.date4"),
+      title: t("diplome.title4"),
+      description: t("diplome.description4"),
       imageUrl: LogoDiderot,
     },
   ];
 
   const certifications = [
     {
-      title: "Certified JavaScript Developer",
-      description:
-        "A comprehensive certification covering advanced JavaScript topics.",
-      year: "2022",
+      title: t("certification.title1"),
+      description: t("certification.description1"),
+      year: t("certification.year1"),
       link: certif_js,
     },
     {
-      title: "React Expert Certification",
-      description:
-        "Certification demonstrating mastery of React.js development.",
-      year: "2021",
+      title: t("certification.title2"),
+      description: t("certification.description2"),
+      year: t("certification.year2"),
       link: certif_ia,
     },
     {
-      title: "Full Stack Web Developer",
-      description:
-        "An extensive certification for full stack web development skills.",
-      year: "2020",
+      title: t("certification.title3"),
+      description: t("certification.description3"),
+      year: t("certification.year3"),
       link: certif_py,
     },
   ];
 
   const texts = [
-    "Hello, world!",
-    // "This is a terminal simulation.",
-    // "React is awesome!",
-    // "Let's code more.",
-    "Intégrateur d'IA",
-    "Développeur PHP",
-    "Développeur Symfony",
-    "We love Eurelis! ♡",
-    "Formation : MIAGE",
-    "La Documentation ma passion!",
-    "MarkIA = MarkDown + IA",
-    "sudo rm -rf /*",
+    t("terminal.text1"),
+    t("terminal.text2"),
+    t("terminal.text3"),
+    t("terminal.text4"),
+    t("terminal.text5"),
+    t("terminal.text6"),
+    t("terminal.text7"),
+    t("terminal.text8"),
+    t("terminal.text9"),
   ];
 
   const projectData = [
     {
-      title: "Projet 1",
-      subtitle: "Sous-titre du projet 1",
-      date: "Janvier 2024",
-      description: "Description du projet 1.",
+      title: t("project.title1"),
+      subtitle: t("project.subtitle1"),
+      date: t("project.date1"),
+      description: t("project.description1"),
       imageSrc: "https://via.placeholder.com/200x150",
       techLogos: [
         "https://via.placeholder.com/40x40",
@@ -154,10 +148,10 @@ const HomePage: React.FC = () => {
       demoLink: "https://example.com/demo1",
     },
     {
-      title: "Projet 2",
-      subtitle: "Sous-titre du projet 2",
-      date: "Février 2024",
-      description: "Description du projet 2.",
+      title: t("project.title2"),
+      subtitle: t("project.subtitle2"),
+      date: t("project.date2"),
+      description: t("project.description2"),
       imageSrc: "https://via.placeholder.com/200x150",
       techLogos: [
         "https://via.placeholder.com/40x40",
@@ -199,40 +193,28 @@ const HomePage: React.FC = () => {
 
   return (
     <Layout title={t("homepage.title")} displaySidebar>
-      {/* <Banner text="ePortfolio" height="100px" />
-      <MainImage
-        imgLight={bannerImageDark}
-        imgDark={bannerImageLight}
-        alt="Description of image"
-        margin="10px 0"
-        width="10%" // Largeur ajustée pour l'image
-      /> */}
       <ProfileCard
         imageSrc={pp}
-        name="Nicolas Loisy"
-        // title="Fullstack Developer"
-        title="Développeur Web & Intégrateur d'Intelligence Artificielle"
+        name={t("profile.name")}
+        title={t("profile.title")}
       />
 
       <SocialBar
-        github="https://github.com/Nicolas-Loisy"
-        huggingface="https://huggingface.co/Nicolas-Loisy"
-        linkedin="https://www.linkedin.com/in/nicolas-loisy/"
-        email="nicolas.loisy@yahoo.fr"
+        github={t("social.github")}
+        huggingface={t("social.huggingface")}
+        linkedin={t("social.linkedin")}
+        email={t("social.email")}
       />
       <TerminalLite texts={texts} />
-      <About
-        title="À propos de moi"
-        description="Je suis développeur web passionné par l'informatique dans son ensemble. Ma curiosité me pousse à explorer divers domaines tels que la technologie, l'intelligence artificielle et l'électronique. J'aime trouver des solutions à des problèmes techniques et relever des défis.<br /><br /> Chaque jour, j'ai la chance de travailler dans un environnement stimulant où je peux appliquer mes compétences tout en apprenant constamment. Mes passions pour l'informatique et la technologie me permettent de prendre du plaisir à créer et à innover, tout en m'enrichissant en connaissances et en expériences. Mon objectif est de continuer à évoluer dans ce domaine fascinant."
+      <About title={t("about.title")} description={t("about.description")} />
+      <Skills title={t("skills.title")} />
+      <Experience title={t("experience.title")} experiences={experiencesData} />
+      <Diplome title={t("diplome.title")} diplomes={diplomesData} />
+      <Certification
+        title={t("certification.title")}
+        certifications={certifications}
       />
-      {/* <Terminal texts={texts} />
-      <TerminalLite texts={texts} /> */}
-      <Skills title="Compétences"></Skills>
-      <Experience title="Experiences" experiences={experiencesData} />
-      <Diplome title="Diplômes" diplomes={diplomesData} />
-      <Certification title="Certifications" certifications={certifications} />
-      <Projects title="Mes Projets" projects={projectData} />
-      {/* <FriseDyn images={friseData} speed={100} freeze /> */}
+      <Projects title={t("projects.title")} projects={projectData} />
       <Frise images={friseData} />
     </Layout>
   );

@@ -9,8 +9,86 @@
   },
   "welcome": "Bienvenue dans notre application",
   "homepage": {
-    "title": "Page d'accueil test",
+    "title": "Page d'accueil",
     "description": "Ceci est la page d'accueil."
+  },
+  "profile": {
+    "name": "Nicolas Loisy",
+    "title": "Développeur Web & Intégrateur d'Intelligence Artificielle"
+  },
+  "social": {
+    "github": "https://github.com/Nicolas-Loisy",
+    "huggingface": "https://huggingface.co/Nicolas-Loisy",
+    "linkedin": "https://www.linkedin.com/in/nicolas-loisy/",
+    "email": "nicolas.loisy@yahoo.fr"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "description": "Je suis un développeur web passionné par l'informatique dans son ensemble.<br />Ma curiosité me pousse à explorer divers domaines tels que la technologie, l'intelligence artificielle et l'électronique.<br />J'aime trouver des solutions à des problèmes techniques et relever des défis.<br /><br />Chaque jour, j'ai la chance de travailler dans un environnement stimulant où je peux appliquer mes compétences tout en apprenant constamment.<br />Mes passions pour l'informatique et la technologie me permettent de prendre du plaisir à créer et à innover, tout en m'enrichissant en connaissances et en expériences.<br />Mon objectif est de continuer à évoluer dans ce domaine fascinant."
+  },
+  "skills": {
+    "title": "Compétences"
+  },
+  "experience": {
+    "title": "Expériences",
+    "date1": "09/2023 - Aujourd'hui",
+    "title1": "Développeur Python & Intégrateur d'IA - Eurelis",
+    "description1": "Développement de chatbots IA avec système RAG • Prompt engineering • Scraping<br />Langchain • LlamaIndex • Huggingface • GPT • JS<br />Outils : GIT • Jira",
+    "date2": "09/2022 - 09/2023",
+    "title2": "Développeur PHP & Symfony - Eurelis",
+    "description2": "Développement d'un backend et d'un portail client PHP/Symfony • TMA et évolutions diverses sur le site OSAC.AERO<br />PHP • Symfony • JS • MySQL • Jira <br />Outils : Docker • GIT • Mantis Bug Tracker • SonarQube",
+    "date3": "04/2022 - 07/2022",
+    "title3": "Développeur PHP & Symfony - Eurelis",
+    "description3": "Développement d'un backend et d'un portail client PHP/Symfony • Intégration d’une équipe de développement Symfony • TMA et traitement de tickets<br />PHP • Symfony • Twig • HTML • CSS"
+  },
+  "diplome": {
+    "title": "Diplômes",
+    "date1": "2023 - Présent",
+    "title1": "Master MIAGE - Université Paris Cité (Descartes)",
+    "description1": "Master MIAGE - Parcours : Valorisation et protection des données de l'entreprise.<br/> Double compétence en gestion de projet, management et développement, avec une expertise dans la getion de la donnée.",
+    "date2": "2022 - 2023",
+    "title2": "L3 MIAGE - IUT Paris Cité (Descartes)",
+    "description2": "Acquisition d’une double compétence en gestion de projet et développement logiciel, préparant à des responsabilités techniques et organisationnelles.",
+    "date3": "2020 - 2022",
+    "title3": "DUT Informatique - IUT de Montreuil",
+    "description3": "Maîtrise de Java, C, PHP, SQL, Bash, ainsi que des concepts de réseau, design patterns, sécurité, et logique algorithmique.",
+    "date4": "2020",
+    "title4": "Bac Scientifique - Lycée Diderot",
+    "description4": "Formation générale en sciences."
+  },
+  "certification": {
+    "title": "Certifications",
+    "title1": "Certification JavaScript",
+    "description1": "Certification complète couvrant des sujets avancés en JavaScript.",
+    "year1": "2023",
+    "title2": "Certification Python",
+    "description2": "Certification complète couvrant des sujets avancés en Python.",
+    "year2": "2024",
+    "title3": "Certification ChatGPT & Langchain",
+    "description3": "Certification sur Langchain, ChatGPT et la maîtrise des systèmes RAG.",
+    "year3": "2024"
+  },
+  "terminal": {
+    "text1": "Hello, world!",
+    "text2": "Intégrateur d'IA",
+    "text3": "Développeur PHP",
+    "text4": "Développeur Symfony",
+    "text5": "We love Eurelis! ♡",
+    "text6": "Formation : MIAGE",
+    "text7": "La documentation, ma passion!",
+    "text8": "MarkIA = MarkDown + IA",
+    "text9": "sudo rm -rf /*"
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "title1": "Projet 1",
+    "subtitle1": "Sous-titre du projet 1",
+    "date1": "Janvier 2024",
+    "description1": "Description du projet 1.",
+    "title2": "Projet 2",
+    "subtitle2": "Sous-titre du projet 2",
+    "date2": "Février 2024",
+    "description2": "Description du projet 2."
   },
   "contentpage": {
     "title": "Documentation"

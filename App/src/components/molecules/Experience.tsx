@@ -147,8 +147,9 @@ const ExperienceTitle = styled.h3`
 `;
 
 // Description de l'expérience
-const ExperienceDescription = styled.p`
+const ExperienceDescription = styled.div`
   margin-top: 0.5rem;
+  margin-bottom: 1rem;
   color: ${(props) => props.theme.text || "#666"};
 `;
 
@@ -222,8 +223,12 @@ const Experience: React.FC<ExperienceProps> = ({ experiences, title }) => {
           {/* Contenu de l'expérience à droite avec image */}
           <ContentContainer>
             <div>
-              <ExperienceTitle>{exp.title}</ExperienceTitle>
-              <ExperienceDescription>{exp.description}</ExperienceDescription>
+              <ExperienceTitle
+                dangerouslySetInnerHTML={{ __html: exp.title }}
+              />
+              <ExperienceDescription
+                dangerouslySetInnerHTML={{ __html: exp.description }}
+              />
             </div>
             {exp.imageUrl ? (
               <ImageContainer>

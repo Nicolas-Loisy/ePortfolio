@@ -243,8 +243,10 @@ const Diplome: React.FC<DiplomeProps> = ({ diplomes, title }) => {
             {/* Contenu de l'expérience à droite avec image */}
             <ContentContainer>
               <DiplomeContainer>
-                <DiplomeTitle>{exp.title}</DiplomeTitle>
-                <DiplomeDescription>{exp.description}</DiplomeDescription>
+                <DiplomeTitle dangerouslySetInnerHTML={{ __html: exp.title }} />
+                <DiplomeDescription
+                  dangerouslySetInnerHTML={{ __html: exp.description }}
+                />
               </DiplomeContainer>
               {/* Affichage de l'image si une image est fournie */}
               {exp.imageUrl ? (
