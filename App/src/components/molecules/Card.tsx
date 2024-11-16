@@ -51,7 +51,7 @@ const CardImage = styled.img`
   height: auto; // Ajustement dynamique de la hauteur
   object-fit: cover;
   border-radius: 8px;
-  border: 1px solid ${(props) => props.theme.titleBorder || "#f9d342"};
+  // border: 1px solid ${(props) => props.theme.titleBorder || "#f9d342"};
   align-self: center; // Aligner horizontalement au centre
 
   @media (max-width: 768px) {

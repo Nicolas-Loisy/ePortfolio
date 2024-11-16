@@ -99,7 +99,7 @@
       "title": "JOBO",
       "subtitle": "Application mobile pour valoriser les métiers des industries et le Made in France",
       "date": "2024",
-      "description": "Création d'une application mobile innovante qui reconnaît les objets via la caméra et identifie les métiers d'artisanat ou d'industrie impliqués dans leur fabrication. Développé avec React Native et une API de vision IA.",
+      "description": "Création d'une application mobile innovante qui reconnaît les objets via la caméra et identifie les métiers d'artisanat ou d'industrie impliqués dans leur fabrication. Développé avec React Native et un modèle de vision IA.",
       "techLogos": ["FaReact", "SiMongodb"]
     },
     "meteoApp": {

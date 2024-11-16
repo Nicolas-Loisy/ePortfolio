@@ -37,6 +37,12 @@ import eurelisLogo from "../assets/img/eurelis_logo.jpg";
 import LogoUniversiteParisCite from "../assets/img/LogoUniversiteParisCite.png";
 import LogoIutMontreuil from "../assets/img/logo_iut_montreuil.png";
 import LogoDiderot from "../assets/img/logo_diderot.png";
+import LogoMarkia from "../assets/img/logo_markia.jpg";
+import LogoJobo from "../assets/img/logo_jobo.png";
+import LogoMeteoApp from "../assets/img/logo_meteo.svg";
+import LogoEMortelRenartBouche from "../assets/img/logo_emortel_renart_bouche.png";
+import LogoEMortelRenartEpee from "../assets/img/logo_emortel_renart_epee.png";
+import LogoPiBot from "../assets/img/logo_pi_bot.jpg";
 
 import certif_ia from "../assets/files/nl_ia.jpg";
 import certif_js from "../assets/files/nl_js.jpg";
@@ -163,14 +169,14 @@ const HomePage: React.FC = () => {
       description: t("projects.ePortfolio.description"),
       imageSrc: dark ? logoNLb : logoNLw,
       techLogos: [<FaReact />, <SiTypescript />, <SiRaspberrypi />],
-      demoLink: "URL_DEMO",
+      demoLink: "",
     },
     {
       title: t("projects.markIA.title"),
       subtitle: t("projects.markIA.subtitle"),
       date: t("projects.markIA.date"),
       description: t("projects.markIA.description"),
-      imageSrc: "URL_IMAGE",
+      imageSrc: LogoMarkia,
       techLogos: [
         <FaReact />,
         <SiTypescript />,
@@ -179,41 +185,41 @@ const HomePage: React.FC = () => {
         <SiLangchain />,
         <SiFirebase />,
       ],
-      demoLink: "URL_DEMO",
+      demoLink: "",
     },
     {
       title: t("projects.jobo.title"),
       subtitle: t("projects.jobo.subtitle"),
       date: t("projects.jobo.date"),
       description: t("projects.jobo.description"),
-      imageSrc: "URL_IMAGE",
+      imageSrc: LogoJobo,
       techLogos: [<FaReact />, <SiMongodb />, <SiHuggingface />, <SiTsnode />],
-      demoLink: "URL_DEMO",
+      demoLink: "",
     },
     {
       title: t("projects.meteoApp.title"),
       subtitle: t("projects.meteoApp.subtitle"),
       date: t("projects.meteoApp.date"),
       description: t("projects.meteoApp.description"),
-      imageSrc: "URL_IMAGE",
+      imageSrc: LogoMeteoApp,
       techLogos: [<FaReact />, <SiFirebase />],
-      demoLink: "URL_DEMO",
+      demoLink: "",
     },
     {
       title: t("projects.eMortels.title"),
       subtitle: t("projects.eMortels.subtitle"),
       date: t("projects.eMortels.date"),
       description: t("projects.eMortels.description"),
-      imageSrc: "URL_IMAGE",
+      imageSrc: LogoEMortelRenartBouche,
       techLogos: [<FaReact />, <SiNodedotjs />, <SiMongodb />],
-      demoLink: "URL_DEMO",
+      demoLink: "",
     },
     {
       title: t("projects.discordPiBot.title"),
       subtitle: t("projects.discordPiBot.subtitle"),
       date: t("projects.discordPiBot.date"),
       description: t("projects.discordPiBot.description"),
-      imageSrc: "URL_IMAGE",
+      imageSrc: LogoPiBot,
       techLogos: [
         <FaPython />,
         <SiGnubash />,
@@ -221,7 +227,7 @@ const HomePage: React.FC = () => {
         <SiGit />,
         <SiRaspberrypi />,
       ],
-      demoLink: "URL_DEMO",
+      demoLink: "",
     },
   ];
 
