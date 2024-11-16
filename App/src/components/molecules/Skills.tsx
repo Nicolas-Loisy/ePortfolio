@@ -25,8 +25,12 @@ const SkillsContainer = styled.div`
   align-items: flex-start; // Aligne le titre à gauche
   padding: 2rem; // Espacement autour du conteneur
   box-sizing: border-box;
-  width: fit-content; // La largeur s'adapte au contenu
-  margin: 0 auto; // Centre le conteneur horizontalement
+  width: 74%;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 // Conteneur pour les cartes avec largeur maximale
