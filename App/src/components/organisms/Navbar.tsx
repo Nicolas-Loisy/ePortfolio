@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Logo from "../molecules/Logo";
 import Sidebar from "./Sidebar";
 import ThemeSwitcher from "../molecules/ThemeSwitcher";
+import LanguageSelector from "../molecules/LanguageSelector";
 
 // Conteneur de la barre de navigation
 const NavbarContainer = styled.nav<{ isHidden: boolean; isFixed: boolean }>`
@@ -93,7 +94,8 @@ const Navbar: React.FC<NavbarProps> = ({
       <NavbarContainer isHidden={isHidden} isFixed={fixed}>
         {/* Sidebar à gauche */}
         <SidebarContainer>
-          <Sidebar />
+          {/* <Sidebar /> */}
+          <LanguageSelector />
         </SidebarContainer>
 
         {/* Logo centré */}

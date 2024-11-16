@@ -10,7 +10,8 @@ const Selector = styled.div`
   align-items: center;
   cursor: pointer;
 
-  &:hover .dropdown {
+  &:hover .dropdown,
+  .dropdown:hover {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -24,6 +25,10 @@ const LanguageText = styled.span`
   align-items: center;
   font-size: 14px;
   font-weight: bold;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const Dropdown = styled.div`
@@ -40,6 +45,18 @@ const Dropdown = styled.div`
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease,
     box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure dropdown is above other elements */
+
+  @media (max-width: 600px) {
+    right: auto;
+    left: 0;
+  }
+
+  &:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 `;
 
 const DropdownItem = styled.div`

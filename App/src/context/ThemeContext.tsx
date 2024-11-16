@@ -21,7 +21,7 @@ const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     | null;
 
   // Initialiser le state avec le thème sauvegardé ou "light" par défaut
-  const [theme, setTheme] = useState<"light" | "dark">(savedTheme || "light");
+  const [theme, setTheme] = useState<"light" | "dark">(savedTheme || "dark");
 
   const toggleTheme = () => {
     setTheme((prevTheme) => {
