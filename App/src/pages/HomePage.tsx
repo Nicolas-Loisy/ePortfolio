@@ -112,13 +112,13 @@ const HomePage: React.FC = () => {
       title: t("certification.title2"),
       description: t("certification.description2"),
       year: t("certification.year2"),
-      link: certif_ia,
+      link: certif_py,
     },
     {
       title: t("certification.title3"),
       description: t("certification.description3"),
       year: t("certification.year3"),
-      link: certif_py,
+      link: certif_ia,
     },
   ];
 
