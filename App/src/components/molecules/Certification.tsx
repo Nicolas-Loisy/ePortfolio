@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
 // Conteneur principal pour la liste de certifications
@@ -158,6 +159,8 @@ const Certification: React.FC<CertificationProps> = ({
   title,
   certifications,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <CertificationContainer>
       <SectionTitle>{title}</SectionTitle>
@@ -183,7 +186,7 @@ const Certification: React.FC<CertificationProps> = ({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Voir la certification
+                  {t("global.redirectCertif")}
                 </CertificationLink>
               </CertificationLinkContainer>
             </CertificationContent>

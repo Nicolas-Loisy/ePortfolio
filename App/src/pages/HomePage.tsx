@@ -185,7 +185,7 @@ const HomePage: React.FC = () => {
         <SiLangchain />,
         <SiFirebase />,
       ],
-      demoLink: "",
+      demoLink: "https://www.markia.fr/",
     },
     {
       title: t("projects.jobo.title"),

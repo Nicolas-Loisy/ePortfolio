@@ -5,7 +5,9 @@
     "loading": "Chargement...",
     "noContent": "Aucun contenu trouvé",
     "yes": "Oui",
-    "no": "Non"
+    "no": "Non",
+    "redirectCertif": "Voir la certification",
+    "redirectProject": "Voir le projet"
   },
   "welcome": "Bienvenue dans notre application",
   "homepage": {

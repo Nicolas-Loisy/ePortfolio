@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
 // Conteneur principal de la carte
@@ -179,6 +180,8 @@ const Card: React.FC<CardProps> = ({
   techLogos = [],
   demoLink,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <CardContainer>
       <CardContent>
@@ -201,7 +204,7 @@ const Card: React.FC<CardProps> = ({
 
       {demoLink && (
         <DemoButton href={demoLink} target="_blank" rel="noopener noreferrer">
-          Voir la démo
+          {t("global.redirectProject")}
         </DemoButton>
       )}
     </CardContainer>
