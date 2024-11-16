@@ -6,6 +6,8 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaJsSquare,
+  FaReact,
+  FaNodeJs,
 } from "react-icons/fa"; // Ajouter d'autres icônes si nécessaire
 import {
   SiSymfony,
@@ -16,6 +18,9 @@ import {
   SiGnubash,
   SiDocker,
   SiHuggingface,
+  SiRaspberrypi,
+  SiLangchain,
+  SiTsnode,
 } from "react-icons/si"; // Icônes supplémentaires
 
 // Conteneur principal pour les compétences
@@ -97,13 +102,19 @@ const skills = [
   { name: "HTML", icon: <FaHtml5 /> },
   { name: "CSS", icon: <FaCss3Alt /> },
   { name: "JavaScript", icon: <FaJsSquare /> },
+  { name: "React", icon: <FaReact /> },
+  { name: "ReactNative", icon: <FaReact /> },
+  { name: "NodeJS", icon: <FaNodeJs /> },
+  { name: "NodeTS", icon: <SiTsnode /> },
   { name: "IA", icon: <SiHuggingface /> },
+  { name: "Langchain", icon: <SiLangchain /> },
   { name: "MySQL", icon: <SiMysql /> },
   { name: "MongoDB", icon: <SiMongodb /> },
   { name: "Neo4J", icon: <SiNeo4J /> },
   { name: "Git", icon: <SiGit /> },
   { name: "Bash", icon: <SiGnubash /> },
   { name: "Docker", icon: <SiDocker /> },
+  { name: "Raspberry Pi", icon: <SiRaspberrypi /> },
 ];
 
 const Skills: React.FC<{ title: string }> = ({ title }) => {
