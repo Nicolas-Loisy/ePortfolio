@@ -2,17 +2,10 @@ import React from "react";
 
 import {
   FaPython,
-  FaPhp,
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
   FaReact, // Add React icon
 } from "react-icons/fa"; // Ajouter d'autres icônes si nécessaire
 import {
-  SiSymfony,
-  SiMysql,
   SiMongodb,
-  SiNeo4J,
   SiGit,
   SiGnubash,
   SiDocker,
@@ -26,7 +19,6 @@ import {
 } from "react-icons/si"; // Icônes supplémentaires
 
 import Layout from "../components/templates/Layout";
-import InfoSection from "../components/organisms/InfoSection";
 import { useTranslation } from "react-i18next";
 import ProfileCard from "../components/molecules/ProfileCard";
 import About from "../components/molecules/About";
@@ -37,7 +29,6 @@ import Skills from "../components/molecules/Skills";
 import SocialBar from "../components/molecules/SocialBar";
 
 import Frise from "../components/molecules/Frise";
-import FriseDyn from "../components/molecules/FriseDyn";
 import TerminalLite from "../components/molecules/TerminalLite";
 import Projects from "../components/molecules/Projects";
 
@@ -46,8 +37,6 @@ import eurelisLogo from "../assets/img/eurelis_logo.jpg";
 import LogoUniversiteParisCite from "../assets/img/LogoUniversiteParisCite.png";
 import LogoIutMontreuil from "../assets/img/logo_iut_montreuil.png";
 import LogoDiderot from "../assets/img/logo_diderot.png";
-
-import LogoIA_1 from "../assets/img/eurelis_logo.jpg";
 
 import certif_ia from "../assets/files/nl_ia.jpg";
 import certif_js from "../assets/files/nl_js.jpg";

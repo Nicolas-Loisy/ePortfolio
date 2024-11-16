@@ -120,21 +120,17 @@ const TechLogoContainer = styled.div`
   @media (max-width: 768px) {
     justify-content: center;
   }
-`;
 
-// Logo individuel de technologie
-const TechLogo = styled.img`
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  margin-right: 0.5rem;
-  border: 1px solid ${(props) => props.theme.titleBorder || "#f9d342"};
-  border-radius: 4px;
-  background-color: #fff;
-  padding: 0.2rem;
+  svg {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-right: 0.5rem;
+    padding: 0.2rem;
 
-  @media (max-width: 768px) {
-    margin-bottom: 0.5rem;
+    @media (max-width: 768px) {
+      margin-bottom: 0.5rem;
+    }
   }
 `;
 
