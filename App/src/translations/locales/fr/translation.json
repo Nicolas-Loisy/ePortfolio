@@ -45,7 +45,7 @@
     "title": "Diplômes",
     "date1": "2023 - Présent",
     "title1": "Master MIAGE - Université Paris Cité (Descartes)",
-    "description1": "Master MIAGE - Parcours : Valorisation et protection des données de l'entreprise.<br/> Double compétence en gestion de projet, management et développement, avec une expertise dans la getion de la donnée.",
+    "description1": "Master MIAGE - Parcours : Valorisation et protection des données de l'entreprise.<br/> Double compétence en gestion de projet, management et développement, avec une expertise dans la gestion de la donnée.",
     "date2": "2022 - 2023",
     "title2": "L3 MIAGE - IUT Paris Cité (Descartes)",
     "description2": "Acquisition d’une double compétence en gestion de projet et développement logiciel, préparant à des responsabilités techniques et organisationnelles.",
@@ -124,60 +124,12 @@
       "techLogos": ["FaPython", "SiDocker"]
     }
   },
-  "contentpage": {
-    "title": "Documentation"
-  },
   "components": {
     "organisms": {
       "footer": {
         "text": "© {{year}} ePortfolio - Nicolas Loisy. Tous droits réservés."
       },
       "navbar": {
-        "home": "Accueil",
-        "documentation": "Documentation",
-        "tools": "Outils",
-        "extensions": "Extensions"
-      }
-    },
-    "molecules": {
-      "addExtensionForm": {
-        "errorExtension": "Une erreur s'est produite lors de l'ajout de l'extension VS Code.",
-        "fieldName": "Nom",
-        "fieldDescription": "Description en {{lang}}",
-        "fieldUrl": "URL de l'image",
-        "fieldLink": "Lien",
-        "isSubmittingYes": "Ajout en cours...",
-        "isSubmittingNo": "Ajouter l'extension VS Code"
-      },
-      "addToolForm": {
-        "errorTool": "Une erreur s'est produite lors de l'ajout de l'outil.",
-        "fieldName": "Nom",
-        "fieldDescription": "Description en {{lang}}",
-        "fieldUrl": "URL de l'image",
-        "fieldLink": "Lien",
-        "isSubmittingYes": "Ajout en cours...",
-        "isSubmittingNo": "Ajouter l'outil"
-      },
-      "authModal": {
-        "incorrectPassword": "Email ou mot de passe incorrect.",
-        "errorLogout": "Erreur lors de la déconnexion.",
-        "login": "Connexion",
-        "welcome": "Bienvenue, {{name}} !",
-        "logout": "Déconnexion",
-        "email": "Adresse e-mail",
-        "password": "Mot de passe"
-      },
-      "modalDelete": {
-        "confirmDelete": "Confirmer la suppression ?"
-      },
-      "newFileForm": {
-        "errorFile": "Une erreur s'est produite lors de la création du fichier.",
-        "fieldName": "Chemin du fichier (avec extension) : ex. 'PHP/Symfony.md'",
-        "isSubmittingYes": "Création en cours...",
-        "isSubmittingNo": "Créer le fichier"
-      },
-      "searchBar": {
-        "searchInput": "Recherche"
       }
     }
   },

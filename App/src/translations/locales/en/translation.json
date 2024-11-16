@@ -9,11 +9,120 @@
   },
   "welcome": "Welcome to our application",
   "homepage": {
-    "title": "Home Page",
-    "description": "This is the home page."
+    "title": "Homepage",
+    "description": "This is the homepage."
   },
-  "contentpage": {
-    "title": "Documentation"
+  "profile": {
+    "name": "Nicolas Loisy",
+    "title": "Web Developer & AI Integrator"
+  },
+  "social": {
+    "github": "https://github.com/Nicolas-Loisy",
+    "huggingface": "https://huggingface.co/Nicolas-Loisy",
+    "linkedin": "https://www.linkedin.com/in/nicolas-loisy/",
+    "email": "nicolas.loisy@yahoo.fr"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I am a web developer passionate about computing as a whole.<br />My curiosity drives me to explore various fields such as technology, artificial intelligence, and electronics.<br />I enjoy finding solutions to technical problems and taking on challenges.<br /><br />Every day, I have the chance to work in a stimulating environment where I can apply my skills while constantly learning.<br />My passion for computing and technology allows me to take pleasure in creating and innovating, while enriching myself with knowledge and experiences.<br />My goal is to continue evolving in this fascinating field."
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "experience": {
+    "title": "Experiences",
+    "date1": "09/2023 - Present",
+    "title1": "Python Developer & AI Integrator - Eurelis",
+    "description1": "Development of AI chatbots with RAG system • Prompt engineering • Scraping<br />Langchain • LlamaIndex • Huggingface • GPT • JS<br />Tools: GIT • Jira",
+    "date2": "09/2022 - 09/2023",
+    "title2": "PHP & Symfony Developer - Eurelis",
+    "description2": "Development of a backend and a client portal PHP/Symfony • TMA and various evolutions on the OSAC.AERO site<br />PHP • Symfony • JS • MySQL • Jira <br />Tools: Docker • GIT • Mantis Bug Tracker • SonarQube",
+    "date3": "04/2022 - 07/2022",
+    "title3": "PHP & Symfony Developer - Eurelis",
+    "description3": "Development of a backend and a client portal PHP/Symfony • Integration into a Symfony development team • TMA and ticket processing<br />PHP • Symfony • Twig • HTML • CSS"
+  },
+  "diplome": {
+    "title": "Degrees",
+    "date1": "2023 - Present",
+    "title1": "Master MIAGE - Université Paris Cité (Descartes)",
+    "description1": "Master MIAGE - Specialization: Data valorization and protection.<br/> Dual competence in project management, management, and development, with expertise in data management.",
+    "date2": "2022 - 2023",
+    "title2": "L3 MIAGE - IUT Paris Cité (Descartes)",
+    "description2": "Acquisition of dual competence in project management and software development, preparing for technical and organizational responsibilities.",
+    "date3": "2020 - 2022",
+    "title3": "DUT Informatique - IUT de Montreuil",
+    "description3": "Mastery of Java, C, PHP, SQL, Bash, as well as network concepts, design patterns, security, and algorithmic logic.",
+    "date4": "2020",
+    "title4": "Scientific Baccalaureate - Lycée Diderot",
+    "description4": "General education in sciences."
+  },
+  "certification": {
+    "title": "Certifications",
+    "title1": "JavaScript Certification",
+    "description1": "Comprehensive certification covering advanced topics in JavaScript.",
+    "year1": "2023",
+    "title2": "Python Certification",
+    "description2": "Comprehensive certification covering advanced topics in Python.",
+    "year2": "2024",
+    "title3": "ChatGPT & Langchain Certification",
+    "description3": "Certification on Langchain, ChatGPT, and mastery of RAG systems.",
+    "year3": "2024"
+  },
+  "terminal": {
+    "text1": "Hello, world!",
+    "text2": "AI Integrator",
+    "text3": "PHP Developer",
+    "text4": "Symfony Developer",
+    "text5": "We love Eurelis! ♡",
+    "text6": "Education: MIAGE",
+    "text7": "Documentation, my passion!",
+    "text8": "MarkIA = MarkDown + AI",
+    "text9": "sudo rm -rf /*"
+  },
+  "projects": {
+    "title": "My Projects",
+    "ePortfolio": {
+      "title": "ePortfolio",
+      "subtitle": "Interactive personal portfolio",
+      "date": "2024",
+      "description": "Development of an interactive personal portfolio designed to showcase my technical skills, professional experiences, and personal projects. This project was developed with React and TypeScript.",
+      "techLogos": ["FaReact", "SiTypescript"]
+    },
+    "markIA": {
+      "title": "MarkIA",
+      "subtitle": "Technical documentation site with AI",
+      "date": "2024",
+      "description": "Development of a web platform for writing and storing documentation integrating artificial intelligence to simplify search. The project includes a chatbot powered by a knowledge base (the documentation) and a RAG (Retrieval-Augmented Generation) system.",
+      "techLogos": ["FaReact", "SiTypescript", "SiHuggingface"]
+    },
+    "jobo": {
+      "title": "JOBO",
+      "subtitle": "Mobile app to promote industrial jobs and Made in France",
+      "date": "2024",
+      "description": "Creation of an innovative mobile application that recognizes objects via the camera and identifies the craftsmanship or industrial jobs involved in their manufacture. Developed with React Native and an AI vision model.",
+      "techLogos": ["FaReact", "SiMongodb"]
+    },
+    "meteoApp": {
+      "title": "MeteoApp",
+      "subtitle": "Weather alert mobile application",
+      "date": "2023",
+      "description": "A customizable application to alert users about extreme weather events in their region. Includes real-time notifications and local weather forecasts.",
+      "techLogos": ["FaReact", "SiMongodb"]
+    },
+    "eMortels": {
+      "title": "eMortels",
+      "subtitle": "Platform for the French Academy",
+      "date": "2023",
+      "description": "Design and development of an educational platform to promote mastery of the French language. This project offers interactive exercises and access to linguistic resources.",
+      "techLogos": ["FaReact", "SiMongodb"]
+    },
+    "discordPiBot": {
+      "title": "DiscordPiBot",
+      "subtitle": "Discord bot for home automation",
+      "date": "2022",
+      "description": "A multifunctional Discord bot hosted on a Raspberry Pi, designed to control home automation devices and automate tasks in a Discord server. Written in Python for flexible and modular GPIO port management.",
+      "techLogos": ["FaPython", "SiDocker"]
+    }
   },
   "components": {
     "organisms": {
@@ -21,66 +130,22 @@
         "text": "© {{year}} ePortfolio - Nicolas Loisy. All rights reserved."
       },
       "navbar": {
-        "home": "Home",
-        "documentation": "Documentation",
-        "tools": "Tools"
-      }
-    },
-    "molecules": {
-      "addExtensionForm": {
-        "errorExtension": "An error occurred while adding the extension.",
-        "fieldName": "Name",
-        "fieldDescription": "Description in {{lang}}",
-        "fieldUrl": "Image URL",
-        "fieldLink": "Link",
-        "isSubmittingYes": "Adding...",
-        "isSubmittingNo": "Add Extension"
-      },
-      "addToolForm": {
-        "errorTool": "An error occurred while adding the tool.",
-        "fieldName": "Name",
-        "fieldDescription": "Description in {{lang}}",
-        "fieldUrl": "Image URL",
-        "fieldLink": "Link",
-        "isSubmittingYes": "Adding...",
-        "isSubmittingNo": "Add Tool"
-      },
-      "authModal": {
-        "incorrectPassword": "Incorrect email or password.",
-        "errorLogout": "Error during logout.",
-        "login": "Login",
-        "welcome": "Welcome, {{name}}!",
-        "logout": "Logout",
-        "email": "Email address",
-        "password": "Password"
-      },
-      "modalDelete": {
-        "confirmDelete": "Confirm deletion?"
-      },
-      "newFileForm": {
-        "errorFile": "An error occurred while creating the file.",
-        "fieldName": "File path (with extension): e.g., 'PHP/Symfony.md'",
-        "isSubmittingYes": "Creating...",
-        "isSubmittingNo": "Create File"
-      },
-      "searchBar": {
-        "searchInput": "Search"
       }
     }
   },
   "error": {
     "errorThrow": "Error: {{error}}",
-    "errorContent": "An error occurred while loading content.",
+    "errorContent": "An error occurred while loading the content.",
     "403": {
       "title": "403 - Forbidden",
-      "description": "You don't have permission to access this page."
+      "description": "You do not have permission to access this page."
     },
     "404": {
       "title": "404 - Not Found",
       "description": "The page you are looking for does not exist."
     },
     "generic": {
-      "title": "An Error Occurred",
+      "title": "An error occurred",
       "description": "Something went wrong. Please try again later."
     }
   }
