@@ -54,7 +54,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     p {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
+      padding-right: 1rem;
     }
   }
 

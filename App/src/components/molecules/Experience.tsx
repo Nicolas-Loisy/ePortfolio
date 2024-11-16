@@ -53,7 +53,7 @@ const LeftContainer = styled.div`
 
 // Conteneur pour la date
 const DateContainer = styled.div`
-  font-size: 1rem;
+  // font-size: 1rem;
   color: ${(props) => props.theme.text || "#333"};
   font-weight: bold;
   text-align: right;
@@ -147,7 +147,7 @@ const ExperienceTitle = styled.h3`
 `;
 
 // Description de l'expérience
-const ExperienceDescription = styled.div`
+const ExperienceDescription = styled.p`
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   color: ${(props) => props.theme.text || "#666"};
