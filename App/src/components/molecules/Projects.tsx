@@ -39,7 +39,7 @@ interface Project {
   date: string;
   description: string;
   imageSrc: string;
-  techLogos: string[];
+  techLogos: React.ReactNode[];
   demoLink: string;
 }
 

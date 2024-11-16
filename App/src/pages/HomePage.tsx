@@ -1,4 +1,30 @@
 import React from "react";
+
+import {
+  FaPython,
+  FaPhp,
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact, // Add React icon
+} from "react-icons/fa"; // Ajouter d'autres icônes si nécessaire
+import {
+  SiSymfony,
+  SiMysql,
+  SiMongodb,
+  SiNeo4J,
+  SiGit,
+  SiGnubash,
+  SiDocker,
+  SiHuggingface,
+  SiTypescript,
+  SiLangchain,
+  SiFirebase,
+  SiTsnode,
+  SiNodedotjs,
+  SiRaspberrypi, // Add TypeScript icon
+} from "react-icons/si"; // Icônes supplémentaires
+
 import Layout from "../components/templates/Layout";
 import InfoSection from "../components/organisms/InfoSection";
 import { useTranslation } from "react-i18next";
@@ -48,10 +74,16 @@ import logoIA7w from "../assets/img/logo/logo_ia_7_w.svg";
 import logoIA8w from "../assets/img/logo/logo_ia_8_w.svg";
 import logoIA9w from "../assets/img/logo/logo_ia_9_w.svg";
 import logoIA10w from "../assets/img/logo/logo_ia_10_w.svg";
+
+import logoNLw from "../assets/img/LOGO_NL_white.svg";
+import logoNLb from "../assets/img/LOGO_NL_dark.svg";
+
 import { useTheme } from "styled-components";
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();
+  const { theme } = useTheme();
+  const dark = theme === "dark";
 
   const experiencesData = [
     {
@@ -136,28 +168,71 @@ const HomePage: React.FC = () => {
 
   const projectData = [
     {
-      title: t("project.title1"),
-      subtitle: t("project.subtitle1"),
-      date: t("project.date1"),
-      description: t("project.description1"),
-      imageSrc: "https://via.placeholder.com/200x150",
-      techLogos: [
-        "https://via.placeholder.com/40x40",
-        "https://via.placeholder.com/40x40",
-      ],
-      demoLink: "https://example.com/demo1",
+      title: t("projects.ePortfolio.title"),
+      subtitle: t("projects.ePortfolio.subtitle"),
+      date: t("projects.ePortfolio.date"),
+      description: t("projects.ePortfolio.description"),
+      imageSrc: dark ? logoNLb : logoNLw,
+      techLogos: [<FaReact />, <SiTypescript />, <SiRaspberrypi />],
+      demoLink: "URL_DEMO",
     },
     {
-      title: t("project.title2"),
-      subtitle: t("project.subtitle2"),
-      date: t("project.date2"),
-      description: t("project.description2"),
-      imageSrc: "https://via.placeholder.com/200x150",
+      title: t("projects.markIA.title"),
+      subtitle: t("projects.markIA.subtitle"),
+      date: t("projects.markIA.date"),
+      description: t("projects.markIA.description"),
+      imageSrc: "URL_IMAGE",
       techLogos: [
-        "https://via.placeholder.com/40x40",
-        "https://via.placeholder.com/40x40",
+        <FaReact />,
+        <SiTypescript />,
+        <SiHuggingface />,
+        <SiMongodb />,
+        <SiLangchain />,
+        <SiFirebase />,
       ],
-      demoLink: "https://example.com/demo2",
+      demoLink: "URL_DEMO",
+    },
+    {
+      title: t("projects.jobo.title"),
+      subtitle: t("projects.jobo.subtitle"),
+      date: t("projects.jobo.date"),
+      description: t("projects.jobo.description"),
+      imageSrc: "URL_IMAGE",
+      techLogos: [<FaReact />, <SiMongodb />, <SiHuggingface />, <SiTsnode />],
+      demoLink: "URL_DEMO",
+    },
+    {
+      title: t("projects.meteoApp.title"),
+      subtitle: t("projects.meteoApp.subtitle"),
+      date: t("projects.meteoApp.date"),
+      description: t("projects.meteoApp.description"),
+      imageSrc: "URL_IMAGE",
+      techLogos: [<FaReact />, <SiFirebase />],
+      demoLink: "URL_DEMO",
+    },
+    {
+      title: t("projects.eMortels.title"),
+      subtitle: t("projects.eMortels.subtitle"),
+      date: t("projects.eMortels.date"),
+      description: t("projects.eMortels.description"),
+      imageSrc: "URL_IMAGE",
+      techLogos: [<FaReact />, <SiNodedotjs />, <SiMongodb />],
+      demoLink: "URL_DEMO",
+    },
+    {
+      title: t("projects.discordPiBot.title"),
+      subtitle: t("projects.discordPiBot.subtitle"),
+      date: t("projects.discordPiBot.date"),
+      description: t("projects.discordPiBot.description"),
+      imageSrc: "URL_IMAGE",
+      techLogos: [
+        <FaPython />,
+        <SiGnubash />,
+        <SiDocker />,
+        <SiGit />,
+        <SiRaspberrypi />,
+      ],
+      demoLink: "URL_DEMO",
     },
   ];
 
@@ -187,9 +262,7 @@ const HomePage: React.FC = () => {
     logoIA10b,
   ];
 
-  const { theme } = useTheme();
-  console.log(theme);
-  const friseData = theme === "dark" ? darkLogo : whiteLogo;
+  const friseData = dark ? darkLogo : whiteLogo;
 
   return (
     <Layout title={t("homepage.title")} displaySidebar>

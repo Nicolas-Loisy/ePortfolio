@@ -81,14 +81,48 @@
   },
   "projects": {
     "title": "Mes Projets",
-    "title1": "Projet 1",
-    "subtitle1": "Sous-titre du projet 1",
-    "date1": "Janvier 2024",
-    "description1": "Description du projet 1.",
-    "title2": "Projet 2",
-    "subtitle2": "Sous-titre du projet 2",
-    "date2": "Février 2024",
-    "description2": "Description du projet 2."
+    "ePortfolio": {
+      "title": "ePortfolio",
+      "subtitle": "Portfolio personnel interactif",
+      "date": "2024",
+      "description": "Développement d'un portfolio personnel interactif conçu pour présenter mes compétences techniques, mes expériences professionnelles et mes projets personnels. Ce projet a été développé avec React et TypeScript.",
+      "techLogos": ["FaReact", "SiTypescript"]
+    },
+    "markIA": {
+      "title": "MarkIA",
+      "subtitle": "Site de documentation technique avec IA",
+      "date": "2024",
+      "description": "Développement d'une plateforme web de rédaction et stockage de documentation intégrant une intelligence artificielle pour simplifier la recherche. Le projet inclut un chatbot alimenté par une base de connaissances (les documentations) et un système RAG (Retrieval-Augmented Generation).",
+      "techLogos": ["FaReact", "SiTypescript", "SiHuggingface"]
+    },
+    "jobo": {
+      "title": "JOBO",
+      "subtitle": "Application mobile pour valoriser les métiers des industries et le Made in France",
+      "date": "2024",
+      "description": "Création d'une application mobile innovante qui reconnaît les objets via la caméra et identifie les métiers d'artisanat ou d'industrie impliqués dans leur fabrication. Développé avec React Native et une API de vision IA.",
+      "techLogos": ["FaReact", "SiMongodb"]
+    },
+    "meteoApp": {
+      "title": "MeteoApp",
+      "subtitle": "Application mobile d'alertes climatiques",
+      "date": "2023",
+      "description": "Une application personnalisable pour alerter les utilisateurs sur les événements climatiques extrêmes dans leur région. Inclut des notifications en temps réel et des prévisions météorologiques locales.",
+      "techLogos": ["FaReact", "SiMongodb"]
+    },
+    "eMortels": {
+      "title": "eMortels",
+      "subtitle": "Plateforme pour l'Académie Française",
+      "date": "2023",
+      "description": "Conception et développement d'une plateforme éducative pour promouvoir la maîtrise de la langue française. Ce projet propose des exercices interactifs et un accès aux ressources linguistiques.",
+      "techLogos": ["FaReact", "SiMongodb"]
+    },
+    "discordPiBot": {
+      "title": "DiscordPiBot",
+      "subtitle": "Bot Discord pour la domotique",
+      "date": "2022",
+      "description": "Un bot Discord multifonction hébergé sur un Raspberry Pi, conçu pour contrôler des appareils domotiques et automatiser des tâches dans un serveur Discord. Écrit en Python pour une gestion flexible et modulaire des ports GPIO.",
+      "techLogos": ["FaPython", "SiDocker"]
+    }
   },
   "contentpage": {
     "title": "Documentation"

@@ -170,7 +170,7 @@ interface CardProps {
   date?: string;
   description?: string;
   imageSrc?: string;
-  techLogos?: string[];
+  techLogos?: React.ReactNode[];
   demoLink?: string;
 }
 
@@ -198,7 +198,7 @@ const Card: React.FC<CardProps> = ({
       {techLogos.length > 0 && (
         <TechLogoContainer>
           {techLogos.map((logo, index) => (
-            <TechLogo key={index} src={logo} alt={`tech-logo-${index}`} />
+            <React.Fragment key={index}>{logo}</React.Fragment>
           ))}
         </TechLogoContainer>
       )}
