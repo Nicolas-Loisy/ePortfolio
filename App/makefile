@@ -1,6 +1,7 @@
 build:
 	@echo "Installing dependencies and building the project..."
-	@npm install && npm run build
+	@npm install
+	@npm run build
 	@echo "Build completed."
 
 # Commande pour déployer les fonctions sur Firebase

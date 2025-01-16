@@ -130,10 +130,10 @@ const HomePage: React.FC = () => {
 
   const certifications = [
     {
-      title: t("certification.title1"),
-      description: t("certification.description1"),
-      year: t("certification.year1"),
-      link: certif_js,
+      title: t("certification.title3"),
+      description: t("certification.description3"),
+      year: t("certification.year3"),
+      link: certif_ia,
     },
     {
       title: t("certification.title2"),
@@ -142,10 +142,10 @@ const HomePage: React.FC = () => {
       link: certif_py,
     },
     {
-      title: t("certification.title3"),
-      description: t("certification.description3"),
-      year: t("certification.year3"),
-      link: certif_ia,
+      title: t("certification.title1"),
+      description: t("certification.description1"),
+      year: t("certification.year1"),
+      link: certif_js,
     },
   ];
 
