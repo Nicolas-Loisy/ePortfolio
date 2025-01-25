@@ -124,6 +124,12 @@
       "date": "2022",
       "description": "A multifunctional Discord bot hosted on a Raspberry Pi, designed to control home automation devices and automate tasks in a Discord server. Written in Python for flexible and modular GPIO port management.",
       "techLogos": ["FaPython", "SiDocker"]
+    },
+    "enigma": {
+      "title": "Enigma",
+      "subtitle": "University project on cryptology",
+      "date": "2025",
+      "description": "Reproduction of the Enigma machine logic as part of a university project. This project aims to understand and implement the cryptology concepts used by the Enigma machine."
     }
   },
   "components": {

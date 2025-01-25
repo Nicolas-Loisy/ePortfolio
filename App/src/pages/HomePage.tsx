@@ -43,6 +43,7 @@ import LogoMeteoApp from "../assets/img/logo_meteo.svg";
 import LogoEMortelRenartBouche from "../assets/img/logo_emortel_renart_bouche.png";
 import LogoEMortelRenartEpee from "../assets/img/logo_emortel_renart_epee.png";
 import LogoPiBot from "../assets/img/logo_pi_bot.jpg";
+import LogoEnigma from "../assets/img/Enigma-logo.svg.png";
 
 import certif_ia from "../assets/files/nl_ia.jpg";
 import certif_js from "../assets/files/nl_js.jpg";
@@ -162,6 +163,15 @@ const HomePage: React.FC = () => {
   ];
 
   const projectData = [
+    {
+      title: t("projects.enigma.title"),
+      subtitle: t("projects.enigma.subtitle"),
+      date: t("projects.enigma.date"),
+      description: t("projects.enigma.description"),
+      imageSrc: LogoEnigma,
+      techLogos: [<FaPython />],
+      demoLink: "https://nicolasloisy.fr/enigma",
+    },
     {
       title: t("projects.ePortfolio.title"),
       subtitle: t("projects.ePortfolio.subtitle"),
