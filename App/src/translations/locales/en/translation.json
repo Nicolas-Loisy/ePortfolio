@@ -130,6 +130,19 @@
       "subtitle": "University project on cryptology",
       "date": "2025",
       "description": "Reproduction of the Enigma machine logic as part of a university project. This project aims to understand and implement the cryptology concepts used by the Enigma machine."
+    },
+    "tweetLearning": {
+      "title": "TweetEmotion - Machine Learning",
+      "subtitle": "Classification of tweets by emotions using logistic regression",
+      "date": "2025",
+      "description": "Creation of a machine learning model to classify tweets based on their emotions. Preprocessing, vectorization, and supervised model training for sentiment analysis."
+    },
+    "featureEngineering": {
+      "title": "LLM4FE - Feature Engineering",
+      "subtitle": "Automation of feature engineering with AI",
+      "date": "2025",
+      "description": "Development of a system for automating feature engineering for machine learning. Utilization of language models to generate relevant features from raw data.",
+      "techLogos": ["FaPython", "SiHuggingface"]
     }
   },
   "components": {

@@ -130,6 +130,19 @@
       "subtitle": "Projet universitaire sur la cryptologie",
       "date": "2025",
       "description": "Reproduction de la logique de la machine Enigma dans le cadre d'un projet universitaire. Ce projet vise à comprendre et à implémenter les concepts de cryptologie utilisés par la machine Enigma."
+    },
+    "tweetLearning": {
+      "title": "TweetEmotion - Machine Learning",
+      "subtitle": "Classification de tweets par émotions via régression logistique",
+      "date": "2025",
+      "description": "Création d’un modèle de machine learning pour classifier des tweets selon leurs émotions. Prétraitement, vectorisation et entraînement d’un modèle supervisé pour l’analyse de sentiments."
+    },
+    "featureEngineering": {
+      "title": "LLM4FE - Feature Engineering",
+      "subtitle": "Automatisation de feature engineering avec IA",
+      "date": "2025",
+      "description": "Développement d'un système d'automatisation de feature engineering pour le machine learning. Utilisation de modèles de langage pour générer des features pertinentes à partir de données brutes.",
+      "techLogos": ["FaPython", "SiHuggingface"]
     }
   },
   "components": {

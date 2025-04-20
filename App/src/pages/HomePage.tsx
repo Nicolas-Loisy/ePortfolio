@@ -44,6 +44,8 @@ import LogoEMortelRenartBouche from "../assets/img/logo_emortel_renart_bouche.pn
 import LogoEMortelRenartEpee from "../assets/img/logo_emortel_renart_epee.png";
 import LogoPiBot from "../assets/img/logo_pi_bot.jpg";
 import LogoEnigma from "../assets/img/Enigma-logo.svg.png";
+import TweetEmotion from "../assets/img/logo_tweetEmotion.png";
+import FeatureEngineering from "../assets/img/logo_fe.png";
 
 import certif_ia from "../assets/files/nl_ia.jpg";
 import certif_js from "../assets/files/nl_js.jpg";
@@ -163,6 +165,24 @@ const HomePage: React.FC = () => {
   ];
 
   const projectData = [
+    {
+      title: t("projects.featureEngineering.title"),
+      subtitle: t("projects.featureEngineering.subtitle"),
+      date: t("projects.featureEngineering.date"),
+      description: t("projects.featureEngineering.description"),
+      imageSrc: FeatureEngineering,
+      techLogos: [<FaPython />, <SiHuggingface />],
+      demoLink: "",
+    },
+    {
+      title: t("projects.tweetLearning.title"),
+      subtitle: t("projects.tweetLearning.subtitle"),
+      date: t("projects.tweetLearning.date"),
+      description: t("projects.tweetLearning.description"),
+      imageSrc: TweetEmotion,
+      techLogos: [<FaPython />, <SiHuggingface />],
+      demoLink: "",
+    },
     {
       title: t("projects.enigma.title"),
       subtitle: t("projects.enigma.subtitle"),
