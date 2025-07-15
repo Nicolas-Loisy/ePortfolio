@@ -12,7 +12,8 @@
   "welcome": "Bienvenue dans notre application",
   "homepage": {
     "title": "Page d'accueil",
-    "description": "Ceci est la page d'accueil."
+    "description": "Ceci est la page d'accueil.",
+    "downloadcv": "Télécharger le CV"
   },
   "profile": {
     "name": "Nicolas Loisy",

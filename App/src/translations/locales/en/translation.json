@@ -12,7 +12,8 @@
   "welcome": "Welcome to our application",
   "homepage": {
     "title": "Homepage",
-    "description": "This is the homepage."
+    "description": "This is the homepage.",
+    "downloadcv": "Download CV"
   },
   "profile": {
     "name": "Nicolas Loisy",

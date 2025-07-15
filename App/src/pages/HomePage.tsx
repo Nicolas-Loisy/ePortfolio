@@ -47,10 +47,6 @@ import LogoEnigma from "../assets/img/Enigma-logo.svg.png";
 import TweetEmotion from "../assets/img/logo_tweetEmotion.png";
 import FeatureEngineering from "../assets/img/logo_fe.png";
 
-import certif_ia from "../assets/files/nl_ia.jpg";
-import certif_js from "../assets/files/nl_js.jpg";
-import certif_py from "../assets/files/nl_py.jpg";
-
 import logoIA1b from "../assets/img/logo/logo_ia_1_b.svg";
 import logoIA2b from "../assets/img/logo/logo_ia_2_b.svg";
 import logoIA3b from "../assets/img/logo/logo_ia_3_b.svg";
@@ -77,6 +73,12 @@ import logoNLw from "../assets/img/LOGO_NL_white.svg";
 import logoNLb from "../assets/img/LOGO_NL_dark.svg";
 
 import { useTheme } from "styled-components";
+import DownloadButton from "../components/atoms/DownloadButton";
+
+const cv_nl = "/files/CV_Nicolas_Loisy.pdf";
+const certif_ia = "/files/nl_ia.jpg";
+const certif_js = "/files/nl_js.jpg";
+const certif_py = "/files/nl_py.jpg";
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();
@@ -304,6 +306,17 @@ const HomePage: React.FC = () => {
         email={t("social.email")}
       />
       <TerminalLite texts={texts} />
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          margin: "1.5rem 0",
+        }}
+      >
+        <DownloadButton href={cv_nl}>{t("homepage.downloadcv")}</DownloadButton>
+      </div>
+
       <About title={t("about.title")} description={t("about.description")} />
       <Skills title={t("skills.title")} />
       <Experience title={t("experience.title")} experiences={experiencesData} />

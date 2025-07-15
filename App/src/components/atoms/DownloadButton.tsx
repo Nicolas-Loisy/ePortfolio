@@ -1,9 +1,7 @@
-// ButtonLink.tsx
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
-const StyledButton = styled(Link)`
+const StyledDownloadButton = styled.a`
   display: inline-block;
   padding: 0.75rem 1.5rem;
   background-color: transparent;
@@ -27,13 +25,17 @@ const StyledButton = styled(Link)`
   }
 `;
 
-interface ButtonLinkProps {
-  text: string;
-  to: string;
+interface DownloadButtonProps {
+  href: string;
+  children: React.ReactNode;
 }
 
-const ButtonLink: React.FC<ButtonLinkProps> = ({ text, to }) => {
-  return <StyledButton to={to}>{text}</StyledButton>;
+const DownloadButton: React.FC<DownloadButtonProps> = ({ href, children }) => {
+  return (
+    <StyledDownloadButton href={href} target="_blank" rel="noopener noreferrer">
+      {children}
+    </StyledDownloadButton>
+  );
 };
 
-export default ButtonLink;
+export default DownloadButton;
