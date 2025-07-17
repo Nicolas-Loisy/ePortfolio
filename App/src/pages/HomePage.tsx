@@ -74,6 +74,7 @@ import logoNLb from "../assets/img/LOGO_NL_dark.svg";
 
 import { useTheme } from "styled-components";
 import DownloadButton from "../components/atoms/DownloadButton";
+import { useSEO } from "../hooks/useSEO";
 
 const cv_nl = "/files/CV_Nicolas_Loisy.pdf";
 const certif_ia = "/files/nl_ia.jpg";
@@ -84,6 +85,9 @@ const HomePage: React.FC = () => {
   const { t } = useTranslation();
   const { theme } = useTheme();
   const dark = theme === "dark";
+
+  // SEO data from custom hook
+  const { title, description, keywords, structuredData } = useSEO();
 
   const experiencesData = [
     {
@@ -292,41 +296,88 @@ const HomePage: React.FC = () => {
   const friseData = dark ? darkLogo : whiteLogo;
 
   return (
-    <Layout title={t("homepage.title")} displaySidebar>
-      <ProfileCard
-        imageSrc={pp}
-        name={t("profile.name")}
-        title={t("profile.title")}
-      />
+    <Layout
+      title={title}
+      description={description}
+      keywords={keywords}
+      structuredData={structuredData}
+      displaySidebar
+    >
+      <main>
+        <header>
+          <h1 style={{ visibility: "hidden", height: 0, margin: 0 }}>
+            Nicolas Loisy - Développeur IA & Data Scientist
+          </h1>
+        </header>
 
-      <SocialBar
-        github={t("social.github")}
-        huggingface={t("social.huggingface")}
-        linkedin={t("social.linkedin")}
-        email={t("social.email")}
-      />
-      <TerminalLite texts={texts} />
+        <ProfileCard
+          imageSrc={pp}
+          name={t("profile.name")}
+          title={t("profile.title")}
+        />
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          margin: "1.5rem 0",
-        }}
-      >
-        <DownloadButton href={cv_nl}>{t("homepage.downloadcv")}</DownloadButton>
-      </div>
+        <section aria-label="Informations de contact">
+          <SocialBar
+            github={t("social.github")}
+            huggingface={t("social.huggingface")}
+            linkedin={t("social.linkedin")}
+            email={t("social.email")}
+          />
+        </section>
 
-      <About title={t("about.title")} description={t("about.description")} />
-      <Skills title={t("skills.title")} />
-      <Experience title={t("experience.title")} experiences={experiencesData} />
-      <Diplome title={t("diplome.title")} diplomes={diplomesData} />
-      <Certification
-        title={t("certification.title")}
-        certifications={certifications}
-      />
-      <Projects title={t("projects.title")} projects={projectData} />
-      <Frise images={friseData} />
+        <section aria-label="Terminal interactif">
+          <TerminalLite texts={texts} />
+        </section>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            margin: "1.5rem 0",
+          }}
+        >
+          <DownloadButton href={cv_nl}>
+            {t("homepage.downloadcv")}
+          </DownloadButton>
+        </div>
+
+        <section aria-label="À propos">
+          <About
+            title={t("about.title")}
+            description={t("about.description")}
+          />
+        </section>
+
+        <section aria-label="Compétences techniques">
+          <Skills title={t("skills.title")} />
+        </section>
+
+        <section aria-label="Expériences professionnelles">
+          <Experience
+            title={t("experience.title")}
+            experiences={experiencesData}
+          />
+        </section>
+
+        <section aria-label="Diplômes et formation">
+          <Diplome title={t("diplome.title")} diplomes={diplomesData} />
+        </section>
+
+        <section aria-label="Certifications">
+          <Certification
+            title={t("certification.title")}
+            certifications={certifications}
+          />
+        </section>
+
+        <section aria-label="Projets réalisés">
+          <Projects title={t("projects.title")} projects={projectData} />
+        </section>
+
+        <section aria-label="Frise chronologique">
+          <Frise images={friseData} />
+        </section>
+      </main>
     </Layout>
   );
 };

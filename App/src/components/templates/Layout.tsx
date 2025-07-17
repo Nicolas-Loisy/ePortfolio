@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import Navbar from "../organisms/Navbar";
 import Footer from "../organisms/Footer";
+import SEO from "../atoms/SEO";
 import logoDark from "../../assets/img/LOGO_NL_dark.svg";
 import logoLight from "../../assets/img/LOGO_NL_white.svg";
 import { useTranslation } from "react-i18next";
@@ -27,14 +28,30 @@ const MainContainer = styled.main<{}>`
 interface LayoutProps {
   children: React.ReactNode;
   title: string;
+  description?: string;
+  keywords?: string;
+  structuredData?: object;
   displaySidebar?: boolean;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  title,
+  description,
+  keywords,
+  structuredData,
+}) => {
   const { t } = useTranslation();
 
   return (
     <>
+      <SEO
+        title={title}
+        description={description}
+        keywords={keywords}
+        structuredData={structuredData}
+      />
+
       <Navbar
         logoLight={logoDark}
         logoDark={logoLight}

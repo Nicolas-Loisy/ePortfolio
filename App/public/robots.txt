@@ -1,3 +1,17 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://nicolasloisy.fr/sitemap.xml
+
+# Disallow private files
+Disallow: /files/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /src/
+
+# Allow main content
+Allow: /assets/
+Allow: /img/
+Allow: /enigma/
