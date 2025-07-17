@@ -31,6 +31,12 @@ const SEO: React.FC<SEOProps> = ({
         <meta name="author" content={author} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        {/* Google Search Console Verification - Remplacez par votre code */}
+        <meta
+          name="google-site-verification"
+          content="blS9Z2j-1VFTbRqIOBu5U4HYLdSQUpVc4AQPKfV4wp8"
+        />
+
         {/* Open Graph */}
         <meta property="og:title" content={title} />
         {description && (
