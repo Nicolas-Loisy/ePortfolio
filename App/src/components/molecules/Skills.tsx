@@ -23,6 +23,8 @@ import {
   SiTsnode,
 } from "react-icons/si"; // Icônes supplémentaires
 
+import llamaindex from "../../assets/img/llamaindex.svg";
+
 // Conteneur principal pour les compétences
 const SkillsContainer = styled.div`
   display: flex;
@@ -95,7 +97,12 @@ const SectionTitle = styled.h2`
   width: fit-content; // La largeur du titre s'adapte à son contenu
 `;
 
-const skills = [
+type Skill = {
+  name: string;
+  icon: React.ReactNode;
+};
+
+const skills: Skill[] = [
   { name: "Python", icon: <FaPython /> },
   { name: "PHP", icon: <FaPhp /> },
   { name: "Symfony", icon: <SiSymfony /> },
@@ -107,6 +114,16 @@ const skills = [
   { name: "NodeJS", icon: <FaNodeJs /> },
   { name: "NodeTS", icon: <SiTsnode /> },
   { name: "IA", icon: <SiHuggingface /> },
+  {
+    name: "LlamaIndex",
+    icon: (
+      <img
+        src={llamaindex}
+        alt="LlamaIndex"
+        style={{ width: "2rem", height: "2rem" }}
+      />
+    ),
+  },
   { name: "Langchain", icon: <SiLangchain /> },
   { name: "MySQL", icon: <SiMysql /> },
   { name: "MongoDB", icon: <SiMongodb /> },
