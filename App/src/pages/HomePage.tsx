@@ -306,7 +306,7 @@ const HomePage: React.FC = () => {
       <main>
         <header>
           <h1 style={{ visibility: "hidden", height: 0, margin: 0 }}>
-            Nicolas Loisy - Développeur IA & Data Scientist
+            Nicolas Loisy - Développeur IA, Python & Web | Portfolio
           </h1>
         </header>
 

@@ -9,7 +9,7 @@ interface SEOData {
 
 export const useSEO = (): SEOData => {
   return useMemo(() => ({
-    title: "Nicolas Loisy - Développeur IA & Data Scientist | Portfolio",
+    title: "Nicolas Loisy - Développeur IA, Python, Web & Data Scientist | Portfolio",
     description: "Nicolas Loisy, Développeur Intelligence Artificielle et Data Scientist. Spécialisé en Python, React, Machine Learning, NLP. Portfolio de projets IA et développement web.",
     keywords: "Nicolas Loisy, développeur IA, data scientist, intelligence artificielle, machine learning, Python, React, TypeScript, portfolio, développeur web, PHP, Symfony, MongoDB, Docker, LlamaIndex, Langchain, RAG, IEEE",
     structuredData: {
