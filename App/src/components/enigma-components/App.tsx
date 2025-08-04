@@ -386,7 +386,7 @@ function App() {
           {/* Encoded Message */}
           {encodedMessage && (
             <div
-              id="encoded-message-result"
+              id="encoded-message-container"
               className="encoded-message-container"
               style={{
                 marginTop: "2rem",
@@ -403,7 +403,7 @@ function App() {
               >
                 Message Encodé
               </h2>
-              <p className="encoded-message-text">{encodedMessage}</p>
+              <p className="encoded-message-text-result">{encodedMessage}</p>
             </div>
           )}
         </div>
