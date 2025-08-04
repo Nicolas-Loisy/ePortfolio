@@ -140,13 +140,14 @@ function App() {
           }}
         >
           {/* Configuration des Rotors */}
-          <div style={{ marginBottom: "2rem" }}>
+          <div style={{ marginBottom: "2rem" }} className="rotors-section">
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
                 marginBottom: "1rem",
               }}
+              className="rotors-header"
             >
               <Settings
                 style={{
@@ -168,17 +169,25 @@ function App() {
               }}
             >
               {initialPositions.map((pos, index) => (
-                <div key={index} style={{ marginRight: "1rem" }}>
+                <div
+                  key={index}
+                  style={{ marginRight: "1rem" }}
+                  className="rotor-container"
+                >
                   <label
+                    htmlFor={`rotor-${index + 1}`}
                     style={{
                       display: "block",
                       marginBottom: "0.5rem",
                       color: "#9ca3af",
                     }}
+                    className="rotor-label"
                   >
                     Rotor {index + 1}
                   </label>
                   <input
+                    id={`rotor-${index + 1}`}
+                    className="rotor-input"
                     type="number"
                     min="1"
                     max="26"
@@ -201,7 +210,7 @@ function App() {
           </div>
 
           {/* Connexions */}
-          <div style={{ marginBottom: "2rem" }}>
+          <div style={{ marginBottom: "2rem" }} className="connections-section">
             <div
               style={{
                 display: "flex",
@@ -209,6 +218,7 @@ function App() {
                 alignItems: "center",
                 marginBottom: "1rem",
               }}
+              className="connections-header"
             >
               <div style={{ display: "flex", alignItems: "center" }}>
                 <RotateCw
@@ -224,6 +234,8 @@ function App() {
                 </h2>
               </div>
               <button
+                id="add-connection-btn"
+                className="add-connection-button"
                 onClick={addConnection}
                 disabled={boardConnections.length >= 13}
                 style={{
@@ -258,17 +270,22 @@ function App() {
                 <div
                   key={index}
                   style={{ marginBottom: "1rem", marginRight: "1rem" }}
+                  className="connection-container"
                 >
                   <label
+                    htmlFor={`connection-${index + 1}`}
                     style={{
                       display: "block",
                       marginBottom: "0.5rem",
                       color: "#9ca3af",
                     }}
+                    className="connection-label"
                   >
                     Paire {index + 1}
                   </label>
                   <input
+                    id={`connection-${index + 1}`}
+                    className="connection-input"
                     type="text"
                     value={conn}
                     onChange={(e) =>
@@ -291,18 +308,22 @@ function App() {
           </div>
 
           {/* Message */}
-          <div style={{ marginBottom: "2rem" }}>
+          <div style={{ marginBottom: "2rem" }} className="message-section">
             <label
+              htmlFor="message-input"
               style={{
                 display: "block",
                 marginBottom: "0.5rem",
                 marginRight: "1rem",
                 color: "#9ca3af",
               }}
+              className="message-label"
             >
               Message à encoder
             </label>
             <textarea
+              id="message-input"
+              className="message-textarea"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               style={{
@@ -319,6 +340,8 @@ function App() {
           </div>
 
           <button
+            id="encode-btn"
+            className="encode-button"
             onClick={handleEncode}
             disabled={isLoading}
             style={{
@@ -363,6 +386,8 @@ function App() {
           {/* Encoded Message */}
           {encodedMessage && (
             <div
+              id="encoded-message-result"
+              className="encoded-message-container"
               style={{
                 marginTop: "2rem",
                 padding: "1rem",
@@ -372,10 +397,13 @@ function App() {
                 color: COLORS.text,
               }}
             >
-              <h2 style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
+              <h2
+                className="encoded-message-title"
+                style={{ fontSize: "1.5rem", fontWeight: "bold" }}
+              >
                 Message Encodé
               </h2>
-              <p>{encodedMessage}</p>
+              <p className="encoded-message-text">{encodedMessage}</p>
             </div>
           )}
         </div>

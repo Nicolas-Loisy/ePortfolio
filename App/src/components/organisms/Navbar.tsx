@@ -2,7 +2,6 @@
 import React, { useCallback, useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../molecules/Logo";
-import Sidebar from "./Sidebar";
 import ThemeSwitcher from "../molecules/ThemeSwitcher";
 import LanguageSelector from "../molecules/LanguageSelector";
 

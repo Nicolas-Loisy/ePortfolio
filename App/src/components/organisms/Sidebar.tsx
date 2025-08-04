@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa"; // Icônes burger et croix de FontAwesome
-import ThemeSwitcher from "../molecules/ThemeSwitcher";
+// import ThemeSwitcher from "../molecules/ThemeSwitcher";
 import LanguageSelector from "../molecules/LanguageSelector";
 
 const Sidebar: React.FC = () => {

@@ -41,7 +41,6 @@ import LogoMarkia from "../assets/img/logo_markia.jpg";
 import LogoJobo from "../assets/img/logo_jobo.png";
 import LogoMeteoApp from "../assets/img/logo_meteo.svg";
 import LogoEMortelRenartBouche from "../assets/img/logo_emortel_renart_bouche.png";
-import LogoEMortelRenartEpee from "../assets/img/logo_emortel_renart_epee.png";
 import LogoPiBot from "../assets/img/logo_pi_bot.jpg";
 import LogoEnigma from "../assets/img/Enigma-logo.svg.png";
 import TweetEmotion from "../assets/img/logo_tweetEmotion.png";
