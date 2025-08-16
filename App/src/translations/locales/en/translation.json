@@ -170,5 +170,28 @@
       "title": "An error occurred",
       "description": "Something went wrong. Please try again later."
     }
+  },
+  "secure": {
+    "access": "Secure Documents Access",
+    "description": "Password-protected section",
+    "login": {
+      "title": "Confidential Documents",
+      "subtitle": "This section contains confidential documents. Please authenticate to access.",
+      "password": "Password",
+      "submit": "Access",
+      "loading": "Verifying...",
+      "error": "Incorrect password. Please try again."
+    },
+    "documents": {
+      "title": "Confidential Documents",
+      "subtitle": "Secure access",
+      "logout": "Logout",
+      "download": "Download",
+      "preview": "Preview",
+      "empty": {
+        "title": "No documents available",
+        "description": "There are currently no confidential documents available in this section. Please check back later or contact the administrator."
+      }
+    }
   }
 }

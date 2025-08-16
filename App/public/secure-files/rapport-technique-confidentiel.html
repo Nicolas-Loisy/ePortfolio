@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Confidentiel - Exemple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .confidential {
+            background: #fee;
+            border: 2px solid #fcc;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            color: #c33;
+        }
+        .section {
+            margin: 25px 0;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔒 DOCUMENT CONFIDENTIEL</h1>
+        <p>Accès Sécurisé - Portfolio Nicolas Loisy</p>
+    </div>
+
+    <div class="content">
+        <div class="confidential">
+            ⚠️ CONFIDENTIEL - Distribution limitée aux personnes autorisées ⚠️
+        </div>
+
+        <div class="section">
+            <h2>📋 Rapport Technique</h2>
+            <p><strong>Date :</strong> 16 août 2024</p>
+            <p><strong>Auteur :</strong> Nicolas Loisy</p>
+            <p><strong>Classification :</strong> Confidentiel</p>
+            <p><strong>Référence :</strong> RT-2024-001</p>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Objectif</h2>
+            <p>Ce document présente un exemple de contenu confidentiel accessible uniquement après authentification dans le système de documents sécurisés.</p>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Fonctionnalités Implémentées</h2>
+            <ul>
+                <li><strong>Authentification sécurisée :</strong> Protection par mot de passe statique</li>
+                <li><strong>Gestion de session :</strong> Expiration automatique (1 heure)</li>
+                <li><strong>Interface utilisateur :</strong> Design responsive et élégant</li>
+                <li><strong>Multi-langue :</strong> Support français/anglais</li>
+                <li><strong>Gestion des documents :</strong> Prévisualisation et téléchargement</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📊 Spécifications Techniques</h2>
+            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                <tr style="background: #f5f5f5;">
+                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Composant</th>
+                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Technologie</th>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #ddd;">Frontend</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">React + TypeScript</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Authentification</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">Session locale + Variables d'environnement</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #ddd;">Styling</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">Styled Components</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                    <td style="padding: 8px; border: 1px solid #ddd;">Routing</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">React Router v6</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>🔐 Sécurité</h2>
+            <p>Le système implémente plusieurs niveaux de sécurité :</p>
+            <ul>
+                <li>Mot de passe configurable via variables d'environnement</li>
+                <li>Session avec expiration automatique</li>
+                <li>Vérification de la validité de session</li>
+                <li>Interface de déconnexion manuelle</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📋 Instructions d'utilisation</h2>
+            <ol>
+                <li>Accéder à la section via le bouton "Accès Documents Sécurisés"</li>
+                <li>Saisir le mot de passe configuré</li>
+                <li>Naviguer dans l'interface des documents</li>
+                <li>Télécharger ou prévisualiser les fichiers</li>
+                <li>Se déconnecter manuellement ou attendre l'expiration</li>
+            </ol>
+        </div>
+
+        <div class="confidential">
+            Ce document contient des informations propriétaires et confidentielles.<br>
+            Toute reproduction ou distribution non autorisée est strictement interdite.
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Nicolas Loisy - Document généré automatiquement</p>
+        <p>Système de documents sécurisés - Version 1.0</p>
+    </div>
+</body>
+</html>

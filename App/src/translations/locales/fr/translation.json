@@ -170,5 +170,28 @@
       "title": "Une erreur s'est produite",
       "description": "Quelque chose a mal tourné. Veuillez réessayer plus tard."
     }
+  },
+  "secure": {
+    "access": "Accès Documents Sécurisés",
+    "description": "Section protégée par mot de passe",
+    "login": {
+      "title": "Documents Confidentiels",
+      "subtitle": "Cette section contient des documents confidentiels. Veuillez vous authentifier pour y accéder.",
+      "password": "Mot de passe",
+      "submit": "Accéder",
+      "loading": "Vérification...",
+      "error": "Mot de passe incorrect. Veuillez réessayer."
+    },
+    "documents": {
+      "title": "Documents Confidentiels",
+      "subtitle": "Accès sécurisé",
+      "logout": "Se déconnecter",
+      "download": "Télécharger",
+      "preview": "Aperçu",
+      "empty": {
+        "title": "Aucun document disponible",
+        "description": "Il n'y a actuellement aucun document confidentiel disponible dans cette section. Veuillez revenir ultérieurement ou contacter l'administrateur."
+      }
+    }
   }
 }

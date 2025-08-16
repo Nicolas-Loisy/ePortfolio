@@ -31,6 +31,7 @@ import SocialBar from "../components/molecules/SocialBar";
 import Frise from "../components/molecules/Frise";
 import TerminalLite from "../components/molecules/TerminalLite";
 import Projects from "../components/molecules/Projects";
+import SecureAccessButton from "../components/molecules/SecureAccessButton";
 
 import pp from "../assets/img/pp_nl.jpg";
 import eurelisLogo from "../assets/img/eurelis_logo.jpg";
@@ -339,6 +340,14 @@ const HomePage: React.FC = () => {
             {t("homepage.downloadcv")}
           </DownloadButton>
         </div>
+
+        <SecureAccessButton
+          text={t("secure.access", "Accès Documents Sécurisés")}
+          description={t(
+            "secure.description",
+            "Section protégée par mot de passe"
+          )}
+        />
 
         <section aria-label="À propos">
           <About
