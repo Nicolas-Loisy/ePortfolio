@@ -82,6 +82,9 @@
     "text8": "MarkIA = MarkDown + IA",
     "text9": "sudo rm -rf /*"
   },
+  "linkedin": {
+    "title": "Mes Publications LinkedIn"
+  },
   "projects": {
     "title": "Mes Projets",
     "ePortfolio": {

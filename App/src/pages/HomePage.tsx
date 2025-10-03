@@ -31,6 +31,7 @@ import SocialBar from "../components/molecules/SocialBar";
 import Frise from "../components/molecules/Frise";
 import TerminalLite from "../components/molecules/TerminalLite";
 import Projects from "../components/molecules/Projects";
+import LinkedInPosts from "../components/molecules/LinkedInPosts";
 
 import pp from "../assets/img/pp_nl.jpg";
 import eurelisLogo from "../assets/img/eurelis_logo.jpg";
@@ -294,6 +295,23 @@ const HomePage: React.FC = () => {
 
   const friseData = dark ? darkLogo : whiteLogo;
 
+  // LinkedIn posts data - Ajoutez vos URLs d'iframe LinkedIn ici
+  // Pour obtenir l'URL d'iframe : sur LinkedIn, cliquez sur "..." puis "Intégrer" sur votre post
+  const linkedInPostsData = [
+    {
+      id: "1",
+      idIframeUrl: "7379872156538646528",
+    },
+    // {
+    //   id: "2",
+    //   idIframeUrl: "7379872156538646528",
+    // },
+    // {
+    //   id: "3",
+    //   idIframeUrl: "7379872156538646528",
+    // },
+  ];
+
   return (
     <Layout
       title={title}
@@ -371,6 +389,13 @@ const HomePage: React.FC = () => {
 
         <section aria-label="Projets réalisés">
           <Projects title={t("projects.title")} projects={projectData} />
+        </section>
+
+        <section aria-label="Publications LinkedIn">
+          <LinkedInPosts
+            title={t("linkedin.title")}
+            posts={linkedInPostsData}
+          />
         </section>
 
         <section aria-label="Frise chronologique">
