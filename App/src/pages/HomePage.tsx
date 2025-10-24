@@ -302,14 +302,14 @@ const HomePage: React.FC = () => {
       id: "1",
       idIframeUrl: "7379872156538646528",
     },
-    // {
-    //   id: "2",
-    //   idIframeUrl: "7379872156538646528",
-    // },
-    // {
-    //   id: "3",
-    //   idIframeUrl: "7379872156538646528",
-    // },
+    {
+      id: "2",
+      url: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7381728949665419264?collapsed=1",
+    },
+    {
+      id: "3",
+      idIframeUrl: "7369722803526213633",
+    },
   ];
 
   return (

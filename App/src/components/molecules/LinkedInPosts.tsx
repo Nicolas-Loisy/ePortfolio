@@ -4,7 +4,8 @@ import { FaLinkedin } from "react-icons/fa";
 
 interface LinkedInPost {
   id: string;
-  idIframeUrl: string;
+  idIframeUrl?: string;
+  url?: string;
 }
 
 interface LinkedInPostsProps {
@@ -101,7 +102,11 @@ const LinkedInPosts: React.FC<LinkedInPostsProps> = ({ title, posts }) => {
         {posts.map((post) => (
           <IframeContainer key={post.id}>
             <iframe
-              src={`https://www.linkedin.com/embed/feed/update/urn:li:share:${post.idIframeUrl}?collapsed=1`}
+              src={
+                post.idIframeUrl
+                  ? `https://www.linkedin.com/embed/feed/update/urn:li:share:${post.idIframeUrl}?collapsed=1`
+                  : post.url
+              }
               title="Post intégré"
             ></iframe>
           </IframeContainer>
