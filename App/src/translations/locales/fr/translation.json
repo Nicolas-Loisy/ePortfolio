@@ -13,7 +13,8 @@
   "homepage": {
     "title": "Page d'accueil",
     "description": "Ceci est la page d'accueil.",
-    "downloadcv": "Télécharger le CV"
+    "downloadcv": "Télécharger le CV",
+    "downloadmemoire": "Télécharger le Mémoire"
   },
   "profile": {
     "name": "Nicolas Loisy",
@@ -46,7 +47,7 @@
   },
   "diplome": {
     "title": "Diplômes",
-    "date1": "2023 - Présent",
+    "date1": "2023 - 2025",
     "title1": "Master MIAGE - Université Paris Cité (Descartes)",
     "description1": "Master MIAGE - Parcours : Valorisation et protection des données de l'entreprise.<br/> Double compétence en gestion de projet, management et développement, avec une expertise dans la gestion de la donnée.",
     "date2": "2022 - 2023",
@@ -147,6 +148,14 @@
       "date": "2025",
       "description": "Développement d'un système d'automatisation de feature engineering pour le machine learning. Utilisation de modèles de langage pour générer des features pertinentes à partir de données brutes.",
       "techLogos": ["FaPython", "SiHuggingface"]
+    }
+    ,
+    "glados": {
+      "title": "GLaDOS",
+      "subtitle": "Quand l'IA de Portal contrôle votre maison",
+      "date": "2025",
+      "description": "Et si GLaDOS, l’IA culte et sarcastique du jeu Portal, devenait votre assistante vocale à domicile ?\n\n C’est le défi que je me suis lancé : lui donner une voix, une personnalité… et surtout le contrôle de mon environnement connecté. Interaction multimodale (voix, Discord, web), TTS personnalisé, domotique locale (IR, GPIO, Bluetooth) et confidentialité (tout tourne sur un Raspberry Pi 5). Technologies : Picovoice, Piper, LlamaIndex, ReAct, LED IR, GPIO, Bluetooth, Pi 5.",
+      "techLogos": ["FaPython", "SiDocker", "SiRaspberrypi", "SiHuggingface"]
     }
   },
   "components": {

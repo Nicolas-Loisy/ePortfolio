@@ -3,6 +3,7 @@ import React from "react";
 import {
   FaPython,
   FaReact, // Add React icon
+  FaRobot,
 } from "react-icons/fa"; // Ajouter d'autres icônes si nécessaire
 import {
   SiMongodb,
@@ -46,6 +47,7 @@ import LogoPiBot from "../assets/img/logo_pi_bot.jpg";
 import LogoEnigma from "../assets/img/Enigma-logo.svg.png";
 import TweetEmotion from "../assets/img/logo_tweetEmotion.png";
 import FeatureEngineering from "../assets/img/logo_fe.png";
+import LogoGLaDOS from "../assets/img/GLaDOS_logo.png";
 
 import logoIA1b from "../assets/img/logo/logo_ia_1_b.svg";
 import logoIA2b from "../assets/img/logo/logo_ia_2_b.svg";
@@ -77,6 +79,7 @@ import DownloadButton from "../components/atoms/DownloadButton";
 import { useSEO } from "../hooks/useSEO";
 
 const cv_nl = "/files/CV_Nicolas_Loisy.pdf";
+const memoire_nl = "/files/NicolasLoisy_Memoire.pdf";
 const certif_ia = "/files/nl_ia.jpg";
 const certif_js = "/files/nl_js.jpg";
 const certif_py = "/files/nl_py.jpg";
@@ -171,6 +174,20 @@ const HomePage: React.FC = () => {
   ];
 
   const projectData = [
+    {
+      title: t("projects.glados.title"),
+      subtitle: t("projects.glados.subtitle"),
+      date: t("projects.glados.date"),
+      description: t("projects.glados.description"),
+      imageSrc: LogoGLaDOS,
+      techLogos: [
+        <FaPython />,
+        <SiDocker />,
+        <SiRaspberrypi />,
+        <SiHuggingface />,
+      ],
+      demoLink: "",
+    },
     {
       title: t("projects.featureEngineering.title"),
       subtitle: t("projects.featureEngineering.subtitle"),
@@ -351,10 +368,14 @@ const HomePage: React.FC = () => {
             display: "flex",
             justifyContent: "center",
             margin: "1.5rem 0",
+            verticalAlign: "middle",
           }}
         >
           <DownloadButton href={cv_nl}>
             {t("homepage.downloadcv")}
+          </DownloadButton>
+          <DownloadButton href={memoire_nl}>
+            {t("homepage.downloadmemoire")}
           </DownloadButton>
         </div>
 

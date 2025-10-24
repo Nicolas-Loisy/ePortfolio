@@ -11,8 +11,9 @@ const StyledDownloadButton = styled.a`
   border-radius: 4px;
   border: 2px solid ${(props) => props.theme.titleBorder || "#f9d342"};
   text-decoration: none;
-  margin: 0 auto;
+  margin: 1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
+  vertical-align: bottom;
 
   &:hover {
     background-color: ${(props) => props.theme.titleBorder || "#f9d342"};

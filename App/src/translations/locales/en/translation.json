@@ -13,7 +13,8 @@
   "homepage": {
     "title": "Homepage",
     "description": "This is the homepage.",
-    "downloadcv": "Download CV"
+    "downloadcv": "Download CV",
+    "downloadmemoire": "Download Thesis"
   },
   "profile": {
     "name": "Nicolas Loisy",
@@ -46,7 +47,7 @@
   },
   "diplome": {
     "title": "Degrees",
-    "date1": "2023 - Present",
+    "date1": "2023 - 2025",
     "title1": "Master MIAGE - Université Paris Cité (Descartes)",
     "description1": "Master MIAGE - Specialization: Data valorization and protection.<br/> Dual competence in project management, management, and development, with expertise in data management.",
     "date2": "2022 - 2023",
@@ -147,6 +148,14 @@
       "date": "2025",
       "description": "Development of a system for automating feature engineering for machine learning. Utilization of language models to generate relevant features from raw data.",
       "techLogos": ["FaPython", "SiHuggingface"]
+    }
+    ,
+    "glados": {
+      "title": "GLaDOS",
+      "subtitle": "When Portal's AI controls your home",
+      "date": "2025",
+      "description": "What if GLaDOS, the cult sarcastic AI from the game Portal, became your home voice assistant?\n\nThis project gives GLaDOS a voice and personality and lets it control a connected local environment running on a Raspberry Pi 5. Multimodal interaction (voice, Discord, web), custom TTS, local home automation (IR, GPIO, Bluetooth) and privacy-first design. Technologies: Picovoice, Piper, LlamaIndex, ReAct, IR LEDs, GPIO, Bluetooth, Pi 5.",
+      "techLogos": ["FaPython", "SiDocker", "SiRaspberrypi", "SiHuggingface"]
     }
   },
   "components": {
