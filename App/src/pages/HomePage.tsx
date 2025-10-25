@@ -76,6 +76,7 @@ import logoNLb from "../assets/img/LOGO_NL_dark.svg";
 
 import { useTheme } from "styled-components";
 import DownloadButton from "../components/atoms/DownloadButton";
+import AnchorNavArrows from "../components/atoms/AnchorNavArrows";
 import { useSEO } from "../hooks/useSEO";
 
 const cv_nl = "/files/CV_Nicolas_Loisy.pdf";
@@ -339,7 +340,7 @@ const HomePage: React.FC = () => {
     >
       <main>
         <header>
-          <h1 style={{ visibility: "hidden", height: 0, margin: 0 }}>
+          <h1 id="home" style={{ visibility: "hidden", height: 0, margin: 0 }}>
             Nicolas Loisy - Développeur IA, Python & Web | Portfolio
           </h1>
         </header>
@@ -359,7 +360,7 @@ const HomePage: React.FC = () => {
           />
         </section>
 
-        <section aria-label="Terminal interactif">
+        <section id="terminal" aria-label="Terminal interactif">
           <TerminalLite texts={texts} />
         </section>
 
@@ -379,40 +380,40 @@ const HomePage: React.FC = () => {
           </DownloadButton>
         </div>
 
-        <section aria-label="À propos">
+        <section id="about" aria-label="À propos">
           <About
             title={t("about.title")}
             description={t("about.description")}
           />
         </section>
 
-        <section aria-label="Compétences techniques">
+        <section id="skills" aria-label="Compétences techniques">
           <Skills title={t("skills.title")} />
         </section>
 
-        <section aria-label="Expériences professionnelles">
+        <section id="experience" aria-label="Expériences professionnelles">
           <Experience
             title={t("experience.title")}
             experiences={experiencesData}
           />
         </section>
 
-        <section aria-label="Diplômes et formation">
+        <section id="diplome" aria-label="Diplômes et formation">
           <Diplome title={t("diplome.title")} diplomes={diplomesData} />
         </section>
 
-        <section aria-label="Certifications">
+        <section id="certifications" aria-label="Certifications">
           <Certification
             title={t("certification.title")}
             certifications={certifications}
           />
         </section>
 
-        <section aria-label="Projets réalisés">
+        <section id="projects" aria-label="Projets réalisés">
           <Projects title={t("projects.title")} projects={projectData} />
         </section>
 
-        <section aria-label="Publications LinkedIn">
+        <section id="linkedin" aria-label="Publications LinkedIn">
           <LinkedInPosts
             title={t("linkedin.title")}
             posts={linkedInPostsData}
@@ -422,6 +423,17 @@ const HomePage: React.FC = () => {
         <section aria-label="Frise chronologique">
           <Frise images={friseData} />
         </section>
+        <AnchorNavArrows
+          anchors={[
+            "about",
+            "skills",
+            "experience",
+            "diplome",
+            "certifications",
+            "projects",
+            "linkedin",
+          ]}
+        />
       </main>
     </Layout>
   );
