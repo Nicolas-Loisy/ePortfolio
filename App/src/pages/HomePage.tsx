@@ -142,6 +142,27 @@ const HomePage: React.FC = () => {
   ];
 
   const certifications = [
+    // Ajout Sinequa Design Specialist
+    {
+      title: t("certification.title6"),
+      description: t("certification.description6"),
+      year: t("certification.year6"),
+      link: "https://university.chapsvision.com/redirect/api/certification/7067662244641226",
+    },
+    // Ajout Sinequa V11 Practical Basics
+    {
+      title: t("certification.title5"),
+      description: t("certification.description5"),
+      year: t("certification.year5"),
+      link: "https://university.chapsvision.com/api/certification/3259644365865782",
+    },
+    // Ajout Sinequa Certified Professional
+    {
+      title: t("certification.title4"),
+      description: t("certification.description4"),
+      year: t("certification.year4"),
+      link: "https://university.chapsvision.com/api/certification/7562952816856628",
+    },
     {
       title: t("certification.title3"),
       description: t("certification.description3"),

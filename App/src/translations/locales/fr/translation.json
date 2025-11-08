@@ -70,7 +70,16 @@
     "year2": "2024",
     "title3": "Certification ChatGPT & Langchain",
     "description3": "Certification sur Langchain, ChatGPT et la maîtrise des systèmes RAG.",
-    "year3": "2024"
+    "year3": "2024",
+    "title4": "Sinequa Certified Professional - Associate Certificate",
+    "description4": "Attestation de réussite à la formation \"Sinequa: Associate (2025.1) Certification Path\" délivrée par Sinequa University. \nRésumé : Moteur de recherche d'entreprise, Vision, architecture, sécurité, NLP et indexation de la plateforme Sinequa.",
+    "year4": "24 octobre 2025",
+    "title5": "Sinequa V11 Practical Basics Certificate",
+    "description5": "Attestation de réussite à la formation \"Sinequa: Practical Basics Certification (2025.3 - 11.13)\" délivrée par Sinequa - Center of Excellence. \nRésumé : Architecture Sinequa, connecteurs, indexation, interface SBA et recherche.",
+    "year5": "24 octobre 2025",
+    "title6": "Sinequa Certified Professional - Design Specialist Certificate",
+    "description6": "Attestation de réussite à la formation 'Sinequa: Design Specialist (2025.1) Certification Path' délivrée par Sinequa University.\nRésumé : Architecture et sécurité Sinequa, connecteurs, indexation, NLP, moteur, recherche, SBA, plugins, web services et aspects produits.",
+    "year6": "30 octobre 2025"
   },
   "terminal": {
     "text1": "Hello, world!",
