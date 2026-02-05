@@ -192,6 +192,80 @@
       }
     }
   },
+  "tweetEmotionDetail": {
+    "title": "TweetEmotion - ML Benchmark",
+    "subtitle": "Comparative study of 3 sentiment classification models",
+    "date": "2025",
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "content": "This project is a comparative study of three machine learning approaches for sentiment classification on tweets. The goal was to evaluate the performance of models with increasing complexity: a custom model trained from scratch, a pre-trained Hugging Face model, and GPT-4o-mini via the OpenAI API."
+      },
+      "methodology": {
+        "title": "Methodology",
+        "content": "The study follows a rigorous protocol: data preparation, model training/configuration, prediction on a common test set, and evaluation with standardized metrics. The dataset used is a corpus of tweets annotated with 3 sentiment classes: positive, negative, and neutral."
+      },
+      "models": {
+        "title": "Compared Models",
+        "intro": "Three distinct approaches were evaluated, representing different levels of complexity and cost:"
+      },
+      "gptImplementation": {
+        "title": "GPT-4o-mini Implementation",
+        "content": "The GPT-4o-mini integration uses OpenAI API's Structured Output feature. This ensures responses follow a defined schema with precise sentiment classes, avoiding parsing errors and ensuring prediction consistency."
+      },
+      "metrics": {
+        "title": "Evaluation Metrics",
+        "content": "The three main metrics used to compare models are Precision, Recall, and F1-Score. These metrics allow fine-grained evaluation of prediction quality for each sentiment class."
+      },
+      "results": {
+        "title": "Experimental Results",
+        "content": "Results show significant differences between the three approaches, both in terms of accuracy and execution time. The Hugging Face model stands out with the best performance/cost balance."
+      },
+      "findings": {
+        "title": "Key Findings"
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "content": "This study demonstrates that model choice strongly depends on the use case context. For applications requiring high accuracy with a limited budget, pre-trained Hugging Face models represent an excellent compromise. GPT-4o offers exceptional performance but at a significant cost. Custom models remain relevant for specific use cases requiring full control over the pipeline."
+      }
+    },
+    "models": {
+      "custom": {
+        "title": "Custom Model (Logistic Regression + TF-IDF)",
+        "description": "Model trained from scratch using TF-IDF vectorization and multiclass logistic regression. Complete NLP preprocessing pipeline including cleaning, tokenization, and lemmatization. Advantage: full control and zero inference cost."
+      },
+      "huggingface": {
+        "title": "Hugging Face (RoBERTa)",
+        "description": "Pre-trained model cardiffnlp/twitter-roberta-base-sentiment, specifically fine-tuned for Twitter sentiment analysis. Transformer architecture with contextual embeddings. Excellent performance/ease-of-use ratio."
+      },
+      "gpt": {
+        "title": "GPT-4o-mini (OpenAI API)",
+        "description": "Using the OpenAI API with Structured Output to ensure consistent response format. Optimized prompting for sentiment classification. High accuracy but higher API cost and latency."
+      }
+    },
+    "findings": {
+      "huggingface": {
+        "title": "🏆 Hugging Face - Best value for money",
+        "content": "The RoBERTa model achieves the best overall performance (F1-Score ~0.85) with reasonable execution time and no API cost. Recommended for most production use cases."
+      },
+      "gpt": {
+        "title": "💰 GPT-4o-mini - High accuracy, high cost",
+        "content": "Performance comparable to Hugging Face but with significant API cost and higher latency. Relevant for one-shot analyses or when prompting flexibility is critical."
+      },
+      "custom": {
+        "title": "⚙️ Custom - Full control, modest performance",
+        "content": "The custom model offers decent performance but lower than pre-trained models. Its advantage lies in full pipeline control and no external dependency."
+      }
+    },
+    "images": {
+      "workflow": "Workflow diagram of the comparative study",
+      "outputStructure": "Output structure defined for GPT (Python Enums)",
+      "gptApiCall": "OpenAI API call code with Structured Output",
+      "metricsComparison": "Metrics comparison (Precision, Recall, F1) by model",
+      "executionTime": "Execution time by model",
+      "confusionMatrices": "Confusion matrices of the three models"
+    }
+  },
   "error": {
     "errorThrow": "Error: {{error}}",
     "errorContent": "An error occurred while loading the content.",

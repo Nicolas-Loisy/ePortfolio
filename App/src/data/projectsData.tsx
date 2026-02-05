@@ -26,6 +26,8 @@ import LogoGLaDOS from "../assets/img/GLaDOS_logo.png";
 import logoNLw from "../assets/img/LOGO_NL_white.svg";
 import logoNLb from "../assets/img/LOGO_NL_dark.svg";
 
+import TweetEmotionDetail from "../components/molecules/TweetEmotionDetail";
+
 // --- Types ---
 
 export type SectionType =
@@ -131,23 +133,8 @@ export const projectsConfig: ProjectConfig[] = [
     demoLink: "",
     detailRoute: "/project/tweet-emotion",
     detailEnabled: true,
-    sections: [
-      {
-        type: "text",
-        titleKey: "projects.detailSections.overview",
-        contentKey: "projects.tweetLearning.longDescription",
-      },
-      {
-        type: "features",
-        titleKey: "projects.detailSections.features",
-        contentKey: "projects.tweetLearning.features",
-      },
-      {
-        type: "techStack",
-        titleKey: "projects.detailSections.techStack",
-        contentKey: "projects.tweetLearning",
-      },
-    ],
+    CustomDetailComponent: TweetEmotionDetail,
+    sections: [],
   },
   {
     slug: "enigma",

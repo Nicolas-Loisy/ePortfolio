@@ -174,7 +174,7 @@ const HomePage: React.FC = () => {
     imageSrc: typeof p.imageSrc === "function" ? p.imageSrc(dark) : p.imageSrc,
     techLogos: p.techLogos,
     demoLink: p.demoLink,
-    detailLink: p.detailEnabled && p.sections.length > 0 ? p.detailRoute : undefined,
+    detailLink: p.detailEnabled && (p.sections.length > 0 || p.CustomDetailComponent) ? p.detailRoute : undefined,
   }));
 
   const whiteLogo = [

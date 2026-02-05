@@ -192,6 +192,80 @@
       }
     }
   },
+  "tweetEmotionDetail": {
+    "title": "TweetEmotion - Benchmark ML",
+    "subtitle": "Étude comparative de 3 modèles de classification de sentiments",
+    "date": "2025",
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "content": "Ce projet est une étude comparative de trois approches de machine learning pour la classification de sentiments sur des tweets. L'objectif était d'évaluer les performances de modèles de complexité croissante : un modèle custom entraîné from scratch, un modèle pré-entraîné Hugging Face, et GPT-4o-mini via l'API OpenAI."
+      },
+      "methodology": {
+        "title": "Méthodologie",
+        "content": "L'étude suit un protocole rigoureux : préparation des données, entraînement/configuration des modèles, prédiction sur un jeu de test commun, et évaluation avec des métriques standardisées. Le dataset utilisé est un corpus de tweets annotés avec 3 classes de sentiments : positif, négatif et neutre."
+      },
+      "models": {
+        "title": "Modèles Comparés",
+        "intro": "Trois approches distinctes ont été évaluées, représentant différents niveaux de complexité et de coût :"
+      },
+      "gptImplementation": {
+        "title": "Implémentation GPT-4o-mini",
+        "content": "L'intégration de GPT-4o-mini utilise la fonctionnalité de Structured Output de l'API OpenAI. Cela garantit que les réponses respectent un schéma défini avec des classes de sentiments précises, évitant les erreurs de parsing et assurant la cohérence des prédictions."
+      },
+      "metrics": {
+        "title": "Métriques d'Évaluation",
+        "content": "Les trois métriques principales utilisées pour comparer les modèles sont la Precision, le Recall et le F1-Score. Ces métriques permettent d'évaluer finement la qualité des prédictions pour chaque classe de sentiment."
+      },
+      "results": {
+        "title": "Résultats Expérimentaux",
+        "content": "Les résultats montrent des différences significatives entre les trois approches, tant en termes de précision que de temps d'exécution. Le modèle Hugging Face se distingue par le meilleur équilibre performance/coût."
+      },
+      "findings": {
+        "title": "Conclusions Clés"
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "content": "Cette étude démontre que le choix du modèle dépend fortement du contexte d'utilisation. Pour des applications nécessitant une haute précision avec un budget limité, les modèles pré-entraînés Hugging Face représentent un excellent compromis. GPT-4o offre des performances exceptionnelles mais à un coût significatif. Les modèles custom restent pertinents pour des cas d'usage spécifiques nécessitant un contrôle total sur le pipeline."
+      }
+    },
+    "models": {
+      "custom": {
+        "title": "Modèle Custom (Régression Logistique + TF-IDF)",
+        "description": "Modèle entraîné from scratch utilisant une vectorisation TF-IDF et une régression logistique multiclasse. Pipeline complet de prétraitement NLP incluant nettoyage, tokenisation et lemmatisation. Avantage : contrôle total et coût nul en inférence."
+      },
+      "huggingface": {
+        "title": "Hugging Face (RoBERTa)",
+        "description": "Modèle pré-entraîné cardiffnlp/twitter-roberta-base-sentiment, spécifiquement fine-tuné pour l'analyse de sentiments sur Twitter. Architecture Transformer avec embeddings contextuels. Excellent rapport performance/facilité d'utilisation."
+      },
+      "gpt": {
+        "title": "GPT-4o-mini (OpenAI API)",
+        "description": "Utilisation de l'API OpenAI avec Structured Output pour garantir un format de réponse cohérent. Prompting optimisé pour la classification de sentiments. Haute précision mais coût API et latence plus élevés."
+      }
+    },
+    "findings": {
+      "huggingface": {
+        "title": "🏆 Hugging Face - Meilleur rapport qualité/prix",
+        "content": "Le modèle RoBERTa atteint les meilleures performances globales (F1-Score ~0.85) avec un temps d'exécution raisonnable et sans coût API. Recommandé pour la plupart des cas d'usage production."
+      },
+      "gpt": {
+        "title": "💰 GPT-4o-mini - Haute précision, coût élevé",
+        "content": "Performances comparables à Hugging Face mais avec un coût API significatif et une latence plus élevée. Pertinent pour des analyses one-shot ou quand la flexibilité du prompting est critique."
+      },
+      "custom": {
+        "title": "⚙️ Custom - Contrôle total, performances modestes",
+        "content": "Le modèle custom offre des performances correctes mais inférieures aux modèles pré-entraînés. Son avantage réside dans le contrôle total du pipeline et l'absence de dépendance externe."
+      }
+    },
+    "images": {
+      "workflow": "Schéma du workflow de l'étude comparative",
+      "outputStructure": "Structure de sortie définie pour GPT (Enums Python)",
+      "gptApiCall": "Code d'appel à l'API OpenAI avec Structured Output",
+      "metricsComparison": "Comparaison des métriques (Precision, Recall, F1) par modèle",
+      "executionTime": "Temps d'exécution par modèle",
+      "confusionMatrices": "Matrices de confusion des trois modèles"
+    }
+  },
   "error": {
     "errorThrow": "Erreur : {{error}}",
     "errorContent": "Une erreur est survenue lors du chargement du contenu.",
