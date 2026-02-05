@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
+import ExploreButton from "../atoms/ExploreButton";
 
 // Conteneur principal de la carte
 const CardContainer = styled.div`
@@ -160,6 +161,18 @@ const DemoButton = styled.a`
   }
 `;
 
+// Conteneur pour les boutons d'action
+const ButtonRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
 // Interface des props du composant
 interface CardProps {
   title?: string;
@@ -169,6 +182,7 @@ interface CardProps {
   imageSrc?: string;
   techLogos?: React.ReactNode[];
   demoLink?: string;
+  detailLink?: string;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -179,6 +193,7 @@ const Card: React.FC<CardProps> = ({
   imageSrc,
   techLogos = [],
   demoLink,
+  detailLink,
 }) => {
   const { t } = useTranslation();
 
@@ -202,11 +217,18 @@ const Card: React.FC<CardProps> = ({
         </TechLogoContainer>
       )}
 
-      {demoLink && (
-        <DemoButton href={demoLink} target="_blank" rel="noopener noreferrer">
-          {t("global.redirectProject")}
-        </DemoButton>
-      )}
+      <ButtonRow>
+        {detailLink && (
+          <ExploreButton to={detailLink}>
+            {t("projects.exploreButton")}
+          </ExploreButton>
+        )}
+        {demoLink && (
+          <DemoButton href={demoLink} target="_blank" rel="noopener noreferrer">
+            {t("global.redirectProject")}
+          </DemoButton>
+        )}
+      </ButtonRow>
     </CardContainer>
   );
 };

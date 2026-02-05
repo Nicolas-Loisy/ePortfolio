@@ -41,6 +41,7 @@ interface Project {
   imageSrc: string;
   techLogos: React.ReactNode[];
   demoLink: string;
+  detailLink?: string;
 }
 
 interface ProjectsProps {
@@ -62,6 +63,7 @@ const Projects: React.FC<ProjectsProps> = ({ title, projects }) => {
           imageSrc={project.imageSrc}
           techLogos={project.techLogos}
           demoLink={project.demoLink}
+          detailLink={project.detailLink}
         />
       ))}
     </ProjectsContainer>

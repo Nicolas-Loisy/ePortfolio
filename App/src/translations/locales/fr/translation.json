@@ -97,74 +97,90 @@
   },
   "projects": {
     "title": "Mes Projets",
-    "ePortfolio": {
-      "title": "ePortfolio",
-      "subtitle": "Portfolio personnel interactif",
-      "date": "2024",
-      "description": "Développement d'un portfolio personnel interactif conçu pour présenter mes compétences techniques, mes expériences professionnelles et mes projets personnels. Ce projet a été développé avec React et TypeScript.",
-      "techLogos": ["FaReact", "SiTypescript"]
+    "exploreButton": "En savoir plus",
+    "backToProjects": "Retour aux projets",
+    "detailSections": {
+      "overview": "Apercu",
+      "features": "Fonctionnalites cles",
+      "techStack": "Technologies",
+      "challenges": "Defis techniques"
     },
-    "markIA": {
-      "title": "MarkIA",
-      "subtitle": "Site de documentation technique avec IA",
-      "date": "2024",
-      "description": "Développement d'une plateforme web de rédaction et stockage de documentation intégrant une intelligence artificielle pour simplifier la recherche. Le projet inclut un chatbot alimenté par une base de connaissances (les documentations) et un système RAG (Retrieval-Augmented Generation).",
-      "techLogos": ["FaReact", "SiTypescript", "SiHuggingface"]
-    },
-    "jobo": {
-      "title": "JOBO",
-      "subtitle": "Application mobile pour valoriser les métiers des industries et le Made in France",
-      "date": "2024",
-      "description": "Création d'une application mobile innovante qui reconnaît les objets via la caméra et identifie les métiers d'artisanat ou d'industrie impliqués dans leur fabrication. Développé avec React Native et un modèle de vision IA.",
-      "techLogos": ["FaReact", "SiMongodb"]
-    },
-    "meteoApp": {
-      "title": "MeteoApp",
-      "subtitle": "Application mobile d'alertes climatiques",
-      "date": "2023",
-      "description": "Une application personnalisable pour alerter les utilisateurs sur les événements climatiques extrêmes dans leur région. Inclut des notifications en temps réel et des prévisions météorologiques locales.",
-      "techLogos": ["FaReact", "SiMongodb"]
-    },
-    "eMortels": {
-      "title": "eMortels",
-      "subtitle": "Plateforme pour l'Académie Française",
-      "date": "2023",
-      "description": "Conception et développement d'une plateforme éducative pour promouvoir la maîtrise de la langue française. Ce projet propose des exercices interactifs et un accès aux ressources linguistiques.",
-      "techLogos": ["FaReact", "SiMongodb"]
-    },
-    "discordPiBot": {
-      "title": "DiscordPiBot",
-      "subtitle": "Bot Discord pour la domotique",
-      "date": "2022",
-      "description": "Un bot Discord multifonction hébergé sur un Raspberry Pi, conçu pour contrôler des appareils domotiques et automatiser des tâches dans un serveur Discord. Écrit en Python pour une gestion flexible et modulaire des ports GPIO.",
-      "techLogos": ["FaPython", "SiDocker"]
-    },
-    "enigma": {
-      "title": "Enigma",
-      "subtitle": "Projet universitaire sur la cryptologie",
+    "glados": {
+      "title": "GLaDOS",
+      "subtitle": "Quand l'IA de Portal controle votre maison",
       "date": "2025",
-      "description": "Reproduction de la logique de la machine Enigma dans le cadre d'un projet universitaire. Ce projet vise à comprendre et à implémenter les concepts de cryptologie utilisés par la machine Enigma."
-    },
-    "tweetLearning": {
-      "title": "TweetEmotion - Machine Learning",
-      "subtitle": "Classification de tweets par émotions via régression logistique",
-      "date": "2025",
-      "description": "Création d’un modèle de machine learning pour classifier des tweets selon leurs émotions. Prétraitement, vectorisation et entraînement d’un modèle supervisé pour l’analyse de sentiments."
+      "description": "Et si GLaDOS, l'IA culte et sarcastique du jeu Portal, devenait votre assistante vocale a domicile ?\n\n C'est le defi que je me suis lance : lui donner une voix, une personnalite... et surtout le controle de mon environnement connecte. Interaction multimodale (voix, Discord, web), TTS personnalise, domotique locale (IR, GPIO, Bluetooth) et confidentialite (tout tourne sur un Raspberry Pi 5). Technologies : Picovoice, Piper, LlamaIndex, ReAct, LED IR, GPIO, Bluetooth, Pi 5.",
+      "longDescription": "GLaDOS est un projet personnel ambitieux qui transforme l'IA iconique du jeu Portal en une veritable assistante vocale domotique. L'objectif etait de creer un systeme complet d'interaction multimodale : commande vocale avec wake word, integration Discord et interface web. Le tout fonctionne integralement sur un Raspberry Pi 5 pour garantir la confidentialite des donnees.\n\nLe systeme utilise Picovoice pour la detection du wake word, Piper pour la synthese vocale avec la personnalite de GLaDOS, et LlamaIndex couple a un agent ReAct pour le raisonnement et l'execution d'actions domotiques.",
+      "features": ["Interaction multimodale : wake word vocal, commandes Discord et interface web", "Synthese vocale personnalisee avec la personnalite de GLaDOS (Piper TTS)", "Domotique locale via LED infrarouges, GPIO et Bluetooth", "Architecture privacy-first : tout tourne localement sur Raspberry Pi 5", "Agent ReAct avec LlamaIndex pour le raisonnement et l'execution d'actions", "Detection de wake word avec Picovoice"],
+      "challenges": "Le principal defi etait de faire tourner l'ensemble du pipeline (STT, LLM, TTS, domotique) sur un Raspberry Pi 5 avec des performances acceptables. L'optimisation de la latence entre la commande vocale et la reponse de GLaDOS a necessite un travail important sur le pipeline audio et le streaming des reponses."
     },
     "featureEngineering": {
       "title": "LLM4FE - Feature Engineering",
       "subtitle": "Automatisation de feature engineering avec IA",
       "date": "2025",
-      "description": "Développement d'un système d'automatisation de feature engineering pour le machine learning. Utilisation de modèles de langage pour générer des features pertinentes à partir de données brutes.",
-      "techLogos": ["FaPython", "SiHuggingface"]
-    }
-    ,
-    "glados": {
-      "title": "GLaDOS",
-      "subtitle": "Quand l'IA de Portal contrôle votre maison",
+      "description": "Developpement d'un systeme d'automatisation de feature engineering pour le machine learning. Utilisation de modeles de langage pour generer des features pertinentes a partir de donnees brutes.",
+      "longDescription": "LLM4FE est un projet de recherche qui explore l'utilisation de grands modeles de langage (LLM) pour automatiser le processus de feature engineering en machine learning. Le systeme analyse les donnees brutes, comprend leur semantique et genere automatiquement des transformations de features pertinentes pour ameliorer les performances des modeles predictifs.",
+      "features": ["Generation automatique de features a partir de donnees brutes via LLM", "Analyse semantique des colonnes et relations entre variables", "Pipeline de transformation et evaluation automatique", "Integration avec les workflows scikit-learn existants"]
+    },
+    "tweetLearning": {
+      "title": "TweetEmotion - Machine Learning",
+      "subtitle": "Classification de tweets par emotions via regression logistique",
       "date": "2025",
-      "description": "Et si GLaDOS, l’IA culte et sarcastique du jeu Portal, devenait votre assistante vocale à domicile ?\n\n C’est le défi que je me suis lancé : lui donner une voix, une personnalité… et surtout le contrôle de mon environnement connecté. Interaction multimodale (voix, Discord, web), TTS personnalisé, domotique locale (IR, GPIO, Bluetooth) et confidentialité (tout tourne sur un Raspberry Pi 5). Technologies : Picovoice, Piper, LlamaIndex, ReAct, LED IR, GPIO, Bluetooth, Pi 5.",
-      "techLogos": ["FaPython", "SiDocker", "SiRaspberrypi", "SiHuggingface"]
+      "description": "Creation d'un modele de machine learning pour classifier des tweets selon leurs emotions. Pretraitement, vectorisation et entrainement d'un modele supervise pour l'analyse de sentiments.",
+      "longDescription": "TweetEmotion est un projet de machine learning supervise qui classifie des tweets selon les emotions qu'ils expriment. Le pipeline complet comprend le pretraitement du texte (nettoyage, tokenisation, lemmatisation), la vectorisation via TF-IDF et l'entrainement d'un modele de regression logistique multiclasse. Le projet inclut une phase d'evaluation avec matrice de confusion et metriques de performance.",
+      "features": ["Pretraitement NLP complet : nettoyage, tokenisation, lemmatisation", "Vectorisation TF-IDF pour la representation des textes", "Modele de regression logistique multiclasse", "Evaluation avec matrice de confusion et metriques detaillees"]
+    },
+    "enigma": {
+      "title": "Enigma",
+      "subtitle": "Projet universitaire sur la cryptologie",
+      "date": "2025",
+      "description": "Reproduction de la logique de la machine Enigma dans le cadre d'un projet universitaire. Ce projet vise a comprendre et a implementer les concepts de cryptologie utilises par la machine Enigma."
+    },
+    "ePortfolio": {
+      "title": "ePortfolio",
+      "subtitle": "Portfolio personnel interactif",
+      "date": "2024",
+      "description": "Developpement d'un portfolio personnel interactif concu pour presenter mes competences techniques, mes experiences professionnelles et mes projets personnels. Ce projet a ete developpe avec React et TypeScript.",
+      "longDescription": "Ce portfolio interactif est une application React/TypeScript moderne qui presente de maniere dynamique mon parcours professionnel, mes competences et mes realisations. Le site supporte le mode sombre/clair, l'internationalisation (FR/EN) et est entierement responsive. Il est heberge sur un Raspberry Pi via Firebase Hosting.",
+      "features": ["Interface responsive avec support mobile", "Mode sombre et clair avec persistance", "Internationalisation complete (Francais / Anglais)", "Terminal anime avec texte defilant", "Navigation par ancres avec fleches", "Hebergement sur Raspberry Pi via Firebase"]
+    },
+    "markIA": {
+      "title": "MarkIA",
+      "subtitle": "Site de documentation technique avec IA",
+      "date": "2024",
+      "description": "Developpement d'une plateforme web de redaction et stockage de documentation integrant une intelligence artificielle pour simplifier la recherche. Le projet inclut un chatbot alimente par une base de connaissances (les documentations) et un systeme RAG (Retrieval-Augmented Generation).",
+      "longDescription": "MarkIA est une plateforme web de documentation technique augmentee par l'intelligence artificielle. Elle permet la redaction, le stockage et la recherche intelligente dans des documentations en Markdown. Le systeme integre un chatbot IA qui utilise un systeme RAG (Retrieval-Augmented Generation) pour repondre aux questions des utilisateurs en se basant sur la base de connaissances constituee par les documentations.",
+      "features": ["Editeur Markdown integre pour la redaction de documentation", "Chatbot IA avec systeme RAG (Retrieval-Augmented Generation)", "Recherche semantique dans la base de connaissances", "Authentification et gestion des utilisateurs via Firebase", "Stockage des documentations dans MongoDB", "Integration avec Langchain et Hugging Face pour le pipeline IA"]
+    },
+    "jobo": {
+      "title": "JOBO",
+      "subtitle": "Application mobile pour valoriser les metiers des industries et le Made in France",
+      "date": "2024",
+      "description": "Creation d'une application mobile innovante qui reconnait les objets via la camera et identifie les metiers d'artisanat ou d'industrie impliques dans leur fabrication. Developpe avec React Native et un modele de vision IA.",
+      "longDescription": "JOBO est une application mobile React Native qui utilise la vision par ordinateur pour reconnaitre des objets du quotidien et identifier les metiers d'artisanat et d'industrie impliques dans leur fabrication. L'objectif est de valoriser le Made in France et les savoir-faire industriels en permettant aux utilisateurs de decouvrir les metiers derriere les objets qui les entourent.",
+      "features": ["Reconnaissance d'objets par camera via modele de vision IA", "Base de donnees des metiers industriels et artisanaux", "Interface mobile React Native intuitive", "Backend API avec MongoDB et Hugging Face"]
+    },
+    "meteoApp": {
+      "title": "MeteoApp",
+      "subtitle": "Application mobile d'alertes climatiques",
+      "date": "2023",
+      "description": "Une application personnalisable pour alerter les utilisateurs sur les evenements climatiques extremes dans leur region. Inclut des notifications en temps reel et des previsions meteorologiques locales.",
+      "longDescription": "MeteoApp est une application mobile React Native concue pour alerter les utilisateurs sur les evenements climatiques extremes dans leur region. L'application offre des notifications en temps reel, des previsions meteorologiques locales personnalisables et une interface intuitive pour suivre les conditions meteo."
+    },
+    "eMortels": {
+      "title": "eMortels",
+      "subtitle": "Plateforme pour l'Academie Francaise",
+      "date": "2023",
+      "description": "Conception et developpement d'une plateforme educative pour promouvoir la maitrise de la langue francaise. Ce projet propose des exercices interactifs et un acces aux ressources linguistiques.",
+      "longDescription": "eMortels est une plateforme educative web concue pour promouvoir la maitrise de la langue francaise. Developpee avec React, Node.js et MongoDB, elle propose des exercices interactifs et un acces aux ressources linguistiques de l'Academie Francaise."
+    },
+    "discordPiBot": {
+      "title": "DiscordPiBot",
+      "subtitle": "Bot Discord pour la domotique",
+      "date": "2022",
+      "description": "Un bot Discord multifonction heberge sur un Raspberry Pi, concu pour controler des appareils domotiques et automatiser des taches dans un serveur Discord. Ecrit en Python pour une gestion flexible et modulaire des ports GPIO.",
+      "longDescription": "DiscordPiBot est un bot Discord multifonction heberge sur un Raspberry Pi, concu pour controler des appareils domotiques et automatiser des taches directement depuis un serveur Discord. Le bot est ecrit en Python et offre une gestion flexible et modulaire des ports GPIO du Raspberry Pi, permettant le controle d'appareils connectes a distance.",
+      "features": ["Controle domotique via commandes Discord", "Gestion modulaire des ports GPIO du Raspberry Pi", "Automatisation de taches recurrentes", "Deploiement Docker pour une gestion simplifiee", "Scripts Bash pour l'administration systeme"]
     }
   },
   "components": {
