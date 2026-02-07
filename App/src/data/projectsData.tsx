@@ -75,7 +75,7 @@ export const projectsConfig: ProjectConfig[] = [
     ],
     demoLink: "",
     detailRoute: "/project/glados",
-    detailEnabled: true,
+    detailEnabled: false,
     sections: [
       {
         type: "text",
@@ -106,7 +106,7 @@ export const projectsConfig: ProjectConfig[] = [
     techLogos: [<FaPython />, <SiHuggingface />],
     demoLink: "",
     detailRoute: "/project/feature-engineering",
-    detailEnabled: true,
+    detailEnabled: false,
     sections: [
       {
         type: "text",
@@ -152,7 +152,7 @@ export const projectsConfig: ProjectConfig[] = [
     techLogos: [<FaReact />, <SiTypescript />, <SiRaspberrypi />],
     demoLink: "",
     detailRoute: "/project/eportfolio",
-    detailEnabled: true,
+    detailEnabled: false,
     sections: [
       {
         type: "text",
@@ -185,7 +185,7 @@ export const projectsConfig: ProjectConfig[] = [
     ],
     demoLink: "https://www.markia.fr/",
     detailRoute: "/project/markia",
-    detailEnabled: true,
+    detailEnabled: false,
     sections: [
       {
         type: "text",
@@ -211,7 +211,7 @@ export const projectsConfig: ProjectConfig[] = [
     techLogos: [<FaReact />, <SiMongodb />, <SiHuggingface />, <SiTsnode />],
     demoLink: "",
     detailRoute: "/project/jobo",
-    detailEnabled: true,
+    detailEnabled: false,
     sections: [
       {
         type: "text",
@@ -237,7 +237,7 @@ export const projectsConfig: ProjectConfig[] = [
     techLogos: [<FaReact />, <SiFirebase />],
     demoLink: "",
     detailRoute: "/project/meteo-app",
-    detailEnabled: true,
+    detailEnabled: false,
     sections: [
       {
         type: "text",
@@ -258,7 +258,7 @@ export const projectsConfig: ProjectConfig[] = [
     techLogos: [<FaReact />, <SiNodedotjs />, <SiMongodb />],
     demoLink: "",
     detailRoute: "/project/emortels",
-    detailEnabled: true,
+    detailEnabled: false,
     sections: [
       {
         type: "text",
@@ -285,7 +285,7 @@ export const projectsConfig: ProjectConfig[] = [
     ],
     demoLink: "",
     detailRoute: "/project/discord-pi-bot",
-    detailEnabled: true,
+    detailEnabled: false,
     sections: [
       {
         type: "text",
