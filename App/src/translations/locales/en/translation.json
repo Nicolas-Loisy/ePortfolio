@@ -199,7 +199,7 @@
     "sections": {
       "intro": {
         "title": "Introduction",
-        "content": "This project is a comprehensive comparative study of three machine learning approaches for sentiment classification on tweets. The primary objective was to evaluate and compare the performance of models representing different levels of technological complexity: a custom model trained entirely from scratch using classical NLP techniques, a pre-trained model from the Hugging Face ecosystem specialized in Twitter sentiment analysis, and GPT-4o-mini via the OpenAI API leveraging the capabilities of large language models.\n\nThis study takes a pragmatic approach aimed at determining which solution best fits the cost, performance, and execution time constraints encountered in real-world projects."
+        "content": "This project is a comparative study conducted as part of a university course with time constraints. The objective was to evaluate and compare the performance of three machine learning approaches for emotion classification on tweets, representing different levels of technological complexity: a custom model trained entirely from scratch using classical NLP techniques, a pre-trained model from the Hugging Face ecosystem specialized in Twitter sentiment analysis, and GPT-4o-mini via the OpenAI API leveraging the capabilities of large language models.\n\nThis study takes a pragmatic approach aimed at determining which solution best fits the cost, performance, and execution time constraints encountered in real-world projects."
       },
       "methodology": {
         "title": "Methodology",
