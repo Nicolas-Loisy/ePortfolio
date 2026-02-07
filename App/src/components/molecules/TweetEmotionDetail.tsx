@@ -245,11 +245,10 @@ const TechGrid = styled.div`
 `;
 
 const HighlightBox = styled.div`
-  background: linear-gradient(
-    135deg,
-    ${(props) => props.theme.cardBackground || "#1e1e1e"} 0%,
-    ${(props) => (props.theme.theme === "dark" ? "#2a2a2a" : "#f5f5f5")} 100%
-  );
+  background: ${(props) =>
+    props.theme.theme === "dark"
+      ? "linear-gradient(135deg, rgba(249, 211, 66, 0.08) 0%, rgba(249, 211, 66, 0.02) 100%)"
+      : "linear-gradient(135deg, rgba(249, 211, 66, 0.15) 0%, rgba(249, 211, 66, 0.05) 100%)"};
   border-left: 4px solid ${(props) => props.theme.titleBorder || "#f9d342"};
   padding: 1.5rem;
   border-radius: 0 8px 8px 0;
@@ -372,20 +371,24 @@ const TweetEmotionDetail: React.FC = () => {
       {/* Results */}
       <SectionTitle>{t("tweetEmotionDetail.sections.results.title")}</SectionTitle>
       <TextContent>{t("tweetEmotionDetail.sections.results.content")}</TextContent>
-      <ResultsGrid>
-        <ImageFigure>
-          <StyledImage src={MetricsComparison} alt={t("tweetEmotionDetail.images.metricsComparison")} />
-          <ImageCaption>{t("tweetEmotionDetail.images.metricsComparison")}</ImageCaption>
-        </ImageFigure>
-        <ImageFigure>
-          <StyledImage src={ExecutionTime} alt={t("tweetEmotionDetail.images.executionTime")} />
-          <ImageCaption>{t("tweetEmotionDetail.images.executionTime")}</ImageCaption>
-        </ImageFigure>
-        <ImageFigure>
-          <StyledImage src={ConfusionMatrices} alt={t("tweetEmotionDetail.images.confusionMatrices")} />
-          <ImageCaption>{t("tweetEmotionDetail.images.confusionMatrices")}</ImageCaption>
-        </ImageFigure>
-      </ResultsGrid>
+
+      <ImageFigure>
+        <StyledImage src={MetricsComparison} alt={t("tweetEmotionDetail.images.metricsComparison")} />
+        <ImageCaption>{t("tweetEmotionDetail.images.metricsComparison")}</ImageCaption>
+      </ImageFigure>
+      <TextContent>{t("tweetEmotionDetail.resultsAnalysis.metricsComparison")}</TextContent>
+
+      <ImageFigure>
+        <StyledImage src={ExecutionTime} alt={t("tweetEmotionDetail.images.executionTime")} />
+        <ImageCaption>{t("tweetEmotionDetail.images.executionTime")}</ImageCaption>
+      </ImageFigure>
+      <TextContent>{t("tweetEmotionDetail.resultsAnalysis.executionTime")}</TextContent>
+
+      <ImageFigure>
+        <StyledImage src={ConfusionMatrices} alt={t("tweetEmotionDetail.images.confusionMatrices")} />
+        <ImageCaption>{t("tweetEmotionDetail.images.confusionMatrices")}</ImageCaption>
+      </ImageFigure>
+      <TextContent>{t("tweetEmotionDetail.resultsAnalysis.confusionMatrices")}</TextContent>
 
       {/* Key Findings */}
       <SectionTitle>{t("tweetEmotionDetail.sections.findings.title")}</SectionTitle>

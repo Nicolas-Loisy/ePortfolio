@@ -199,62 +199,62 @@
     "sections": {
       "intro": {
         "title": "Introduction",
-        "content": "This project is a comparative study of three machine learning approaches for sentiment classification on tweets. The goal was to evaluate the performance of models with increasing complexity: a custom model trained from scratch, a pre-trained Hugging Face model, and GPT-4o-mini via the OpenAI API."
+        "content": "This project is a comprehensive comparative study of three machine learning approaches for sentiment classification on tweets. The primary objective was to evaluate and compare the performance of models representing different levels of technological complexity: a custom model trained entirely from scratch using classical NLP techniques, a pre-trained model from the Hugging Face ecosystem specialized in Twitter sentiment analysis, and GPT-4o-mini via the OpenAI API leveraging the capabilities of large language models.\n\nThis study takes a pragmatic approach aimed at determining which solution best fits the cost, performance, and execution time constraints encountered in real-world projects."
       },
       "methodology": {
         "title": "Methodology",
-        "content": "The study follows a rigorous protocol: data preparation, model training/configuration, prediction on a common test set, and evaluation with standardized metrics. The dataset used is a corpus of tweets annotated with 3 sentiment classes: positive, negative, and neutral."
+        "content": "We chose Twitter (renamed X) for this study because this social network stands out for the great freedom of expression it offers its users, allowing spontaneous expression of emotions and opinions. Tweets, limited to 280 characters, and the hashtag system make Twitter particularly suited for analyzing sentiments in real-time.\n\nThe dataset used comes from Kaggle and contains 25,000 tweets, with each tweet having an associated emotion and sentiment. These tweets were previously classified by two RoBERTa models: one for sentiments (positive, negative, neutral) and another for emotions (joy, anger, sadness, etc. among 11 categories). Our benchmark then compares our three models on unstructured tweets, using human analysis as reference."
       },
       "models": {
         "title": "Compared Models",
-        "intro": "Three distinct approaches were evaluated, representing different levels of complexity and cost:"
+        "intro": "Three distinct approaches were selected and evaluated, representing a complete spectrum of available solutions in terms of complexity, cost, and ease of implementation:"
       },
       "gptImplementation": {
         "title": "GPT-4o-mini Implementation",
-        "content": "The GPT-4o-mini integration uses OpenAI API's Structured Output feature. This ensures responses follow a defined schema with precise sentiment classes, avoiding parsing errors and ensuring prediction consistency."
+        "content": "The GPT-4o-mini integration leverages OpenAI API's Structured Output feature, an innovation that constrains the model's output format. This approach ensures responses follow a strictly defined JSON schema with precise sentiment classes (POSITIVE, NEGATIVE, NEUTRAL), thus eliminating parsing errors and ensuring perfect prediction consistency.\n\nThe prompt was optimized to guide the model toward contextual sentiment analysis, taking into account Twitter language peculiarities (abbreviations, emojis, informal tone). This method demonstrates how LLMs can be reliably used for structured classification tasks."
       },
       "metrics": {
         "title": "Evaluation Metrics",
-        "content": "The three main metrics used to compare models are Precision, Recall, and F1-Score. These metrics allow fine-grained evaluation of prediction quality for each sentiment class."
+        "content": "Model evaluation relies on three complementary metrics, standard in supervised classification. Precision measures the proportion of correct positive predictions among all positive predictions made. Recall evaluates the model's ability to identify all actual positive examples. Finally, the F1-Score constitutes the harmonic mean of Precision and Recall, offering a balanced measure particularly useful when classes are imbalanced.\n\nThese metrics are calculated for each sentiment class then averaged (macro-average) to obtain an overall view of performance."
       },
       "results": {
         "title": "Experimental Results",
-        "content": "Results show significant differences between the three approaches, both in terms of accuracy and execution time. The Hugging Face model stands out with the best performance/cost balance."
+        "content": "Experimental results reveal significant differences between the three approaches, both in terms of prediction quality and execution time. The metrics comparison chart clearly shows that the Hugging Face model (RoBERTa) achieves the best overall performance, closely followed by GPT-4o-mini. The custom model, while functional, shows more modest performance.\n\nExecution time analysis reveals another crucial aspect: the custom and Hugging Face models offer fast and predictable response times, while GPT-4o-mini, dependent on API calls, presents higher and variable latency. Confusion matrices help identify each model's specific confusions between sentiment classes."
       },
       "findings": {
         "title": "Key Findings"
       },
       "conclusion": {
         "title": "Conclusion",
-        "content": "This study demonstrates that model choice strongly depends on the use case context. For applications requiring high accuracy with a limited budget, pre-trained Hugging Face models represent an excellent compromise. GPT-4o offers exceptional performance but at a significant cost. Custom models remain relevant for specific use cases requiring full control over the pipeline."
+        "content": "This comparative study demonstrates that the choice of sentiment classification model strongly depends on the use case context and project constraints. For applications requiring high accuracy with a limited budget and no dependency on external services, pre-trained models from the Hugging Face ecosystem represent an excellent compromise between performance, cost, and ease of integration.\n\nGPT-4o-mini and large language models offer remarkable performance and unmatched flexibility through prompting, but involve significant API costs and higher latency. They are particularly suited for one-off analyses or cases requiring rapid adaptability without retraining.\n\nCustom models trained from scratch retain their relevance for specific use cases requiring full pipeline control, no external dependencies, or strict confidentiality constraints preventing data transmission to third-party APIs."
       }
     },
     "models": {
       "custom": {
         "title": "Custom Model (Logistic Regression + TF-IDF)",
-        "description": "Model trained from scratch using TF-IDF vectorization and multiclass logistic regression. Complete NLP preprocessing pipeline including cleaning, tokenization, and lemmatization. Advantage: full control and zero inference cost."
+        "description": "Model trained using supervised learning with TF-IDF (Term Frequency-Inverse Document Frequency) vectorization coupled with a logistic regression classifier. Tweets are transformed into numerical vectors where each word receives a weight based on its frequency in the tweet and its overall rarity in the dataset. The model learns from annotated examples (X = text vector, Y = associated emotion) and adjusts its parameters to minimize prediction errors."
       },
       "huggingface": {
         "title": "Hugging Face (RoBERTa)",
-        "description": "Pre-trained model cardiffnlp/twitter-roberta-base-sentiment, specifically fine-tuned for Twitter sentiment analysis. Transformer architecture with contextual embeddings. Excellent performance/ease-of-use ratio."
+        "description": "Pre-trained model cardiffnlp/twitter-roberta-base based on RoBERTa (Robustly Optimized BERT Pretraining Approach), a Transformer architecture specialized in natural language processing. This model was trained on 124 million tweets, making it particularly effective at detecting emotions. Its contextual learning mechanism analyzes each word while considering the surrounding words, allowing it to understand the overall meaning of the text."
       },
       "gpt": {
         "title": "GPT-4o-mini (OpenAI API)",
-        "description": "Using the OpenAI API with Structured Output to ensure consistent response format. Optimized prompting for sentiment classification. High accuracy but higher API cost and latency."
+        "description": "Using the GPT-4o-mini model via the OpenAI API with the Structured Output feature. This method enforces a precise response format via a JSON schema, avoiding response variations (\"The emotion is joy\", \"I think it's joy\", \"Joy\") that complicate automatic processing. Prompting was optimized for emotion classification in Twitter context."
       }
     },
     "findings": {
       "huggingface": {
-        "title": "🏆 Hugging Face - Best value for money",
-        "content": "The RoBERTa model achieves the best overall performance (F1-Score ~0.85) with reasonable execution time and no API cost. Recommended for most production use cases."
+        "title": "Hugging Face - Best value for money",
+        "content": "The pre-trained RoBERTa model achieves the best overall performance with an F1-Score of approximately 0.85, combined with reasonable execution time and zero API cost. Its ease of integration via the Transformers library and robustness make it the recommended solution for most production use cases requiring reliable sentiment analysis."
       },
       "gpt": {
-        "title": "💰 GPT-4o-mini - High accuracy, high cost",
-        "content": "Performance comparable to Hugging Face but with significant API cost and higher latency. Relevant for one-shot analyses or when prompting flexibility is critical."
+        "title": "GPT-4o-mini - High accuracy, high cost",
+        "content": "GPT-4o-mini demonstrates performance comparable to or slightly better than Hugging Face on certain metrics, but at the cost of significant API fees and higher latency due to network calls. This approach proves particularly relevant for one-off analyses, rapid prototypes, or situations where prompting flexibility allows quick behavior adaptation without retraining."
       },
       "custom": {
-        "title": "⚙️ Custom - Full control, modest performance",
-        "content": "The custom model offers decent performance but lower than pre-trained models. Its advantage lies in full pipeline control and no external dependency."
+        "title": "Custom - Full control, modest performance",
+        "content": "The custom model based on TF-IDF and logistic regression offers decent but significantly lower performance than modern pre-trained models. Its main advantage lies in full control over the entire processing pipeline, no external dependencies, and the ability to operate in isolated environments. It remains suitable for use cases with strict confidentiality or resource constraints."
       }
     },
     "images": {
@@ -264,6 +264,11 @@
       "metricsComparison": "Metrics comparison (Precision, Recall, F1) by model",
       "executionTime": "Execution time by model",
       "confusionMatrices": "Confusion matrices of the three models"
+    },
+    "resultsAnalysis": {
+      "metricsComparison": "The GPT and Hugging Face models show globally comparable and moderate performance (around 40-50% for all three metrics), while the Custom model is significantly inferior with very low metrics (around 10-20%). The proximity between GPT and Hugging Face suggests that both benefit from their pre-training, but Hugging Face seems to have a slight advantage, probably due to better adaptation to the specific context.\n\nBoth models show higher precision than recall, meaning they prefer to limit false positives but at the expense of detecting all relevant cases. These results can be explained in part by the fact that the data is decontextualized: even for a human, it is difficult to identify the emotion of a tweet without knowing its context.",
+      "executionTime": "This measurement shows a significant difference between GPT and the two other models. GPT is the only non-local model: we have to go through an API and make a network request to obtain results, which explains its high latency. Our custom model is faster than Hugging Face's since there is no additional layer to install.",
+      "confusionMatrices": "The diagonal (i,i) represents all true positives. This diagonal is partially visible on the GPT and Hugging Face models but is completely non-existent on our own model. It clearly appears that our model has a bias towards the emotions \"anger\" and \"impatience\". This is directly explained by the training file used, which contained only tweets related to Dell support. Impatience and anger were therefore emotions predominantly present in this dataset, creating a bias. To correct this, it would have been necessary to use a larger training dataset."
     }
   },
   "error": {
