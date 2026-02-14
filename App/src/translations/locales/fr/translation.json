@@ -84,13 +84,13 @@
   "terminal": {
     "text1": "Hello, world!",
     "text2": "Intégrateur d'IA",
-    "text3": "Développeur PHP",
-    "text4": "Développeur Symfony",
+    "text3": "Développeur PHP & Symfony",
+    "text4": "Développeur Python",
     "text5": "We love Eurelis! ♡",
     "text6": "Formation : MIAGE",
     "text7": "La documentation, ma passion!",
     "text8": "MarkIA = MarkDown + IA",
-    "text9": "sudo rm -rf /*"
+    "text9": "sudo rm -rf /* --no-preserve-root"
   },
   "linkedin": {
     "title": "Mes Publications LinkedIn"
