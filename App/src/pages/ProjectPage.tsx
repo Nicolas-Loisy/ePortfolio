@@ -23,14 +23,41 @@ const ProjectPage: React.FC = () => {
       ? project.imageSrc(dark)
       : project.imageSrc;
 
-  const pageTitle = `${t(`${project.translationKey}.title`)} - Nicolas Loisy`;
+  const projectTitle = t(`${project.translationKey}.title`);
+  const pageTitle = `${projectTitle} - Nicolas Loisy`;
   const pageDescription = t(`${project.translationKey}.description`);
+  const pageUrl = `https://nicolasloisy.fr/project/${slug}`;
+
+  // Keywords pour le SEO
+  const pageKeywords = `${projectTitle}, Nicolas Loisy, projet, portfolio, développeur, machine learning, IA`;
+
+  // Structured Data pour le projet
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    name: projectTitle,
+    description: pageDescription,
+    author: {
+      "@type": "Person",
+      name: "Nicolas Loisy",
+      url: "https://nicolasloisy.fr",
+    },
+    dateCreated: t(`${project.translationKey}.date`),
+    url: pageUrl,
+    ...(project.demoLink && { codeRepository: project.demoLink }),
+  };
 
   // Si un composant personnalisé est défini, l'utiliser à la place de ProjectDetail
   const CustomComponent = project.CustomDetailComponent;
 
   return (
-    <Layout title={pageTitle} description={pageDescription}>
+    <Layout
+      title={pageTitle}
+      description={pageDescription}
+      keywords={pageKeywords}
+      structuredData={structuredData}
+      url={pageUrl}
+    >
       {CustomComponent ? (
         <CustomComponent />
       ) : (

@@ -31,6 +31,8 @@ interface LayoutProps {
   description?: string;
   keywords?: string;
   structuredData?: object;
+  url?: string;
+  image?: string;
   displaySidebar?: boolean;
 }
 
@@ -40,6 +42,8 @@ const Layout: React.FC<LayoutProps> = ({
   description,
   keywords,
   structuredData,
+  url,
+  image,
 }) => {
   const { t } = useTranslation();
 
@@ -50,6 +54,8 @@ const Layout: React.FC<LayoutProps> = ({
         description={description}
         keywords={keywords}
         structuredData={structuredData}
+        url={url}
+        image={image}
       />
 
       <Navbar
