@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Download, FileText } from "lucide-react";
+import { ArrowLeft, Download, FileText, Eye } from "lucide-react";
 import { FaPython } from "react-icons/fa";
 import { SiDocker, SiRaspberrypi, SiHuggingface } from "react-icons/si";
 
@@ -228,28 +228,59 @@ const DocumentDescription = styled.p`
   line-height: 1.5;
 `;
 
-const DownloadButton = styled.a`
+const ButtonGroup = styled.div`
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+  }
+`;
+
+const ActionButton = styled.a`
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background: ${(props) => props.theme.titleBorder || "#f9d342"};
-  color: #1e1e1e;
+  padding: 0.75rem 1.25rem;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
-  flex-shrink: 0;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(249, 211, 66, 0.4);
   }
 
   svg {
     width: 18px;
     height: 18px;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
+const DownloadButton = styled(ActionButton)`
+  background: ${(props) => props.theme.titleBorder || "#f9d342"};
+  color: #1e1e1e;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(249, 211, 66, 0.4);
+  }
+`;
+
+const PreviewButton = styled(ActionButton)`
+  background: transparent;
+  border: 2px solid ${(props) => props.theme.titleBorder || "#f9d342"};
+  color: ${(props) => props.theme.titleBorder || "#f9d342"};
+
+  &:hover {
+    background: ${(props) => props.theme.titleBorder || "#f9d342"};
+    color: #1e1e1e;
   }
 `;
 
@@ -310,15 +341,25 @@ const GladosDetail: React.FC = () => {
             {t("gladosDetail.irSection.documentDescription")}
           </DocumentDescription>
         </DocumentInfo>
-        <DownloadButton
-          href="/files/IR_NicolasLoisy_scientific_paper.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-        >
-          <Download />
-          {t("gladosDetail.irSection.downloadButton")}
-        </DownloadButton>
+        <ButtonGroup>
+          <PreviewButton
+            href="/files/IR_NicolasLoisy_scientific_paper.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Eye />
+            {t("gladosDetail.irSection.previewButton")}
+          </PreviewButton>
+          <DownloadButton
+            href="/files/IR_NicolasLoisy_scientific_paper.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+          >
+            <Download />
+            {t("gladosDetail.irSection.downloadButton")}
+          </DownloadButton>
+        </ButtonGroup>
       </DocumentCard>
 
       {/* Tech Stack */}
