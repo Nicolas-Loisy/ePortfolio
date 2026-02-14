@@ -192,6 +192,15 @@
       }
     }
   },
+  "gladosDetail": {
+    "irSection": {
+      "title": "Étude technique : Télécommande infrarouge",
+      "description": "Dans le cadre de ce projet, j'ai développé une télécommande infrarouge pour contrôler un amplificateur Yamaha depuis le Raspberry Pi 5. Ce document retrace le développement complet, de la validation sur Arduino à la migration vers Raspberry Pi 5, en passant par les défis techniques liés à la précision temporelle du protocole NEC.",
+      "documentTitle": "Développement d'une télécommande infrarouge Yamaha sur Raspberry Pi 5",
+      "documentDescription": "Retour d'expérience technique complet : protocole NEC, validation Arduino, migration Raspberry Pi 5, optimisations et résultats. 15 pages - Février 2025.",
+      "downloadButton": "Télécharger le PDF"
+    }
+  },
   "tweetEmotionDetail": {
     "title": "TweetEmotion - Benchmark ML",
     "subtitle": "Étude comparative de 3 modèles de classification de sentiments",

@@ -192,6 +192,15 @@
       }
     }
   },
+  "gladosDetail": {
+    "irSection": {
+      "title": "Technical Study: Infrared Remote Control",
+      "description": "As part of this project, I developed an infrared remote control to control a Yamaha amplifier from the Raspberry Pi 5. This document traces the complete development, from Arduino validation to Raspberry Pi 5 migration, including the technical challenges related to the timing precision of the NEC protocol.",
+      "documentTitle": "Development of a Yamaha Infrared Remote Control on Raspberry Pi 5",
+      "documentDescription": "Complete technical feedback: NEC protocol, Arduino validation, Raspberry Pi 5 migration, optimizations and results. 15 pages - February 2025.",
+      "downloadButton": "Download PDF"
+    }
+  },
   "tweetEmotionDetail": {
     "title": "TweetEmotion - ML Benchmark",
     "subtitle": "Comparative study of 3 sentiment classification models",

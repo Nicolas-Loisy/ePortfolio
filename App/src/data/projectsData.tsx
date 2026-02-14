@@ -27,6 +27,7 @@ import logoNLw from "../assets/img/LOGO_NL_white.svg";
 import logoNLb from "../assets/img/LOGO_NL_dark.svg";
 
 import TweetEmotionDetail from "../components/molecules/TweetEmotionDetail";
+import GladosDetail from "../components/molecules/GladosDetail";
 
 // --- Types ---
 
@@ -75,29 +76,9 @@ export const projectsConfig: ProjectConfig[] = [
     ],
     demoLink: "",
     detailRoute: "/project/glados",
-    detailEnabled: false,
-    sections: [
-      {
-        type: "text",
-        titleKey: "projects.detailSections.overview",
-        contentKey: "projects.glados.longDescription",
-      },
-      {
-        type: "features",
-        titleKey: "projects.detailSections.features",
-        contentKey: "projects.glados.features",
-      },
-      {
-        type: "techStack",
-        titleKey: "projects.detailSections.techStack",
-        contentKey: "projects.glados",
-      },
-      {
-        type: "text",
-        titleKey: "projects.detailSections.challenges",
-        contentKey: "projects.glados.challenges",
-      },
-    ],
+    detailEnabled: true,
+    CustomDetailComponent: GladosDetail,
+    sections: [],
   },
   {
     slug: "feature-engineering",
