@@ -81,7 +81,7 @@ const Sidebar: React.FC<{
   onToggle: () => void;
 }> = ({ logoLight, logoDark, siteName, isOpen, onToggle }) => {
   const [bottomOffset, setBottomOffset] = useState(0);
-  const { t } = useTranslation();
+  const { t: _t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
