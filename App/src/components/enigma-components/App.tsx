@@ -701,6 +701,22 @@ function App() {
             )}
           </button>
 
+          {/* Error Message */}
+          {error && (
+            <div
+              style={{
+                marginTop: "2rem",
+                padding: "1rem",
+                background: "rgba(255, 82, 82, 0.1)",
+                borderRadius: "0.5rem",
+                border: "1px solid #ff5252",
+                color: "#ff5252",
+              }}
+            >
+              <p style={{ margin: 0 }}>{error}</p>
+            </div>
+          )}
+
           {/* Encoded Message */}
           {encodedMessage && (
             <div
