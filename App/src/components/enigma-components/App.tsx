@@ -1,5 +1,16 @@
 import React, { useState } from "react";
-import { Settings, Send, RotateCw, Lock, Plus } from "lucide-react";
+import {
+  Settings,
+  Send,
+  RotateCw,
+  Lock,
+  Plus,
+  History,
+  Cpu,
+  Cable,
+  GraduationCap,
+  ChevronDown,
+} from "lucide-react";
 
 const COLORS = {
   background: "radial-gradient(ellipse at top, #0b0c10, #1f2833, #0b0c10)",
@@ -15,6 +26,26 @@ const COLORS = {
 
 function App() {
   const [initialPositions, setInitialPositions] = useState([1, 1, 1]);
+
+  // CSS animations
+  React.useEffect(() => {
+    const style = document.createElement("style");
+    style.textContent = `
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-10px); }
+        60% { transform: translateY(-5px); }
+      }
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+    `;
+    document.head.appendChild(style);
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
   const [boardConnections, setBoardConnections] = useState(["AY", "CD", "EF"]);
   const [message, setMessage] = useState("");
   const [encodedMessage, setEncodedMessage] = useState("");
@@ -128,6 +159,293 @@ function App() {
           >
             Machine Énigma
           </h1>
+          <p
+            style={{
+              color: COLORS.secondary,
+              fontSize: "1.1rem",
+              marginTop: "0.5rem",
+            }}
+          >
+            Projet universitaire de cryptographie
+          </p>
+        </div>
+
+        {/* Section Introduction */}
+        <div
+          style={{
+            background: COLORS.inputBackground,
+            borderRadius: "1rem",
+            padding: "2rem",
+            marginBottom: "2rem",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5)",
+            border: `1px solid ${COLORS.border}`,
+          }}
+        >
+          {/* Histoire */}
+          <div style={{ marginBottom: "2rem" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginBottom: "1rem",
+              }}
+            >
+              <History
+                style={{
+                  width: "28px",
+                  height: "28px",
+                  marginRight: "0.75rem",
+                  color: COLORS.primary,
+                }}
+              />
+              <h2 style={{ fontSize: "1.5rem", fontWeight: "bold", margin: 0 }}>
+                Une machine légendaire
+              </h2>
+            </div>
+            <p
+              style={{
+                lineHeight: "1.8",
+                color: COLORS.text,
+                marginBottom: "1rem",
+              }}
+            >
+              La machine Enigma est un dispositif de chiffrement électromécanique
+              inventé par l'ingénieur allemand Arthur Scherbius à la fin de la
+              Première Guerre mondiale. Utilisée massivement par l'Allemagne nazie
+              pendant la Seconde Guerre mondiale, elle était considérée comme
+              inviolable grâce à ses milliards de combinaisons possibles.
+            </p>
+            <p style={{ lineHeight: "1.8", color: COLORS.text }}>
+              C'est à Bletchley Park, en Angleterre, qu'une équipe de
+              cryptanalystes dirigée par{" "}
+              <span style={{ color: COLORS.primary, fontWeight: "600" }}>
+                Alan Turing
+              </span>{" "}
+              réussit l'exploit de percer ses secrets. Leur travail, resté secret
+              pendant des décennies, aurait raccourci la guerre de deux ans et
+              sauvé des millions de vies.
+            </p>
+          </div>
+
+          {/* Fonctionnement mécanique */}
+          <div style={{ marginBottom: "2rem" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginBottom: "1rem",
+              }}
+            >
+              <Cpu
+                style={{
+                  width: "28px",
+                  height: "28px",
+                  marginRight: "0.75rem",
+                  color: COLORS.primary,
+                }}
+              />
+              <h2 style={{ fontSize: "1.5rem", fontWeight: "bold", margin: 0 }}>
+                Comment ça fonctionne ?
+              </h2>
+            </div>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+                gap: "1rem",
+                marginTop: "1rem",
+              }}
+            >
+              {/* Rotors */}
+              <div
+                style={{
+                  background: "rgba(69, 162, 158, 0.1)",
+                  borderRadius: "0.75rem",
+                  padding: "1.25rem",
+                  border: `1px solid ${COLORS.secondary}`,
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "0.75rem",
+                  }}
+                >
+                  <RotateCw
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      marginRight: "0.5rem",
+                      color: COLORS.primary,
+                    }}
+                  />
+                  <h3
+                    style={{
+                      fontSize: "1.1rem",
+                      fontWeight: "bold",
+                      margin: 0,
+                      color: COLORS.primary,
+                    }}
+                  >
+                    Les Rotors
+                  </h3>
+                </div>
+                <p style={{ fontSize: "0.95rem", lineHeight: "1.6", margin: 0 }}>
+                  Trois ou quatre disques rotatifs qui substituent chaque lettre.
+                  Après chaque frappe, les rotors tournent, changeant
+                  complètement le circuit électrique et donc la substitution.
+                </p>
+              </div>
+
+              {/* Réflecteur */}
+              <div
+                style={{
+                  background: "rgba(69, 162, 158, 0.1)",
+                  borderRadius: "0.75rem",
+                  padding: "1.25rem",
+                  border: `1px solid ${COLORS.secondary}`,
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "0.75rem",
+                  }}
+                >
+                  <Lock
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      marginRight: "0.5rem",
+                      color: COLORS.primary,
+                    }}
+                  />
+                  <h3
+                    style={{
+                      fontSize: "1.1rem",
+                      fontWeight: "bold",
+                      margin: 0,
+                      color: COLORS.primary,
+                    }}
+                  >
+                    Le Réflecteur
+                  </h3>
+                </div>
+                <p style={{ fontSize: "0.95rem", lineHeight: "1.6", margin: 0 }}>
+                  Situé après les rotors, il renvoie le signal à travers les
+                  rotors dans le sens inverse. C'est ce qui permet de déchiffrer
+                  un message avec les mêmes réglages.
+                </p>
+              </div>
+
+              {/* Tableau de connexions */}
+              <div
+                style={{
+                  background: "rgba(69, 162, 158, 0.1)",
+                  borderRadius: "0.75rem",
+                  padding: "1.25rem",
+                  border: `1px solid ${COLORS.secondary}`,
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "0.75rem",
+                  }}
+                >
+                  <Cable
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      marginRight: "0.5rem",
+                      color: COLORS.primary,
+                    }}
+                  />
+                  <h3
+                    style={{
+                      fontSize: "1.1rem",
+                      fontWeight: "bold",
+                      margin: 0,
+                      color: COLORS.primary,
+                    }}
+                  >
+                    Le Plugboard
+                  </h3>
+                </div>
+                <p style={{ fontSize: "0.95rem", lineHeight: "1.6", margin: 0 }}>
+                  Un tableau de connexions où des câbles échangent des paires de
+                  lettres avant et après le passage dans les rotors, ajoutant une
+                  couche de complexité supplémentaire.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Projet universitaire */}
+          <div
+            style={{
+              background: `linear-gradient(135deg, rgba(102, 252, 241, 0.1) 0%, rgba(69, 162, 158, 0.05) 100%)`,
+              borderRadius: "0.75rem",
+              padding: "1.5rem",
+              borderLeft: `4px solid ${COLORS.primary}`,
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginBottom: "0.75rem",
+              }}
+            >
+              <GraduationCap
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  marginRight: "0.75rem",
+                  color: COLORS.primary,
+                }}
+              />
+              <h3
+                style={{
+                  fontSize: "1.2rem",
+                  fontWeight: "bold",
+                  margin: 0,
+                  color: COLORS.primary,
+                }}
+              >
+                Ce projet
+              </h3>
+            </div>
+            <p style={{ lineHeight: "1.7", margin: 0 }}>
+              Dans le cadre d'un cours de cryptographie, j'ai recodé la logique
+              complète de la machine Enigma en Python. L'interface ci-dessous
+              vous permet de configurer les rotors et les connexions du
+              plugboard, puis d'encoder votre propre message exactement comme
+              l'auraient fait les opérateurs allemands il y a 80 ans.
+            </p>
+          </div>
+
+          {/* Scroll indicator */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "1.5rem",
+            }}
+          >
+            <ChevronDown
+              style={{
+                width: "32px",
+                height: "32px",
+                color: COLORS.secondary,
+                animation: "bounce 2s infinite",
+              }}
+            />
+          </div>
         </div>
 
         <div
