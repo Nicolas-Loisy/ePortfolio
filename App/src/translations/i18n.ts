@@ -1,28 +1,18 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
+// Import translations directly (Vite-compatible)
+import frTranslation from "./locales/fr/translation.json";
+import enTranslation from "./locales/en/translation.json";
+
 // Clé pour stocker la langue dans localStorage
 const localStorageLanguageKey = "user-preferred-language";
 
-// Fonction pour charger dynamiquement les fichiers de traduction
-const loadTranslations = () => {
-  const translations: any = {};
-  const context = (require as any).context("./locales", true, /\.json$/);
-
-  context.keys().forEach((key: string) => {
-    const language = key.match(/\/([a-zA-Z-]+)\//)?.[1];
-    if (language) {
-      translations[language] = {
-        translation: context(key),
-      };
-    }
-  });
-
-  return translations;
+// Ressources de traduction
+const resources = {
+  fr: { translation: frTranslation },
+  en: { translation: enTranslation },
 };
-
-// Charger les ressources de traduction de manière dynamique
-const resources = loadTranslations();
 
 // Récupérer la langue préférée stockée dans localStorage (ou 'fr' par défaut)
 const savedLanguage = localStorage.getItem(localStorageLanguageKey) || "fr";

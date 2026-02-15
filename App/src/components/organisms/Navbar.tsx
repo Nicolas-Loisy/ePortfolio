@@ -89,7 +89,7 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({
-  links,
+  links: _links,
   logoLight,
   logoDark,
   siteName,
