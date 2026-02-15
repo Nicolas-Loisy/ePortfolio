@@ -1,6 +1,6 @@
 # ePortfolio - Nicolas Loisy
 
-Portfolio personnel presentant mes projets, competences et parcours en tant que developpeur IA et Data Scientist.
+Portfolio personnel présentant mes projets, compétences et parcours en tant que développeur IA et Data Scientist.
 
 Site en ligne : [nicolasloisy.fr](https://nicolasloisy.fr)
 
@@ -10,7 +10,7 @@ Site en ligne : [nicolasloisy.fr](https://nicolasloisy.fr)
 - **Build** : Vite
 - **Internationalisation** : i18next (FR/EN)
 - **Authentification** : Firebase Auth
-- **Hebergement** : Raspberry Pi 5
+- **Hébergement** : Raspberry Pi 5
 
 ## Installation
 
@@ -21,7 +21,7 @@ npm install
 
 ## Configuration
 
-Creer un fichier `.env` a la racine du dossier `App` :
+Créer un fichier `.env` à la racine du dossier `App` :
 
 ```env
 VITE_FIREBASE_API_KEY=your_api_key
@@ -36,13 +36,13 @@ VITE_FIREBASE_MEASUREMENT_ID=your_measurement_id
 ## Commandes
 
 ```bash
-# Serveur de developpement
+# Serveur de développement
 npm run dev
 
 # Build production
 npm run build
 
-# Previsualiser le build
+# Prévisualiser le build
 npm run preview
 ```
 
@@ -54,28 +54,28 @@ App/
 ├── src/
 │   ├── assets/      # Images et fichiers
 │   ├── components/  # Composants React (atoms, molecules, organisms)
-│   ├── contexts/    # Contextes React (theme, etc.)
-│   ├── data/        # Donnees des projets
+│   ├── contexts/    # Contextes React (thème, etc.)
+│   ├── data/        # Données des projets
 │   ├── pages/       # Pages de l'application
 │   ├── router/      # Configuration du routeur
-│   ├── styles/      # Styles globaux et themes
+│   ├── styles/      # Styles globaux et thèmes
 │   └── translations/# Fichiers de traduction i18n
-├── index.html       # Point d'entree HTML
+├── index.html       # Point d'entrée HTML
 ├── vite.config.ts   # Configuration Vite
 └── tsconfig.json    # Configuration TypeScript
 ```
 
-## Projets presentes
+## Projets présentés
 
 - **GLaDOS** - Assistant vocal IA sur Raspberry Pi
 - **TweetEmotion** - Benchmark ML pour classification de sentiments
 - **Enigma** - Simulateur de la machine Enigma
-- **MarkIA** - Editeur Markdown avec IA
+- **MarkIA** - Éditeur Markdown avec IA
 - **Et plus...**
 
 ## Licence
 
-Projet personnel - Tous droits reserves.
+Projet personnel - Tous droits réservés.
 
 ## Contact
 
