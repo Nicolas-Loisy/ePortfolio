@@ -84,60 +84,51 @@
   "terminal": {
     "text1": "Hello, world!",
     "text2": "AI Integrator",
-    "text3": "PHP Developer",
-    "text4": "Symfony Developer",
+    "text3": "PHP & Symfony Developer",
+    "text4": "Python Developer",
     "text5": "We love Eurelis! ♡",
     "text6": "Education: MIAGE",
     "text7": "Documentation, my passion!",
     "text8": "MarkIA = MarkDown + AI",
-    "text9": "sudo rm -rf /*"
+    "text9": "sudo rm -rf /* --no-preserve-root"
   },
   "linkedin": {
     "title": "My LinkedIn Posts"
   },
   "projects": {
     "title": "My Projects",
-    "ePortfolio": {
-      "title": "ePortfolio",
-      "subtitle": "Interactive personal portfolio",
-      "date": "2024",
-      "description": "Development of an interactive personal portfolio designed to showcase my technical skills, professional experiences, and personal projects. This project was developed with React and TypeScript.",
-      "techLogos": ["FaReact", "SiTypescript"]
+    "exploreButton": "Learn more",
+    "backToProjects": "Back to projects",
+    "detailSections": {
+      "overview": "Overview",
+      "features": "Key Features",
+      "techStack": "Technologies",
+      "challenges": "Technical Challenges"
     },
-    "markIA": {
-      "title": "MarkIA",
-      "subtitle": "Technical documentation site with AI",
-      "date": "2024",
-      "description": "Development of a web platform for writing and storing documentation integrating artificial intelligence to simplify search. The project includes a chatbot powered by a knowledge base (the documentation) and a RAG (Retrieval-Augmented Generation) system.",
-      "techLogos": ["FaReact", "SiTypescript", "SiHuggingface"]
+    "glados": {
+      "title": "GLaDOS",
+      "subtitle": "When Portal's AI controls your home",
+      "date": "2025",
+      "description": "What if GLaDOS, the cult sarcastic AI from the game Portal, became your home voice assistant?\n\nThis project gives GLaDOS a voice and personality and lets it control a connected local environment running on a Raspberry Pi 5. Multimodal interaction (voice, Discord, web), custom TTS, local home automation (IR, GPIO, Bluetooth) and privacy-first design. Technologies: Picovoice, Piper, LlamaIndex, ReAct, IR LEDs, GPIO, Bluetooth, Pi 5.",
+      "longDescription": "GLaDOS is an ambitious personal project that transforms the iconic AI from the game Portal into a real home voice assistant. The goal was to create a complete multimodal interaction system: voice commands with wake word, Discord integration, and a web interface. Everything runs entirely on a Raspberry Pi 5 to ensure data privacy.\n\nThe system uses Picovoice for wake word detection, Piper for text-to-speech with GLaDOS's personality, and LlamaIndex coupled with a ReAct agent for reasoning and executing home automation actions.",
+      "features": ["Multimodal interaction: voice wake word, Discord commands, and web interface", "Custom text-to-speech with GLaDOS personality (Piper TTS)", "Local home automation via infrared LEDs, GPIO, and Bluetooth", "Privacy-first architecture: everything runs locally on Raspberry Pi 5", "ReAct agent with LlamaIndex for reasoning and action execution", "Wake word detection with Picovoice"],
+      "challenges": "The main challenge was running the entire pipeline (STT, LLM, TTS, home automation) on a Raspberry Pi 5 with acceptable performance. Optimizing latency between voice commands and GLaDOS responses required significant work on the audio pipeline and response streaming."
     },
-    "jobo": {
-      "title": "JOBO",
-      "subtitle": "Mobile app to promote industrial jobs and Made in France",
-      "date": "2024",
-      "description": "Creation of an innovative mobile application that recognizes objects via the camera and identifies the craftsmanship or industrial jobs involved in their manufacture. Developed with React Native and an AI vision model.",
-      "techLogos": ["FaReact", "SiMongodb"]
+    "featureEngineering": {
+      "title": "LLM4FE - Feature Engineering",
+      "subtitle": "Automation of feature engineering with AI",
+      "date": "2025",
+      "description": "Development of a system for automating feature engineering for machine learning. Utilization of language models to generate relevant features from raw data.",
+      "longDescription": "LLM4FE is a research project exploring the use of large language models (LLMs) to automate the feature engineering process in machine learning. The system analyzes raw data, understands its semantics, and automatically generates relevant feature transformations to improve predictive model performance.",
+      "features": ["Automatic feature generation from raw data via LLM", "Semantic analysis of columns and relationships between variables", "Automated transformation and evaluation pipeline", "Integration with existing scikit-learn workflows"]
     },
-    "meteoApp": {
-      "title": "MeteoApp",
-      "subtitle": "Weather alert mobile application",
-      "date": "2023",
-      "description": "A customizable application to alert users about extreme weather events in their region. Includes real-time notifications and local weather forecasts.",
-      "techLogos": ["FaReact", "SiMongodb"]
-    },
-    "eMortels": {
-      "title": "eMortels",
-      "subtitle": "Platform for the French Academy",
-      "date": "2023",
-      "description": "Design and development of an educational platform to promote mastery of the French language. This project offers interactive exercises and access to linguistic resources.",
-      "techLogos": ["FaReact", "SiMongodb"]
-    },
-    "discordPiBot": {
-      "title": "DiscordPiBot",
-      "subtitle": "Discord bot for home automation",
-      "date": "2022",
-      "description": "A multifunctional Discord bot hosted on a Raspberry Pi, designed to control home automation devices and automate tasks in a Discord server. Written in Python for flexible and modular GPIO port management.",
-      "techLogos": ["FaPython", "SiDocker"]
+    "tweetLearning": {
+      "title": "TweetEmotion - Machine Learning",
+      "subtitle": "Classification of tweets by emotions using logistic regression",
+      "date": "2025",
+      "description": "Creation of a machine learning model to classify tweets based on their emotions. Preprocessing, vectorization, and supervised model training for sentiment analysis.",
+      "longDescription": "TweetEmotion is a supervised machine learning project that classifies tweets based on the emotions they express. The complete pipeline includes text preprocessing (cleaning, tokenization, lemmatization), TF-IDF vectorization, and training a multiclass logistic regression model. The project includes an evaluation phase with confusion matrix and performance metrics.",
+      "features": ["Complete NLP preprocessing: cleaning, tokenization, lemmatization", "TF-IDF vectorization for text representation", "Multiclass logistic regression model", "Evaluation with confusion matrix and detailed metrics"]
     },
     "enigma": {
       "title": "Enigma",
@@ -145,26 +136,51 @@
       "date": "2025",
       "description": "Reproduction of the Enigma machine logic as part of a university project. This project aims to understand and implement the cryptology concepts used by the Enigma machine."
     },
-    "tweetLearning": {
-      "title": "TweetEmotion - Machine Learning",
-      "subtitle": "Classification of tweets by emotions using logistic regression",
-      "date": "2025",
-      "description": "Creation of a machine learning model to classify tweets based on their emotions. Preprocessing, vectorization, and supervised model training for sentiment analysis."
+    "ePortfolio": {
+      "title": "ePortfolio",
+      "subtitle": "Interactive personal portfolio",
+      "date": "2024",
+      "description": "Development of an interactive personal portfolio designed to showcase my technical skills, professional experiences, and personal projects. This project was developed with React and TypeScript.",
+      "longDescription": "This interactive portfolio is a modern React/TypeScript application that dynamically presents my professional journey, skills, and achievements. The site supports dark/light mode, internationalization (FR/EN), and is fully responsive. It is hosted on a Raspberry Pi via Firebase Hosting.",
+      "features": ["Responsive interface with mobile support", "Dark and light mode with persistence", "Full internationalization (French / English)", "Animated terminal with scrolling text", "Anchor navigation with arrows", "Hosting on Raspberry Pi via Firebase"]
     },
-    "featureEngineering": {
-      "title": "LLM4FE - Feature Engineering",
-      "subtitle": "Automation of feature engineering with AI",
-      "date": "2025",
-      "description": "Development of a system for automating feature engineering for machine learning. Utilization of language models to generate relevant features from raw data.",
-      "techLogos": ["FaPython", "SiHuggingface"]
-    }
-    ,
-    "glados": {
-      "title": "GLaDOS",
-      "subtitle": "When Portal's AI controls your home",
-      "date": "2025",
-      "description": "What if GLaDOS, the cult sarcastic AI from the game Portal, became your home voice assistant?\n\nThis project gives GLaDOS a voice and personality and lets it control a connected local environment running on a Raspberry Pi 5. Multimodal interaction (voice, Discord, web), custom TTS, local home automation (IR, GPIO, Bluetooth) and privacy-first design. Technologies: Picovoice, Piper, LlamaIndex, ReAct, IR LEDs, GPIO, Bluetooth, Pi 5.",
-      "techLogos": ["FaPython", "SiDocker", "SiRaspberrypi", "SiHuggingface"]
+    "markIA": {
+      "title": "MarkIA",
+      "subtitle": "Technical documentation site with AI",
+      "date": "2024",
+      "description": "Development of a web platform for writing and storing documentation integrating artificial intelligence to simplify search. The project includes a chatbot powered by a knowledge base (the documentation) and a RAG (Retrieval-Augmented Generation) system.",
+      "longDescription": "MarkIA is an AI-augmented technical documentation web platform. It enables writing, storing, and intelligent search within Markdown documentation. The system integrates an AI chatbot that uses a RAG (Retrieval-Augmented Generation) system to answer user questions based on the knowledge base constituted by the documentation.",
+      "features": ["Integrated Markdown editor for documentation writing", "AI chatbot with RAG (Retrieval-Augmented Generation) system", "Semantic search across the knowledge base", "Authentication and user management via Firebase", "Documentation storage in MongoDB", "Integration with Langchain and Hugging Face for the AI pipeline"]
+    },
+    "jobo": {
+      "title": "JOBO",
+      "subtitle": "Mobile app to promote industrial jobs and Made in France",
+      "date": "2024",
+      "description": "Creation of an innovative mobile application that recognizes objects via the camera and identifies the craftsmanship or industrial jobs involved in their manufacture. Developed with React Native and an AI vision model.",
+      "longDescription": "JOBO is a React Native mobile application that uses computer vision to recognize everyday objects and identify the craftsmanship and industrial jobs involved in their manufacture. The goal is to promote Made in France and industrial know-how by allowing users to discover the trades behind the objects around them.",
+      "features": ["Object recognition via camera using AI vision model", "Database of industrial and craft trades", "Intuitive React Native mobile interface", "Backend API with MongoDB and Hugging Face"]
+    },
+    "meteoApp": {
+      "title": "MeteoApp",
+      "subtitle": "Weather alert mobile application",
+      "date": "2023",
+      "description": "A customizable application to alert users about extreme weather events in their region. Includes real-time notifications and local weather forecasts.",
+      "longDescription": "MeteoApp is a React Native mobile application designed to alert users about extreme weather events in their region. The application offers real-time notifications, customizable local weather forecasts, and an intuitive interface for tracking weather conditions."
+    },
+    "eMortels": {
+      "title": "eMortels",
+      "subtitle": "Platform for the French Academy",
+      "date": "2023",
+      "description": "Design and development of an educational platform to promote mastery of the French language. This project offers interactive exercises and access to linguistic resources.",
+      "longDescription": "eMortels is an educational web platform designed to promote mastery of the French language. Developed with React, Node.js, and MongoDB, it offers interactive exercises and access to linguistic resources from the French Academy."
+    },
+    "discordPiBot": {
+      "title": "DiscordPiBot",
+      "subtitle": "Discord bot for home automation",
+      "date": "2022",
+      "description": "A multifunctional Discord bot hosted on a Raspberry Pi, designed to control home automation devices and automate tasks in a Discord server. Written in Python for flexible and modular GPIO port management.",
+      "longDescription": "DiscordPiBot is a multifunctional Discord bot hosted on a Raspberry Pi, designed to control home automation devices and automate tasks directly from a Discord server. The bot is written in Python and offers flexible and modular management of the Raspberry Pi's GPIO ports, enabling remote control of connected devices.",
+      "features": ["Home automation control via Discord commands", "Modular management of Raspberry Pi GPIO ports", "Automation of recurring tasks", "Docker deployment for simplified management", "Bash scripts for system administration"]
     }
   },
   "components": {
@@ -174,6 +190,95 @@
       },
       "navbar": {
       }
+    }
+  },
+  "gladosDetail": {
+    "irSection": {
+      "title": "Technical Study: Infrared Remote Control",
+      "description": "As part of this project, I developed an infrared remote control to control a Yamaha amplifier from the Raspberry Pi 5. This document traces the complete development, from Arduino validation to Raspberry Pi 5 migration, including the technical challenges related to the timing precision of the NEC protocol.",
+      "documentTitle": "Development of a Yamaha Infrared Remote Control on Raspberry Pi 5",
+      "documentDescription": "Complete technical feedback: NEC protocol, Arduino validation, Raspberry Pi 5 migration, optimizations and results. 15 pages - February 2025.",
+      "previewButton": "Preview",
+      "downloadButton": "Download"
+    }
+  },
+  "tweetEmotionDetail": {
+    "title": "TweetEmotion - ML Benchmark",
+    "subtitle": "Comparative study of 3 sentiment classification models",
+    "date": "2025",
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "content": "This project is a comparative study conducted as part of a university course with time constraints. The objective was to evaluate and compare the performance of three machine learning approaches for emotion classification on tweets, representing different levels of technological complexity: a custom model trained entirely from scratch using classical NLP techniques, a pre-trained model from the Hugging Face ecosystem specialized in Twitter sentiment analysis, and GPT-4o-mini via the OpenAI API leveraging the capabilities of large language models.\n\nThis study takes a pragmatic approach aimed at determining which solution best fits the cost, performance, and execution time constraints encountered in real-world projects."
+      },
+      "methodology": {
+        "title": "Methodology",
+        "content": "We chose Twitter (renamed X) for this study because this social network stands out for the great freedom of expression it offers its users, allowing spontaneous expression of emotions and opinions. Tweets, limited to 280 characters, and the hashtag system make Twitter particularly suited for analyzing sentiments in real-time.\n\nThe dataset used comes from Kaggle and contains 25,000 tweets, with each tweet having an associated emotion and sentiment. These tweets were previously classified by two RoBERTa models: one for sentiments (positive, negative, neutral) and another for emotions (joy, anger, sadness, etc. among 11 categories). Our benchmark then compares our three models on unstructured tweets, using human analysis as reference."
+      },
+      "models": {
+        "title": "Compared Models",
+        "intro": "Three distinct approaches were selected and evaluated, representing a complete spectrum of available solutions in terms of complexity, cost, and ease of implementation:"
+      },
+      "gptImplementation": {
+        "title": "GPT-4o-mini Implementation",
+        "content": "The GPT-4o-mini integration leverages OpenAI API's Structured Output feature, an innovation that constrains the model's output format. This approach ensures responses follow a strictly defined JSON schema with precise sentiment classes (POSITIVE, NEGATIVE, NEUTRAL), thus eliminating parsing errors and ensuring perfect prediction consistency.\n\nThe prompt was optimized to guide the model toward contextual sentiment analysis, taking into account Twitter language peculiarities (abbreviations, emojis, informal tone). This method demonstrates how LLMs can be reliably used for structured classification tasks."
+      },
+      "metrics": {
+        "title": "Evaluation Metrics",
+        "content": "Model evaluation relies on three complementary metrics, standard in supervised classification. Precision measures the proportion of correct positive predictions among all positive predictions made. Recall evaluates the model's ability to identify all actual positive examples. Finally, the F1-Score constitutes the harmonic mean of Precision and Recall, offering a balanced measure particularly useful when classes are imbalanced.\n\nThese metrics are calculated for each sentiment class then averaged (macro-average) to obtain an overall view of performance."
+      },
+      "results": {
+        "title": "Experimental Results",
+        "content": "Experimental results reveal significant differences between the three approaches, both in terms of prediction quality and execution time. The metrics comparison chart clearly shows that the Hugging Face model (RoBERTa) achieves the best overall performance, closely followed by GPT-4o-mini. The custom model, while functional, shows more modest performance.\n\nExecution time analysis reveals another crucial aspect: the custom and Hugging Face models offer fast and predictable response times, while GPT-4o-mini, dependent on API calls, presents higher and variable latency. Confusion matrices help identify each model's specific confusions between sentiment classes."
+      },
+      "findings": {
+        "title": "Key Findings"
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "content": "This comparative study demonstrates that the choice of sentiment classification model strongly depends on the use case context and project constraints. For applications requiring high accuracy with a limited budget and no dependency on external services, pre-trained models from the Hugging Face ecosystem represent an excellent compromise between performance, cost, and ease of integration.\n\nGPT-4o-mini and large language models offer remarkable performance and unmatched flexibility through prompting, but involve significant API costs and higher latency. They are particularly suited for one-off analyses or cases requiring rapid adaptability without retraining.\n\nCustom models trained from scratch retain their relevance for specific use cases requiring full pipeline control, no external dependencies, or strict confidentiality constraints preventing data transmission to third-party APIs."
+      }
+    },
+    "models": {
+      "custom": {
+        "title": "Custom Model (Logistic Regression + TF-IDF)",
+        "description": "Model trained using supervised learning with TF-IDF (Term Frequency-Inverse Document Frequency) vectorization coupled with a logistic regression classifier. Tweets are transformed into numerical vectors where each word receives a weight based on its frequency in the tweet and its overall rarity in the dataset. The model learns from annotated examples (X = text vector, Y = associated emotion) and adjusts its parameters to minimize prediction errors."
+      },
+      "huggingface": {
+        "title": "Hugging Face (RoBERTa)",
+        "description": "Pre-trained model cardiffnlp/twitter-roberta-base based on RoBERTa (Robustly Optimized BERT Pretraining Approach), a Transformer architecture specialized in natural language processing. This model was trained on 124 million tweets, making it particularly effective at detecting emotions. Its contextual learning mechanism analyzes each word while considering the surrounding words, allowing it to understand the overall meaning of the text."
+      },
+      "gpt": {
+        "title": "GPT-4o-mini (OpenAI API)",
+        "description": "Using the GPT-4o-mini model via the OpenAI API with the Structured Output feature. This method enforces a precise response format via a JSON schema, avoiding response variations (\"The emotion is joy\", \"I think it's joy\", \"Joy\") that complicate automatic processing. Prompting was optimized for emotion classification in Twitter context."
+      }
+    },
+    "findings": {
+      "huggingface": {
+        "title": "Hugging Face - Best value for money",
+        "content": "The pre-trained RoBERTa model achieves the best overall performance with an F1-Score of approximately 0.85, combined with reasonable execution time and zero API cost. Its ease of integration via the Transformers library and robustness make it the recommended solution for most production use cases requiring reliable sentiment analysis."
+      },
+      "gpt": {
+        "title": "GPT-4o-mini - High accuracy, high cost",
+        "content": "GPT-4o-mini demonstrates performance comparable to or slightly better than Hugging Face on certain metrics, but at the cost of significant API fees and higher latency due to network calls. This approach proves particularly relevant for one-off analyses, rapid prototypes, or situations where prompting flexibility allows quick behavior adaptation without retraining."
+      },
+      "custom": {
+        "title": "Custom - Full control, modest performance",
+        "content": "The custom model based on TF-IDF and logistic regression offers decent but significantly lower performance than modern pre-trained models. Its main advantage lies in full control over the entire processing pipeline, no external dependencies, and the ability to operate in isolated environments. It remains suitable for use cases with strict confidentiality or resource constraints."
+      }
+    },
+    "images": {
+      "workflow": "Workflow diagram of the comparative study",
+      "outputStructure": "Output structure defined for GPT (Python Enums)",
+      "gptApiCall": "OpenAI API call code with Structured Output",
+      "metricsComparison": "Metrics comparison (Precision, Recall, F1) by model",
+      "executionTime": "Execution time by model",
+      "confusionMatrices": "Confusion matrices of the three models"
+    },
+    "resultsAnalysis": {
+      "metricsComparison": "The GPT and Hugging Face models show globally comparable and moderate performance (around 40-50% for all three metrics), while the Custom model is significantly inferior with very low metrics (around 10-20%). The proximity between GPT and Hugging Face suggests that both benefit from their pre-training, but Hugging Face seems to have a slight advantage, probably due to better adaptation to the specific context.\n\nBoth models show higher precision than recall, meaning they prefer to limit false positives but at the expense of detecting all relevant cases. These results can be explained in part by the fact that the data is decontextualized: even for a human, it is difficult to identify the emotion of a tweet without knowing its context.",
+      "executionTime": "This measurement shows a significant difference between GPT and the two other models. GPT is the only non-local model: we have to go through an API and make a network request to obtain results, which explains its high latency. Our custom model is faster than Hugging Face's since there is no additional layer to install.",
+      "confusionMatrices": "The diagonal (i,i) represents all true positives. This diagonal is partially visible on the GPT and Hugging Face models but is completely non-existent on our own model. It clearly appears that our model has a bias towards the emotions \"anger\" and \"impatience\". This is directly explained by the training file used, which contained only tweets related to Dell support. Impatience and anger were therefore emotions predominantly present in this dataset, creating a bias. To correct this, it would have been necessary to use a larger training dataset."
     }
   },
   "error": {

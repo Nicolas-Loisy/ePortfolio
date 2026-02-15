@@ -1,24 +1,5 @@
 import React from "react";
 
-import {
-  FaPython,
-  FaReact, // Add React icon
-  FaRobot,
-} from "react-icons/fa"; // Ajouter d'autres icônes si nécessaire
-import {
-  SiMongodb,
-  SiGit,
-  SiGnubash,
-  SiDocker,
-  SiHuggingface,
-  SiTypescript,
-  SiLangchain,
-  SiFirebase,
-  SiTsnode,
-  SiNodedotjs,
-  SiRaspberrypi, // Add TypeScript icon
-} from "react-icons/si"; // Icônes supplémentaires
-
 import Layout from "../components/templates/Layout";
 import { useTranslation } from "react-i18next";
 import ProfileCard from "../components/molecules/ProfileCard";
@@ -34,20 +15,13 @@ import TerminalLite from "../components/molecules/TerminalLite";
 import Projects from "../components/molecules/Projects";
 import LinkedInPosts from "../components/molecules/LinkedInPosts";
 
+import { projectsConfig } from "../data/projectsData";
+
 import pp from "../assets/img/pp_nl.jpg";
 import eurelisLogo from "../assets/img/eurelis_logo.jpg";
 import LogoUniversiteParisCite from "../assets/img/LogoUniversiteParisCite.png";
 import LogoIutMontreuil from "../assets/img/logo_iut_montreuil.png";
 import LogoDiderot from "../assets/img/logo_diderot.png";
-import LogoMarkia from "../assets/img/logo_markia.jpg";
-import LogoJobo from "../assets/img/logo_jobo.png";
-import LogoMeteoApp from "../assets/img/logo_meteo.svg";
-import LogoEMortelRenartBouche from "../assets/img/logo_emortel_renart_bouche.png";
-import LogoPiBot from "../assets/img/logo_pi_bot.jpg";
-import LogoEnigma from "../assets/img/Enigma-logo.svg.png";
-import TweetEmotion from "../assets/img/logo_tweetEmotion.png";
-import FeatureEngineering from "../assets/img/logo_fe.png";
-import LogoGLaDOS from "../assets/img/GLaDOS_logo.png";
 
 import logoIA1b from "../assets/img/logo/logo_ia_1_b.svg";
 import logoIA2b from "../assets/img/logo/logo_ia_2_b.svg";
@@ -70,9 +44,6 @@ import logoIA7w from "../assets/img/logo/logo_ia_7_w.svg";
 import logoIA8w from "../assets/img/logo/logo_ia_8_w.svg";
 import logoIA9w from "../assets/img/logo/logo_ia_9_w.svg";
 import logoIA10w from "../assets/img/logo/logo_ia_10_w.svg";
-
-import logoNLw from "../assets/img/LOGO_NL_white.svg";
-import logoNLb from "../assets/img/LOGO_NL_dark.svg";
 
 import { useTheme } from "styled-components";
 import DownloadButton from "../components/atoms/DownloadButton";
@@ -195,116 +166,16 @@ const HomePage: React.FC = () => {
     t("terminal.text9"),
   ];
 
-  const projectData = [
-    {
-      title: t("projects.glados.title"),
-      subtitle: t("projects.glados.subtitle"),
-      date: t("projects.glados.date"),
-      description: t("projects.glados.description"),
-      imageSrc: LogoGLaDOS,
-      techLogos: [
-        <FaPython />,
-        <SiDocker />,
-        <SiRaspberrypi />,
-        <SiHuggingface />,
-      ],
-      demoLink: "",
-    },
-    {
-      title: t("projects.featureEngineering.title"),
-      subtitle: t("projects.featureEngineering.subtitle"),
-      date: t("projects.featureEngineering.date"),
-      description: t("projects.featureEngineering.description"),
-      imageSrc: FeatureEngineering,
-      techLogos: [<FaPython />, <SiHuggingface />],
-      demoLink: "",
-    },
-    {
-      title: t("projects.tweetLearning.title"),
-      subtitle: t("projects.tweetLearning.subtitle"),
-      date: t("projects.tweetLearning.date"),
-      description: t("projects.tweetLearning.description"),
-      imageSrc: TweetEmotion,
-      techLogos: [<FaPython />, <SiHuggingface />],
-      demoLink: "",
-    },
-    {
-      title: t("projects.enigma.title"),
-      subtitle: t("projects.enigma.subtitle"),
-      date: t("projects.enigma.date"),
-      description: t("projects.enigma.description"),
-      imageSrc: LogoEnigma,
-      techLogos: [<FaPython />],
-      demoLink: "https://nicolasloisy.fr/enigma",
-    },
-    {
-      title: t("projects.ePortfolio.title"),
-      subtitle: t("projects.ePortfolio.subtitle"),
-      date: t("projects.ePortfolio.date"),
-      description: t("projects.ePortfolio.description"),
-      imageSrc: dark ? logoNLb : logoNLw,
-      techLogos: [<FaReact />, <SiTypescript />, <SiRaspberrypi />],
-      demoLink: "",
-    },
-    {
-      title: t("projects.markIA.title"),
-      subtitle: t("projects.markIA.subtitle"),
-      date: t("projects.markIA.date"),
-      description: t("projects.markIA.description"),
-      imageSrc: LogoMarkia,
-      techLogos: [
-        <FaReact />,
-        <SiTypescript />,
-        <SiHuggingface />,
-        <SiMongodb />,
-        <SiLangchain />,
-        <SiFirebase />,
-      ],
-      demoLink: "https://www.markia.fr/",
-    },
-    {
-      title: t("projects.jobo.title"),
-      subtitle: t("projects.jobo.subtitle"),
-      date: t("projects.jobo.date"),
-      description: t("projects.jobo.description"),
-      imageSrc: LogoJobo,
-      techLogos: [<FaReact />, <SiMongodb />, <SiHuggingface />, <SiTsnode />],
-      demoLink: "",
-    },
-    {
-      title: t("projects.meteoApp.title"),
-      subtitle: t("projects.meteoApp.subtitle"),
-      date: t("projects.meteoApp.date"),
-      description: t("projects.meteoApp.description"),
-      imageSrc: LogoMeteoApp,
-      techLogos: [<FaReact />, <SiFirebase />],
-      demoLink: "",
-    },
-    {
-      title: t("projects.eMortels.title"),
-      subtitle: t("projects.eMortels.subtitle"),
-      date: t("projects.eMortels.date"),
-      description: t("projects.eMortels.description"),
-      imageSrc: LogoEMortelRenartBouche,
-      techLogos: [<FaReact />, <SiNodedotjs />, <SiMongodb />],
-      demoLink: "",
-    },
-    {
-      title: t("projects.discordPiBot.title"),
-      subtitle: t("projects.discordPiBot.subtitle"),
-      date: t("projects.discordPiBot.date"),
-      description: t("projects.discordPiBot.description"),
-      imageSrc: LogoPiBot,
-      techLogos: [
-        <FaPython />,
-        <SiGnubash />,
-        <SiDocker />,
-        <SiGit />,
-        <SiRaspberrypi />,
-      ],
-      demoLink: "",
-    },
-  ];
+  const projectData = projectsConfig.map((p) => ({
+    title: t(`${p.translationKey}.title`),
+    subtitle: t(`${p.translationKey}.subtitle`),
+    date: t(`${p.translationKey}.date`),
+    description: t(`${p.translationKey}.description`),
+    imageSrc: typeof p.imageSrc === "function" ? p.imageSrc(dark) : p.imageSrc,
+    techLogos: p.techLogos,
+    demoLink: p.demoLink,
+    detailLink: p.detailEnabled && (p.sections.length > 0 || p.CustomDetailComponent) ? p.detailRoute : undefined,
+  }));
 
   const whiteLogo = [
     logoIA1w,

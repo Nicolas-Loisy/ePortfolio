@@ -1,9 +1,11 @@
 // components/organisms/Navbar.tsx
 import React, { useCallback, useState, useEffect } from "react";
 import styled from "styled-components";
+import { Snowflake } from "lucide-react";
 import Logo from "../molecules/Logo";
 import ThemeSwitcher from "../molecules/ThemeSwitcher";
 import LanguageSelector from "../molecules/LanguageSelector";
+import { useChristmas } from "../../contexts/ChristmasContext";
 
 // Conteneur de la barre de navigation
 const NavbarContainer = styled.nav<{ isHidden: boolean; isFixed: boolean }>`
@@ -44,6 +46,39 @@ const SidebarContainer = styled.div`
   align-items: center;
 `;
 
+// Conteneur pour les contrôles à droite
+const RightControls = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+`;
+
+// Bouton Noël
+const ChristmasButton = styled.button<{ $isActive: boolean }>`
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${(props) => (props.$isActive ? "#4fc3f7" : props.theme.text)};
+  transition: all 0.3s ease;
+  border-radius: 50%;
+
+  &:hover {
+    background: ${(props) => props.theme.navBarBackground};
+    color: #4fc3f7;
+    transform: scale(1.1);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    filter: ${(props) => (props.$isActive ? "drop-shadow(0 0 6px #4fc3f7)" : "none")};
+  }
+`;
+
 interface NavbarProps {
   links?: { to: string; label: string }[] | [] | undefined;
   logoLight: string;
@@ -64,6 +99,8 @@ const Navbar: React.FC<NavbarProps> = ({
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const scrollThreshold = 50; // Seuil de défilement pour cacher la barre
+  const { isChristmasMode, isDecemberMonth, toggleChristmasMode } =
+    useChristmas();
 
   const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY;
@@ -107,7 +144,18 @@ const Navbar: React.FC<NavbarProps> = ({
             siteName={siteName}
           />
         </LogoContainer>
-        <ThemeSwitcher />
+        <RightControls>
+          {isDecemberMonth && (
+            <ChristmasButton
+              $isActive={isChristmasMode}
+              onClick={toggleChristmasMode}
+              title={isChristmasMode ? "Désactiver la neige" : "Activer la neige"}
+            >
+              <Snowflake />
+            </ChristmasButton>
+          )}
+          <ThemeSwitcher />
+        </RightControls>
       </NavbarContainer>
     </>
   );

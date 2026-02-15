@@ -58,6 +58,12 @@ const SEO: React.FC<SEOProps> = ({
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="Nicolas Loisy Portfolio" />
 
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        {description && <meta name="twitter:description" content={description} />}
+        <meta name="twitter:image" content={image} />
+
         {/* Canonical */}
         <link rel="canonical" href={url} />
 
