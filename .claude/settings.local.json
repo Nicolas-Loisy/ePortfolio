@@ -7,7 +7,10 @@
       "Bash(findstr:*)",
       "Bash(cmd /c copy \"e:\\\\Nicolas\\\\Workspace\\\\ePortfolio\\\\IR_NicolasLoisy_scientific_paper.pdf\" \"e:\\\\Nicolas\\\\Workspace\\\\ePortfolio\\\\App\\\\public\\\\files\\\\IR_NicolasLoisy_scientific_paper.pdf\")",
       "Bash(cmd /c dir \"e:\\\\Nicolas\\\\Workspace\\\\ePortfolio\\\\App\\\\public\\\\files\\\\IR_NicolasLoisy_scientific_paper.pdf\")",
-      "Bash(powershell -Command:*)"
+      "Bash(powershell -Command:*)",
+      "Bash(npm audit:*)",
+      "Bash(npm install:*)",
+      "Bash(git checkout:*)"
     ]
   }
 }

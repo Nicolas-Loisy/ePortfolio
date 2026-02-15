@@ -212,13 +212,6 @@ const FormulaLabel = styled.p`
   margin: 0;
 `;
 
-const ResultsGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin: 1.5rem 0;
-`;
-
 const TechGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
